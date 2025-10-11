@@ -3,3060 +3,725 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xobe Store - Premium Pterodactyl Panel Hosting | Anti Maling & Anti Rusuh</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Xobe Store menyediakan panel Pterodactyl premium dengan fitur anti maling dan anti rusuh. Dapatkan hosting terbaik untuk bot WhatsApp, Telegram, dan game server dengan harga terjangkau.">
-    <meta name="keywords" content="panel pterodactyl, hosting panel, anti maling, anti rusuh, bot whatsapp, bot telegram, game server, hosting murah, xobe store">
-    <meta name="author" content="Xobe Store">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://xobestore.com">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Xobe Store - Premium Pterodactyl Panel Hosting">
-    <meta property="og:description" content="Xobe Store menyediakan panel Pterodactyl premium dengan fitur anti maling dan anti rusuh. Dapatkan hosting terbaik untuk bot WhatsApp, Telegram, dan game server.">
-    <meta property="og:image" content="https://xobestore.com/images/og-image.jpg">
-    <meta property="og:url" content="https://xobestore.com">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="id_ID">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Xobe Store - Premium Pterodactyl Panel Hosting">
-    <meta name="twitter:description" content="Xobe Store menyediakan panel Pterodactyl premium dengan fitur anti maling dan anti rusuh. Dapatkan hosting terbaik untuk bot WhatsApp, Telegram, dan game server.">
-    <meta name="twitter:image" content="https://xobestore.com/images/twitter-image.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    
-    <!-- Preconnect to External Domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
-    <!-- Stylesheets -->
+    <title>Xobe Store - Panel Pterodactyl Premium</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Xobe Store",
-        "description": "Provider panel Pterodactyl premium dengan fitur anti maling dan anti rusuh",
-        "url": "https://xobestore.com",
-        "telephone": "+6283838629756",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "ID"
-        },
-        "sameAs": [
-            "https://wa.me/6283838629756",
-            "https://t.me/xobedevelopment"
-        ],
-        "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "IDR",
-            "lowPrice": "600",
-            "highPrice": "9000"
-        }
-    }
-    </script>
-    
     <style>
-        /* Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --secondary: #8b5cf6;
-            --accent: #fbbf24;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --danger: #ef4444;
-            --info: #3b82f6;
-            --dark: #0f172a;
-            --dark-light: #1e293b;
-            --dark-card: #334155;
-            --text: #f1f5f9;
-            --text-muted: #94a3b8;
-            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-            --gradient-5: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-            --gradient-6: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
-            --gradient-7: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-            --gradient-8: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-            
-            /* Responsive Font Sizes */
-            --font-size-xs: clamp(0.75rem, 2vw, 0.875rem);
-            --font-size-sm: clamp(0.875rem, 2.5vw, 1rem);
-            --font-size-base: clamp(1rem, 3vw, 1.125rem);
-            --font-size-lg: clamp(1.125rem, 3.5vw, 1.25rem);
-            --font-size-xl: clamp(1.25rem, 4vw, 1.5rem);
-            --font-size-2xl: clamp(1.5rem, 5vw, 2rem);
-            --font-size-3xl: clamp(2rem, 6vw, 2.5rem);
-            --font-size-4xl: clamp(2.5rem, 7vw, 3rem);
-            --font-size-5xl: clamp(3rem, 8vw, 4rem);
-            
-            /* Responsive Spacing */
-            --spacing-xs: clamp(0.5rem, 1.5vw, 1rem);
-            --spacing-sm: clamp(0.75rem, 2vw, 1.5rem);
-            --spacing-md: clamp(1rem, 2.5vw, 2rem);
-            --spacing-lg: clamp(1.5rem, 3vw, 3rem);
-            --spacing-xl: clamp(2rem, 4vw, 4rem);
-            --spacing-2xl: clamp(3rem, 5vw, 5rem);
-        }
-
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--dark);
-            color: var(--text);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0e27;
+            color: #fff;
             overflow-x: hidden;
-            line-height: 1.6;
-            font-size: var(--font-size-base);
         }
 
-        /* Improved Scrollbar */
-        ::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--dark);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--gradient-1);
-            border-radius: 6px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--primary-dark);
-        }
-
-        /* Selection */
-        ::selection {
-            background: var(--primary);
-            color: white;
-        }
-
-        /* Loading Screen - Improved */
-        .loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--dark);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 10000;
-            transition: opacity 0.5s ease;
-        }
-
-        .loading-screen.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .loader-container {
-            position: relative;
-            width: clamp(120px, 20vw, 180px);
-            height: clamp(120px, 20vw, 180px);
-        }
-
-        .loader {
-            width: 100%;
-            height: 100%;
-            border: 4px solid rgba(99, 102, 241, 0.1);
-            border-top-color: var(--primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        .loader-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: clamp(24px, 5vw, 40px);
-            font-weight: 900;
-            background: var(--gradient-1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        .loading-percentage {
-            margin-top: var(--spacing-md);
-            font-size: var(--font-size-lg);
-            font-weight: 600;
-            color: var(--text-muted);
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* Animated Background */
-        .bg-animation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: linear-gradient(45deg, #0f172a, #1e293b, #334155, #1e293b, #0f172a);
-            background-size: 400% 400%;
-            animation: gradientShift 20s ease infinite;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .floating-shapes {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -1;
-        }
-
-        .shape {
-            position: absolute;
-            opacity: 0.08;
-            animation: float 25s infinite ease-in-out;
-        }
-
-        .shape-1 {
-            width: clamp(200px, 30vw, 400px);
-            height: clamp(200px, 30vw, 400px);
-            background: var(--gradient-1);
-            border-radius: 50%;
-            top: 10%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .shape-2 {
-            width: clamp(150px, 25vw, 300px);
-            height: clamp(150px, 25vw, 300px);
-            background: var(--gradient-2);
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            top: 60%;
-            right: 10%;
-            animation-delay: 5s;
-        }
-
-        .shape-3 {
-            width: clamp(175px, 27vw, 350px);
-            height: clamp(175px, 27vw, 350px);
-            background: var(--gradient-3);
-            border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
-            bottom: 10%;
-            left: 30%;
-            animation-delay: 10s;
-        }
-
-        .shape-4 {
-            width: clamp(125px, 20vw, 250px);
-            height: clamp(125px, 20vw, 250px);
-            background: var(--gradient-4);
-            border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
-            top: 30%;
-            right: 30%;
-            animation-delay: 15s;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(30px, -30px) rotate(120deg); }
-            66% { transform: translate(-20px, 20px) rotate(240deg); }
-        }
-
-        /* Navigation - Improved Mobile Support */
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            padding: var(--spacing-sm) 0;
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(20px);
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
             z-index: 1000;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        nav.scrolled {
-            padding: var(--spacing-xs) 0;
-            background: rgba(15, 23, 42, 0.95);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
         }
 
         .nav-container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 var(--spacing-md);
+            padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-sm);
-            font-size: clamp(20px, 4vw, 32px);
-            font-weight: 900;
-            font-family: 'Space Grotesk', sans-serif;
-            color: var(--text);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .logo:hover {
-            transform: scale(1.05);
-        }
-
-        .logo-icon {
-            width: clamp(40px, 7vw, 55px);
-            height: clamp(40px, 7vw, 55px);
-            background: var(--gradient-1);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: clamp(18px, 4vw, 26px);
-            color: white;
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        .logo-text {
-            background: var(--gradient-1);
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .nav-links {
+        .nav-menu {
             display: flex;
-            gap: var(--spacing-lg);
+            gap: 40px;
             align-items: center;
         }
 
-        .nav-links a {
-            color: var(--text);
+        .nav-menu a {
+            color: #94a3b8;
             text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #667eea;
+        }
+
+        .btn-nav {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 12px 28px;
+            border-radius: 50px;
+            color: #fff;
             font-weight: 600;
-            font-size: var(--font-size-base);
-            position: relative;
-            transition: all 0.3s ease;
-            padding: var(--spacing-xs) 0;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background: var(--gradient-1);
-            transition: width 0.3s ease;
-            border-radius: 2px;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-cta {
-            background: var(--gradient-1);
-            color: white;
-            padding: var(--spacing-sm) var(--spacing-lg);
-            border-radius: 50px;
             text-decoration: none;
-            font-weight: 700;
-            font-size: var(--font-size-base);
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(99, 102, 241, 0.4);
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-xs);
+            transition: 0.3s;
         }
 
-        .nav-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.6);
+        .btn-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
         }
 
-        .mobile-menu-btn {
+        .mobile-toggle {
             display: none;
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            color: var(--text);
-            font-size: var(--font-size-xl);
+            font-size: 24px;
             cursor: pointer;
-            padding: var(--spacing-xs);
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            width: 44px;
-            height: 44px;
-            justify-content: center;
-            align-items: center;
         }
 
-        .mobile-menu-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        /* Hero Section - Improved Mobile Support */
+        /* Hero */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: clamp(100px, 15vh, 140px) var(--spacing-md) var(--spacing-lg);
-            position: relative;
-            overflow: hidden;
+            padding: 150px 20px 100px;
+            text-align: center;
+            background: radial-gradient(circle at 50% 0%, rgba(102, 126, 234, 0.1) 0%, transparent 50%);
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
-            animation: rotate 30s linear infinite;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .hero-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-2xl);
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-content {
-            animation: fadeInUp 1s ease;
-        }
-
-        .hero-badges {
-            display: flex;
-            gap: var(--spacing-sm);
-            margin-bottom: var(--spacing-lg);
-            flex-wrap: wrap;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--spacing-xs);
-            background: rgba(99, 102, 241, 0.15);
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            padding: var(--spacing-xs) var(--spacing-md);
-            border-radius: 50px;
-            font-size: var(--font-size-xs);
-            font-weight: 700;
-            animation: pulse 2s infinite;
-        }
-
-        .hero-badge i {
-            color: var(--accent);
-        }
-
-        .hero-title {
-            font-size: clamp(32px, 6vw, 72px);
+        .hero h1 {
+            font-size: clamp(36px, 6vw, 64px);
             font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: var(--spacing-md);
-            font-family: 'Space Grotesk', sans-serif;
-            background: linear-gradient(135deg, var(--text) 0%, var(--primary) 50%, var(--secondary) 100%);
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff 0%, #667eea 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: gradientShift 3s ease infinite;
-            background-size: 200% 200%;
+            line-height: 1.2;
         }
 
         .hero-subtitle {
-            font-size: clamp(18px, 4vw, 28px);
-            color: var(--text-muted);
-            margin-bottom: var(--spacing-lg);
-            font-weight: 500;
-            line-height: 1.4;
-        }
-
-        .hero-features {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--spacing-md);
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .hero-feature {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-sm);
-            padding: var(--spacing-sm);
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .hero-feature:hover {
-            background: rgba(99, 102, 241, 0.1);
-            border-color: rgba(99, 102, 241, 0.3);
-            transform: translateY(-3px);
-        }
-
-        .hero-feature-icon {
-            width: clamp(35px, 5vw, 45px);
-            height: clamp(35px, 5vw, 45px);
-            background: var(--gradient-1);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .hero-feature-icon i {
-            font-size: clamp(16px, 3vw, 20px);
-            color: white;
-        }
-
-        .hero-feature-text {
-            font-size: var(--font-size-sm);
-            font-weight: 600;
+            font-size: clamp(18px, 3vw, 24px);
+            color: #94a3b8;
+            margin-bottom: 40px;
+            line-height: 1.6;
         }
 
         .hero-buttons {
             display: flex;
-            gap: var(--spacing-md);
+            gap: 20px;
+            justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn-primary {
-            background: var(--gradient-1);
-            color: white;
-            padding: var(--spacing-md) var(--spacing-xl);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 18px 40px;
             border-radius: 50px;
-            font-size: var(--font-size-lg);
-            font-weight: 700;
+            color: #fff;
+            font-weight: 600;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: var(--spacing-sm);
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.2);
-            transition: left 0.5s ease;
-        }
-
-        .btn-primary:hover::before {
-            left: 100%;
+            gap: 10px;
+            transition: 0.3s;
+            font-size: 16px;
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.6);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
         }
 
         .btn-secondary {
             background: transparent;
-            color: var(--text);
-            padding: var(--spacing-md) var(--spacing-xl);
+            border: 2px solid #667eea;
+            padding: 18px 40px;
             border-radius: 50px;
-            font-size: var(--font-size-lg);
-            font-weight: 700;
+            color: #fff;
+            font-weight: 600;
             text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: var(--spacing-sm);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: var(--primary);
+            background: rgba(102, 126, 234, 0.1);
             transform: translateY(-3px);
         }
 
-        /* Hero Image - Improved Mobile Support */
-        .hero-image {
-            position: relative;
-            animation: fadeInRight 1s ease;
-        }
-
-        .hero-image-wrapper {
-            position: relative;
-            background: rgba(99, 102, 241, 0.05);
-            border-radius: 30px;
-            padding: var(--spacing-lg);
-            border: 2px solid rgba(99, 102, 241, 0.2);
-            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
-            transform: perspective(1000px) rotateY(-5deg);
-            transition: transform 0.5s ease;
-        }
-
-        .hero-image-wrapper:hover {
-            transform: perspective(1000px) rotateY(0deg) scale(1.02);
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 25px;
-            display: block;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
-        }
-
-        .floating-badges {
-            position: absolute;
-            top: -20px;
-            right: -20px;
-            display: flex;
-            flex-direction: column;
-            gap: var(--spacing-sm);
-        }
-
-        .floating-badge {
-            background: var(--gradient-2);
-            color: white;
-            padding: var(--spacing-xs) var(--spacing-md);
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: var(--font-size-xs);
-            box-shadow: 0 10px 30px rgba(240, 147, 251, 0.4);
-            animation: float 3s ease-in-out infinite;
-            white-space: nowrap;
-        }
-
-        .floating-badge:nth-child(2) {
-            animation-delay: 1s;
-            background: var(--gradient-5);
-        }
-
-        .floating-badge:nth-child(3) {
-            animation-delay: 2s;
-            background: var(--gradient-3);
-        }
-
-        /* Trust Indicators - Improved Mobile Support */
-        .trust-indicators {
-            padding: var(--spacing-2xl) var(--spacing-md);
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(168, 85, 247, 0.08) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .trust-indicators::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236366f1' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.5;
-        }
-
-        .trust-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .trust-header {
-            text-align: center;
-            margin-bottom: var(--spacing-2xl);
-        }
-
-        .trust-title {
-            font-size: clamp(28px, 5vw, 48px);
-            font-weight: 900;
-            margin-bottom: var(--spacing-md);
-            font-family: 'Space Grotesk', sans-serif;
-            background: linear-gradient(135deg, var(--text) 0%, var(--primary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .trust-subtitle {
-            font-size: var(--font-size-lg);
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: var(--spacing-xl);
-        }
-
-        .trust-item {
-            background: rgba(30, 41, 59, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 25px;
-            padding: var(--spacing-xl) var(--spacing-lg);
-            text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .trust-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-1);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .trust-item:hover::before {
-            opacity: 0.05;
-        }
-
-        .trust-item:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-            box-shadow: 0 30px 60px rgba(99, 102, 241, 0.2);
-        }
-
-        .trust-icon-wrapper {
-            width: clamp(70px, 10vw, 90px);
-            height: clamp(70px, 10vw, 90px);
-            background: var(--gradient-1);
-            border-radius: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto var(--spacing-lg);
-            position: relative;
-            z-index: 1;
-            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .trust-item:hover .trust-icon-wrapper {
-            transform: scale(1.1) rotate(5deg);
-        }
-
-        .trust-icon {
-            font-size: clamp(30px, 5vw, 40px);
-            color: white;
-        }
-
-        .trust-number {
-            font-size: clamp(32px, 5vw, 48px);
-            font-weight: 900;
-            margin-bottom: var(--spacing-sm);
-            background: var(--gradient-1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            position: relative;
-            z-index: 1;
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        .trust-label {
-            color: var(--text);
-            font-size: var(--font-size-lg);
-            font-weight: 600;
-            position: relative;
-            z-index: 1;
-        }
-
-        .trust-description {
-            color: var(--text-muted);
-            font-size: var(--font-size-sm);
-            margin-top: var(--spacing-sm);
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Features Section - Improved Mobile Support */
+        /* Features */
         .features {
-            padding: var(--spacing-2xl) var(--spacing-md);
-            background: var(--dark);
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto var(--spacing-2xl);
-        }
-
-        .section-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--spacing-sm);
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            padding: var(--spacing-xs) var(--spacing-lg);
-            border-radius: 50px;
-            font-size: var(--font-size-sm);
-            font-weight: 700;
-            margin-bottom: var(--spacing-lg);
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .section-title {
-            font-size: clamp(32px, 6vw, 52px);
-            font-weight: 900;
-            margin-bottom: var(--spacing-lg);
-            font-family: 'Space Grotesk', sans-serif;
-            background: linear-gradient(135deg, var(--text) 0%, var(--primary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .section-subtitle {
-            font-size: var(--font-size-lg);
-            color: var(--text-muted);
-            line-height: 1.6;
+            text-align: center;
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 800;
+            margin-bottom: 60px;
         }
 
         .features-grid {
-            max-width: 1400px;
-            margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-xl);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
         }
 
-        .feature-card {
-            background: rgba(30, 41, 59, 0.5);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 25px;
-            padding: var(--spacing-xl);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-card.featured {
-            grid-column: span 2;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-xl);
-            align-items: center;
-        }
-
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-1);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .feature-card:hover::before {
-            opacity: 0.03;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-            box-shadow: 0 30px 60px rgba(99, 102, 241, 0.2);
-        }
-
-        .feature-icon-wrapper {
-            width: clamp(60px, 8vw, 80px);
-            height: clamp(60px, 8vw, 80px);
-            background: var(--gradient-1);
+        .feature-item {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(102, 126, 234, 0.2);
             border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: var(--spacing-lg);
-            position: relative;
-            z-index: 1;
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+            padding: 40px 30px;
+            transition: 0.3s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+            border-color: #667eea;
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
         }
 
         .feature-icon {
-            font-size: clamp(25px, 4vw, 35px);
-            color: white;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 28px;
         }
 
-        .feature-title {
-            font-size: clamp(20px, 4vw, 26px);
-            font-weight: 800;
-            margin-bottom: var(--spacing-md);
-            position: relative;
-            z-index: 1;
+        .feature-item h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
         }
 
-        .feature-description {
-            color: var(--text-muted);
+        .feature-item p {
+            color: #94a3b8;
             line-height: 1.7;
-            font-size: var(--font-size-base);
-            position: relative;
-            z-index: 1;
         }
 
-        .feature-image {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .feature-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .feature-image:hover img {
-            transform: scale(1.05);
-        }
-
-        .feature-image-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .feature-image:hover .feature-image-overlay {
-            opacity: 1;
-        }
-
-        .feature-image-text {
-            color: white;
-            font-size: var(--font-size-lg);
-            font-weight: 700;
-            text-align: center;
-        }
-
-        /* Usage Section - Improved Mobile Support */
-        .usage {
-            padding: var(--spacing-2xl) var(--spacing-md);
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
-        }
-
-        .usage-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--spacing-lg);
-        }
-
-        .usage-item {
-            background: rgba(30, 41, 59, 0.5);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 25px;
-            padding: var(--spacing-lg);
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-lg);
-            transition: all 0.4s ease;
-        }
-
-        .usage-item:hover {
-            transform: translateX(10px);
-            background: rgba(30, 41, 59, 0.8);
-            border-color: var(--primary);
-            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
-        }
-
-        .usage-icon {
-            width: clamp(50px, 7vw, 70px);
-            height: clamp(50px, 7vw, 70px);
-            background: var(--gradient-3);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
-        }
-
-        .usage-icon i {
-            font-size: clamp(20px, 4vw, 30px);
-            color: white;
-        }
-
-        .usage-content h4 {
-            font-size: var(--font-size-xl);
-            font-weight: 800;
-            margin-bottom: var(--spacing-xs);
-        }
-
-        .usage-content p {
-            color: var(--text-muted);
-            font-size: var(--font-size-sm);
-        }
-
-        /* Pricing Section - Improved Mobile Support */
+        /* Pricing */
         .pricing {
-            padding: var(--spacing-2xl) var(--spacing-md);
-            background: var(--dark);
+            padding: 100px 20px;
+            background: rgba(15, 23, 42, 0.3);
         }
 
         .pricing-container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-        }
-
-        .pricing-filters {
-            display: flex;
-            justify-content: center;
-            margin-bottom: var(--spacing-2xl);
-            gap: var(--spacing-md);
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: var(--spacing-sm) var(--spacing-lg);
-            border-radius: 50px;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            background: transparent;
-            color: var(--text-muted);
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: var(--font-size-base);
-        }
-
-        .filter-btn.active {
-            background: var(--gradient-1);
-            color: white;
-            border-color: transparent;
-        }
-
-        .filter-btn:hover:not(.active) {
-            border-color: var(--primary);
-            color: var(--primary);
         }
 
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-lg);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 60px;
         }
 
-        .pricing-card {
-            background: rgba(30, 41, 59, 0.5);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 25px;
-            padding: var(--spacing-xl);
+        .price-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            border-radius: 20px;
+            padding: 35px 25px;
             text-align: center;
-            transition: all 0.4s ease;
+            transition: 0.3s;
             position: relative;
-            overflow: hidden;
         }
 
-        .pricing-card.featured {
-            border-color: var(--primary);
+        .price-card:hover {
+            transform: translateY(-10px);
+            border-color: #667eea;
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .price-card.featured {
+            border: 2px solid #667eea;
             transform: scale(1.05);
-            box-shadow: 0 30px 60px rgba(99, 102, 241, 0.3);
         }
 
-        .pricing-card.featured::before {
-            content: 'MOST POPULAR';
+        .price-card.featured::before {
+            content: 'POPULAR';
             position: absolute;
             top: -15px;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--gradient-2);
-            color: white;
-            padding: var(--spacing-xs) var(--spacing-lg);
-            border-radius: 50px;
-            font-size: var(--font-size-xs);
-            font-weight: 800;
-            box-shadow: 0 10px 30px rgba(240, 147, 251, 0.4);
-            z-index: 1;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(99, 102, 241, 0.2);
-        }
-
-        .pricing-card.featured:hover {
-            transform: scale(1.05) translateY(-10px);
-        }
-
-        .plan-header {
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .plan-icon {
-            width: clamp(70px, 10vw, 90px);
-            height: clamp(70px, 10vw, 90px);
-            background: var(--gradient-1);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 5px 20px;
             border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto var(--spacing-lg);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+            font-size: 12px;
+            font-weight: 700;
         }
 
-        .plan-icon i {
-            font-size: clamp(30px, 5vw, 40px);
-            color: white;
+        .price-card.promo {
+            border: 2px solid #f5576c;
+            transform: scale(1.08);
+        }
+
+        .price-card.promo::before {
+            content: '🔥 PROMO';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
         }
 
         .plan-name {
-            font-size: clamp(24px, 4vw, 32px);
-            font-weight: 900;
-            margin-bottom: var(--spacing-sm);
-            font-family: 'Space Grotesk', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
         }
 
         .plan-price {
-            font-size: clamp(32px, 5vw, 48px);
+            font-size: 42px;
             font-weight: 900;
-            margin-bottom: var(--spacing-sm);
-            background: var(--gradient-1);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
         }
 
         .plan-price span {
-            font-size: var(--font-size-base);
-            font-weight: 500;
-            color: var(--text-muted);
+            font-size: 16px;
+            color: #94a3b8;
         }
 
         .plan-specs {
             list-style: none;
-            margin-bottom: var(--spacing-xl);
+            margin: 25px 0;
             text-align: left;
         }
 
         .plan-specs li {
-            padding: var(--spacing-sm) 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 12px 0;
+            font-size: 15px;
             display: flex;
             align-items: center;
-            gap: var(--spacing-sm);
-            font-size: var(--font-size-sm);
-        }
-
-        .plan-specs li:last-child {
-            border-bottom: none;
+            gap: 10px;
+            color: #cbd5e1;
         }
 
         .plan-specs i {
-            color: var(--success);
-            font-size: var(--font-size-base);
-            flex-shrink: 0;
+            color: #10b981;
         }
 
-        .plan-btn {
+        .btn-select {
             width: 100%;
-            padding: var(--spacing-md);
-            background: var(--gradient-1);
-            color: white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 14px;
             border: none;
-            border-radius: 50px;
-            font-size: var(--font-size-lg);
-            font-weight: 700;
+            border-radius: 12px;
+            font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            transition: 0.3s;
+            font-size: 16px;
         }
 
-        .plan-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.2);
-            transition: left 0.5s ease;
-        }
-
-        .plan-btn:hover::before {
-            left: 100%;
-        }
-
-        .plan-btn:hover {
+        .btn-select:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
         }
 
-        /* Reseller Section - Improved Mobile Support */
+        /* Reseller */
         .reseller {
-            padding: var(--spacing-2xl) var(--spacing-md);
-            background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(251, 191, 36, 0.05) 100%);
-        }
-
-        .reseller-container {
-            max-width: 1400px;
+            padding: 100px 20px;
+            max-width: 1200px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-2xl);
-            align-items: center;
         }
 
         .reseller-content {
-            animation: fadeInLeft 1s ease;
+            background: rgba(15, 23, 42, 0.5);
+            border: 2px solid rgba(251, 191, 36, 0.3);
+            border-radius: 30px;
+            padding: 60px 40px;
+            text-align: center;
         }
 
         .reseller-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--spacing-sm);
-            background: rgba(245, 158, 11, 0.15);
-            border: 1px solid rgba(245, 158, 11, 0.3);
-            padding: var(--spacing-xs) var(--spacing-lg);
-            border-radius: 50px;
-            font-size: var(--font-size-sm);
-            font-weight: 700;
-            margin-bottom: var(--spacing-lg);
-            color: var(--warning);
-        }
-
-        .reseller-title {
-            font-size: clamp(28px, 5vw, 48px);
-            font-weight: 900;
-            margin-bottom: var(--spacing-lg);
-            font-family: 'Space Grotesk', sans-serif;
-            background: linear-gradient(135deg, var(--warning) 0%, var(--accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .reseller-price-box {
-            background: rgba(30, 41, 59, 0.5);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: var(--spacing-lg);
-            margin-bottom: var(--spacing-xl);
             display: inline-block;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .reseller h2 {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 800;
+            margin-bottom: 30px;
         }
 
         .reseller-price {
-            font-size: var(--font-size-lg);
-            font-weight: 600;
-            margin-bottom: var(--spacing-md);
+            font-size: 20px;
+            color: #94a3b8;
+            margin-bottom: 40px;
         }
 
         .reseller-price strong {
-            color: var(--accent);
-            font-size: clamp(24px, 4vw, 36px);
-            font-weight: 900;
+            color: #fbbf24;
+            font-size: 28px;
         }
 
         .reseller-features {
             list-style: none;
-            margin-bottom: var(--spacing-xl);
+            margin: 40px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            text-align: left;
         }
 
         .reseller-features li {
-            padding: var(--spacing-md) 0;
             display: flex;
             align-items: center;
-            gap: var(--spacing-md);
-            font-size: var(--font-size-base);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .reseller-features li:last-child {
-            border-bottom: none;
+            gap: 15px;
+            font-size: 16px;
         }
 
         .reseller-features i {
-            color: var(--success);
-            font-size: var(--font-size-lg);
-            flex-shrink: 0;
+            color: #10b981;
+            font-size: 20px;
         }
 
-        .reseller-image {
-            position: relative;
-            animation: fadeInRight 1s ease;
-        }
-
-        .reseller-image-wrapper {
-            position: relative;
-            background: rgba(245, 158, 11, 0.05);
-            border-radius: 25px;
-            padding: var(--spacing-lg);
-            border: 1px solid rgba(245, 158, 11, 0.2);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
-            transform: perspective(1000px) rotateY(5deg);
-            transition: transform 0.3s ease;
-        }
-
-        .reseller-image-wrapper:hover {
-            transform: perspective(1000px) rotateY(0deg);
-        }
-
-        .reseller-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 20px;
-        }
-
-        /* Testimonials Section - Improved Mobile Support */
-        .testimonials {
-            padding: var(--spacing-2xl) var(--spacing-md);
-            background: var(--dark);
-        }
-
-        .testimonials-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-lg);
-            margin-top: var(--spacing-2xl);
-        }
-
-        .testimonial-card {
-            background: rgba(30, 41, 59, 0.5);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 25px;
-            padding: var(--spacing-lg);
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .testimonial-card.featured {
-            grid-column: span 2;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-xl);
-            align-items: center;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
-        }
-
-        .testimonial-image {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .testimonial-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .testimonial-image:hover img {
-            transform: scale(1.05);
-        }
-
-        .testimonial-content {
-            padding: var(--spacing-lg);
-        }
-
-        .testimonial-stars {
-            color: var(--accent);
-            font-size: var(--font-size-xl);
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .testimonial-text {
-            color: var(--text-muted);
-            line-height: 1.7;
-            margin-bottom: var(--spacing-xl);
-            font-style: italic;
-            font-size: var(--font-size-lg);
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-md);
-        }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--gradient-1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-        }
-
-        .author-info h4 {
-            font-size: var(--font-size-base);
-            font-weight: 700;
-            margin-bottom: var(--spacing-xs);
-        }
-
-        .author-info p {
-            font-size: var(--font-size-sm);
-            color: var(--text-muted);
-        }
-
-        /* CTA Section - Improved Mobile Support */
+        /* CTA */
         .cta {
-            padding: var(--spacing-2xl) var(--spacing-md);
-            background: var(--gradient-2);
+            padding: 100px 20px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            background: radial-gradient(circle at 50% 50%, rgba(102, 126, 234, 0.15) 0%, transparent 70%);
         }
 
-        .cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-
-        .cta-container {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-title {
-            font-size: clamp(32px, 6vw, 52px);
-            font-weight: 900;
-            color: white;
-            margin-bottom: var(--spacing-lg);
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        .cta-subtitle {
-            font-size: var(--font-size-xl);
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: var(--spacing-2xl);
-            line-height: 1.5;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: var(--spacing-lg);
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-cta-primary {
-            background: white;
-            color: var(--primary);
-            padding: var(--spacing-md) var(--spacing-xl);
-            border-radius: 50px;
-            font-size: var(--font-size-lg);
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: var(--spacing-sm);
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-cta-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .btn-cta-secondary {
-            background: transparent;
-            color: white;
-            padding: var(--spacing-md) var(--spacing-xl);
-            border-radius: 50px;
-            font-size: var(--font-size-lg);
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: var(--spacing-sm);
-            border: 2px solid white;
-            transition: all 0.3s ease;
-        }
-
-        .btn-cta-secondary:hover {
-            background: white;
-            color: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        /* Footer - Improved Mobile Support */
-        footer {
-            padding: var(--spacing-2xl) var(--spacing-md) var(--spacing-lg);
-            background: var(--dark);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .footer-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-xl);
-            margin-bottom: var(--spacing-xl);
-        }
-
-        .footer-section h3 {
-            font-size: var(--font-size-xl);
+        .cta h2 {
+            font-size: clamp(32px, 5vw, 48px);
             font-weight: 800;
-            margin-bottom: var(--spacing-lg);
-            background: var(--gradient-1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
         }
 
-        .footer-section p {
-            color: var(--text-muted);
-            line-height: 1.7;
-            margin-bottom: var(--spacing-lg);
+        .cta p {
+            font-size: 20px;
+            color: #94a3b8;
+            margin-bottom: 40px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 20px 30px;
+            text-align: center;
+            border-top: 1px solid rgba(102, 126, 234, 0.2);
         }
 
         .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: var(--spacing-md);
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
         }
 
         .footer-links a {
-            color: var(--text-muted);
+            color: #94a3b8;
             text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: var(--spacing-sm);
-            font-weight: 500;
+            transition: 0.3s;
         }
 
         .footer-links a:hover {
-            color: var(--primary);
-            transform: translateX(5px);
+            color: #667eea;
         }
 
-        .contact-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: var(--spacing-md);
-        }
-
-        .contact-btn {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-md);
-            padding: var(--spacing-md);
-            background: rgba(30, 41, 59, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .contact-btn:hover {
-            background: rgba(99, 102, 241, 0.1);
-            border-color: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        .contact-btn i {
-            font-size: var(--font-size-xl);
-            width: 40px;
-            height: 40px;
-            background: var(--gradient-1);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
-
-        .contact-btn.whatsapp i {
-            background: var(--gradient-4);
-        }
-
-        .contact-btn.telegram i {
-            background: var(--gradient-3);
-        }
-
-        .footer-bottom {
-            padding-top: var(--spacing-xl);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center;
-            color: var(--text-muted);
-        }
-
-        /* Mobile Menu - Improved */
-        .mobile-menu {
-            position: fixed;
-            top: 80px;
-            left: 0;
-            width: 100%;
-            background: rgba(15, 23, 42, 0.98);
-            backdrop-filter: blur(20px);
-            padding: var(--spacing-lg);
-            display: none;
-            flex-direction: column;
-            gap: var(--spacing-md);
-            z-index: 999;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            max-height: calc(100vh - 80px);
-            overflow-y: auto;
-        }
-
-        .mobile-menu.active {
-            display: flex;
-        }
-
-        .mobile-menu a {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 600;
-            padding: var(--spacing-md) var(--spacing-lg);
-            border-radius: 15px;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-md);
-            font-size: var(--font-size-base);
-        }
-
-        .mobile-menu a:hover {
-            background: rgba(99, 102, 241, 0.1);
-            color: var(--primary);
-        }
-
-        /* Notification Toast - Improved */
-        .toast {
-            position: fixed;
-            bottom: var(--spacing-lg);
-            right: var(--spacing-lg);
-            background: rgba(30, 41, 59, 0.95);
-            backdrop-filter: blur(20px);
-            color: white;
-            padding: var(--spacing-lg);
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-lg);
-            transform: translateX(400px);
-            transition: transform 0.3s ease;
-            z-index: 1001;
-            border-left: 4px solid var(--success);
-            max-width: 400px;
-        }
-
-        .toast.show {
-            transform: translateX(0);
-        }
-
-        .toast-icon {
-            font-size: var(--font-size-xl);
-            color: var(--success);
-        }
-
-        .toast-content h4 {
-            font-size: var(--font-size-lg);
-            font-weight: 700;
-            margin-bottom: var(--spacing-xs);
-        }
-
-        .toast-content p {
-            font-size: var(--font-size-sm);
-            color: var(--text-muted);
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        /* Responsive Design - Improved */
-        @media (max-width: 1200px) {
-            .hero-title {
-                font-size: clamp(28px, 5vw, 60px);
-            }
-            
-            .section-title {
-                font-size: clamp(28px, 5vw, 44px);
-            }
-            
-            .reseller-title {
-                font-size: clamp(24px, 4vw, 42px);
-            }
-            
-            .trust-title {
-                font-size: clamp(24px, 4vw, 40px);
-            }
-            
-            .feature-card.featured {
-                grid-template-columns: 1fr;
-                gap: var(--spacing-lg);
-            }
-            
-            .testimonial-card.featured {
-                grid-template-columns: 1fr;
-                gap: var(--spacing-lg);
-            }
-        }
-
-        @media (max-width: 992px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: var(--spacing-xl);
-            }
-            
-            .hero-title {
-                font-size: clamp(24px, 4vw, 48px);
-            }
-            
-            .hero-features {
-                grid-template-columns: 1fr;
-            }
-            
-            .reseller-container {
-                grid-template-columns: 1fr;
-                gap: var(--spacing-xl);
-            }
-            
-            .reseller-image {
-                order: -1;
-            }
-            
-            .pricing-card.featured {
-                transform: scale(1);
-            }
-            
-            .cta-title {
-                font-size: clamp(24px, 4vw, 42px);
-            }
-            
-            .trust-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
+        /* Mobile */
         @media (max-width: 768px) {
-            .nav-links {
+            .nav-menu {
                 display: none;
             }
-            
-            .mobile-menu-btn {
-                display: flex;
+
+            .mobile-toggle {
+                display: block;
             }
-            
-            .hero-title {
-                font-size: clamp(20px, 4vw, 40px);
-            }
-            
-            .hero-subtitle {
-                font-size: clamp(16px, 3vw, 22px);
-            }
-            
-            .section-title {
-                font-size: clamp(20px, 4vw, 36px);
-            }
-            
-            .features-grid,
-            .usage-grid,
-            .pricing-grid,
-            .testimonials-grid {
+
+            .pricing-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .trust-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .contact-buttons {
-                flex-direction: row;
-                justify-content: center;
+
+            .price-card.featured,
+            .price-card.promo {
+                transform: scale(1);
             }
         }
-
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: clamp(18px, 4vw, 32px);
-            }
-            
-            .section-title {
-                font-size: clamp(18px, 4vw, 30px);
-            }
-            
-            .trust-title {
-                font-size: clamp(16px, 3vw, 28px);
-            }
-            
-            .hero-buttons,
-            .cta-buttons {
-                flex-direction: column;
-            }
-            
-            .btn-primary,
-            .btn-secondary,
-            .btn-cta-primary,
-            .btn-cta-secondary {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .hero-features {
-                grid-template-columns: 1fr;
-            }
-            
-            .pricing-filters {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .filter-btn {
-                width: 100%;
-                max-width: 200px;
-            }
-        }
-        /* Responsive Design - Mobile First */
-@media (max-width: 768px) {
-    /* Navigation */
-    .nav-container {
-        padding: 0 15px;
-    }
-    
-    .nav-links {
-        display: none;
-    }
-    
-    .mobile-menu-btn {
-        display: flex;
-    }
-
-    /* Hero Section */
-    .hero-container {
-        grid-template-columns: 1fr;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .hero-features {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    /* Features Section */
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .feature-card.featured {
-        grid-column: auto;
-        grid-template-columns: 1fr;
-    }
-
-    /* Pricing Section */
-    .pricing-grid {
-        grid-template-columns: 1fr;
-        padding: 15px;
-    }
-
-    .pricing-card {
-        margin-bottom: 20px;
-    }
-
-    /* Reseller Section */
-    .reseller-container {
-        grid-template-columns: 1fr;
-        padding: 20px;
-    }
-
-    /* Trust Indicators */
-    .trust-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    /* Footer */
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-}
-
-/* Extra Small Devices */
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 24px;
-    }
-
-    .section-title {
-        font-size: 20px;
-    }
-
-    .btn-primary, 
-    .btn-secondary {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    .pricing-filters {
-        flex-direction: column;
-    }
-
-    .filter-btn {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    .hero-badge {
-        font-size: 12px;
-        padding: 5px 10px;
-    }
-}
     </style>
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loader-container">
-            <div class="loader"></div>
-            <div class="loader-text">XOBE</div>
-        </div>
-        <div class="loading-percentage" id="loadingPercentage">Loading... 0%</div>
-    </div>
-
-    <!-- Animated Background -->
-    <div class="bg-animation"></div>
-    <div class="floating-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-        <div class="shape shape-4"></div>
-    </div>
-
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav>
         <div class="nav-container">
-            <a href="#" class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-server"></i>
-                </div>
-                <div class="logo-text">Xobe Store</div>
-            </a>
-            <div class="nav-links">
+            <div class="logo">XOBE STORE</div>
+            <div class="nav-menu">
                 <a href="#features">Fitur</a>
-                <a href="#usage">Kegunaan</a>
                 <a href="#pricing">Harga</a>
                 <a href="#reseller">Reseller</a>
-                <a href="#testimonials">Testimoni</a>
-                <a href="https://wa.me/6283838629756?text=BANG%20MAU%20ORDER%20PANEL" class="nav-cta">
+                <a href="https://wa.me/6283838629756?text=BANG%20MAU%20ORDER%20PANEL" class="btn-nav">
                     <i class="fab fa-whatsapp"></i> Order
                 </a>
             </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+            <div class="mobile-toggle">
                 <i class="fas fa-bars"></i>
-            </button>
+            </div>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#features"><i class="fas fa-star"></i> Fitur Unggulan</a>
-        <a href="#usage"><i class="fas fa-rocket"></i> Kegunaan Panel</a>
-        <a href="#pricing"><i class="fas fa-tag"></i> Daftar Harga</a>
-        <a href="#reseller"><i class="fas fa-handshake"></i> Program Reseller</a>
-        <a href="#testimonials"><i class="fas fa-comments"></i> Testimoni</a>
-        <a href="https://wa.me/6283838629756?text=BANG%20MAU%20ORDER%20PANEL">
-            <i class="fab fa-whatsapp"></i> Order Sekarang
-        </a>
-    </div>
-
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badges">
-                    <div class="hero-badge">
-                        <i class="fas fa-bolt"></i>
-                        NEW UPDATE 2025
-                    </div>
-                    <div class="hero-badge">
-                        <i class="fas fa-fire"></i>
-                        HOTTEST DEAL
-                    </div>
-                </div>
-                <h1 class="hero-title">PANEL PTERODACTYL PREMIUM</h1>
-                <p class="hero-subtitle">🛡️ Anti Rusuh • 🔒 Anti Maling • 🚀 Spek GG GILA!</p>
-                <div class="hero-features">
-                    <div class="hero-feature">
-                        <div class="hero-feature-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div class="hero-feature-text">Anti Maling System</div>
-                    </div>
-                    <div class="hero-feature">
-                        <div class="hero-feature-icon">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <div class="hero-feature-text">Anti Delete Protection</div>
-                    </div>
-                    <div class="hero-feature">
-                        <div class="hero-feature-icon">
-                            <i class="fas fa-tachometer-alt"></i>
-                        </div>
-                        <div class="hero-feature-text">High Performance</div>
-                    </div>
-                    <div class="hero-feature">
-                        <div class="hero-feature-icon">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <div class="hero-feature-text">24/7 Support</div>
-                    </div>
-                </div>
-                <div class="hero-buttons">
-                    <a href="https://wa.me/6283838629756?text=BANG%20MAU%20ORDER%20PANEL" class="btn-primary">
-                        <i class="fab fa-whatsapp"></i>
-                        Order Sekarang
-                    </a>
-                    <a href="#pricing" class="btn-secondary">
-                        <i class="fas fa-eye"></i>
-                        Lihat Paket
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="hero-image-wrapper">
-                    <img src="https://z-cdn-media.chatglm.cn/files/63e73de0-7dbb-4d79-8c1a-df44cf09873b_WhatsApp%20Image%202025-10-02%20at%2013.04.24.jpeg?auth_key=1790921142-18fc4992fb764dd8b32ccade5a693de7-0-6d286a080e70f53cbfa10641bb999dc7" alt="Panel Pterodactyl Interface" loading="lazy">
-                    <div class="floating-badges">
-                        <div class="floating-badge">
-                            <i class="fas fa-crown"></i> Premium Quality
-                        </div>
-                        <div class="floating-badge">
-                            <i class="fas fa-check-circle"></i> 100% Safe
-                        </div>
-                        <div class="floating-badge">
-                            <i class="fas fa-rocket"></i> High Speed
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <h1>Panel Pterodactyl Premium</h1>
+        <p class="hero-subtitle">🛡️ Anti Maling • 🔒 Anti Rusuh • 🚀 Performa Maksimal</p>
+        <div class="hero-buttons">
+            <a href="https://wa.me/6283838629756?text=BANG%20MAU%20ORDER%20PANEL" class="btn-primary">
+                <i class="fab fa-whatsapp"></i> Order Sekarang
+            </a>
+            <a href="#pricing" class="btn-secondary">Lihat Harga</a>
         </div>
     </section>
 
-    <!-- Trust Indicators -->
-    <section class="trust-indicators">
-        <div class="trust-container">
-            <div class="trust-header">
-                <h2 class="trust-title">Trusted by Thousands</h2>
-                <p class="trust-subtitle">Join our growing community of satisfied users worldwide</p>
-            </div>
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <div class="trust-icon-wrapper">
-                        <i class="fas fa-users trust-icon"></i>
-                    </div>
-                    <div class="trust-number">5000+</div>
-                    <div class="trust-label">Active Users</div>
-                    <div class="trust-description">Growing daily</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon-wrapper">
-                        <i class="fas fa-server trust-icon"></i>
-                    </div>
-                    <div class="trust-number">100+</div>
-                    <div class="trust-label">Servers</div>
-                    <div class="trust-description">High performance</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon-wrapper">
-                        <i class="fas fa-clock trust-icon"></i>
-                    </div>
-                    <div class="trust-number">99.9%</div>
-                    <div class="trust-label">Uptime</div>
-                    <div class="trust-description">Guaranteed</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon-wrapper">
-                        <i class="fas fa-headset trust-icon"></i>
-                    </div>
-                    <div class="trust-number">24/7</div>
-                    <div class="trust-label">Support</div>
-                    <div class="trust-description">Always available</div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon-wrapper">
-                        <i class="fas fa-star trust-icon"></i>
-                    </div>
-                    <div class="trust-number">4.9/5</div>
-                    <div class="trust-label">Rating</div>
-                    <div class="trust-description">Customer love</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
+    <!-- Features -->
     <section class="features" id="features">
-        <div class="section-header">
-            <div class="section-badge">
-                <i class="fas fa-star"></i>
-                FITUR UNGGULAN
-            </div>
-            <h2 class="section-title">Mengapa Memilih Panel Kami?</h2>
-            <p class="section-subtitle">
-                Nikmati fitur-fitur premium yang tidak akan Anda temukan di tempat lain. 
-                Kami memberikan yang terbaik untuk kebutuhan hosting Anda.
-            </p>
-        </div>
+        <h2 class="section-title">Kenapa Pilih Kami?</h2>
         <div class="features-grid">
-            <div class="feature-card featured">
-                <div class="feature-content">
-                    <div class="feature-icon-wrapper">
-                        <i class="fas fa-shield-alt feature-icon"></i>
-                    </div>
-                    <h3 class="feature-title">Anti Maling System</h3>
-                    <p class="feature-description">
-                        Perlindungan maksimal dengan sistem keamanan berlapis untuk mencegah pencurian data dan akses tidak sah melalui web dan API. Server Anda aman 100%!
-                    </p>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
                 </div>
-                <div class="feature-image">
-                    <img src="https://z-cdn-media.chatglm.cn/files/63e73de0-7dbb-4d79-8c1a-df44cf09873b_WhatsApp%20Image%202025-10-02%20at%2013.04.24.jpeg?auth_key=1790921142-18fc4992fb764dd8b32ccade5a693de7-0-6d286a080e70f53cbfa10641bb999dc7" alt="Anti Maling System" loading="lazy">
-                    <div class="feature-image-overlay">
-                        <div class="feature-image-text">Anti Maling</div>
-                    </div>
-                </div>
+                <h3>Anti Maling</h3>
+                <p>Keamanan maksimal dengan sistem proteksi berlapis dari akses tidak sah</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon-wrapper">
-                    <i class="fas fa-lock feature-icon"></i>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-lock"></i>
                 </div>
-                <h3 class="feature-title">Anti Delete Protection</h3>
-                <p class="feature-description">
-                    Sistem keamanan canggih yang mencegah penghapusan server atau data penting tanpa izin. Data Anda tetap aman dan terlindungi.
-                </p>
+                <h3>Anti Rusuh</h3>
+                <p>Perlindungan penuh dari penghapusan dan kerusakan data</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon-wrapper">
-                    <i class="fas fa-rocket feature-icon"></i>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-rocket"></i>
                 </div>
-                <h3 class="feature-title">High Performance</h3>
-                <p class="feature-description">
-                    Server dengan spesifikasi tinggi dan optimasi maksimal untuk performa tercepat dalam menjalankan aplikasi dan bot Anda.
-                </p>
+                <h3>Performa Tinggi</h3>
+                <p>Server NVMe SSD dengan uptime 99.9% guaranteed</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon-wrapper">
-                    <i class="fas fa-chart-line feature-icon"></i>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
                 </div>
-                <h3 class="feature-title">99.9% Uptime Guarantee</h3>
-                <p class="feature-description">
-                    Garansi uptime 99.9% dengan monitoring 24/7 untuk memastikan server Anda selalu online dan stabil tanpa gangguan.
-                </p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon-wrapper">
-                    <i class="fas fa-headset feature-icon"></i>
-                </div>
-                <h3 class="feature-title">Premium Support</h3>
-                <p class="feature-description">
-                    Tim support profesional siap membantu Anda 24 jam sehari, 7 hari seminggu untuk semua masalah teknis dan pertanyaan.
-                </p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon-wrapper">
-                    <i class="fas fa-sync-alt feature-icon"></i>
-                </div>
-                <h3 class="feature-title">Auto Update System</h3>
-                <p class="feature-description">
-                    Sistem update otomatis untuk menjaga keamanan dan performa panel selalu dalam kondisi terbaik dan terbaru.
-                </p>
+                <h3>Support 24/7</h3>
+                <p>Tim support siap membantu Anda kapan saja</p>
             </div>
         </div>
     </section>
 
-    <!-- Usage Section -->
-    <section class="usage" id="usage">
-        <div class="section-header">
-            <div class="section-badge">
-                <i class="fas fa-rocket"></i>
-                KEGUNAAN PANEL
-            </div>
-            <h2 class="section-title">Apa yang bisa Anda lakukan?</h2>
-            <p class="section-subtitle">
-                Panel kami mendukung berbagai kebutuhan digital Anda dengan performa optimal
-            </p>
-        </div>
-        <div class="usage-grid">
-            <div class="usage-item">
-                <div class="usage-icon">
-                    <i class="fab fa-whatsapp"></i>
-                </div>
-                <div class="usage-content">
-                    <h4>Bot WhatsApp</h4>
-                    <p>Jalankan bot WhatsApp 24/7 tanpa henti dengan performa stabil</p>
-                </div>
-            </div>
-            <div class="usage-item">
-                <div class="usage-icon">
-                    <i class="fab fa-telegram"></i>
-                </div>
-                <div class="usage-content">
-                    <h4>Bot Telegram</h4>
-                    <p>Hosting bot Telegram dengan performa optimal dan latency rendah</p>
-                </div>
-            </div>
-            <div class="usage-item">
-                <div class="usage-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-                <div class="usage-content">
-                    <h4>Host Script</h4>
-                    <p>Jalankan script Python, Node.js, PHP 24/7 full online</p>
-                </div>
-            </div>
-            <div class="usage-item">
-                <div class="usage-icon">
-                    <i class="fas fa-gamepad"></i>
-                </div>
-                <div class="usage-content">
-                    <h4>Game Server</h4>
-                    <p>Buat Minecraft, RAGEMP, FiveM & game server lainnya</p>
-                </div>
-            </div>
-            <div class="usage-item">
-                <div class="usage-icon">
-                    <i class="fas fa-tools"></i>
-                </div>
-                <div class="usage-content">
-                    <h4>Tools & API</h4>
-                    <p>Develop tools, API service, dan aplikasi web</p>
-                </div>
-            </div>
-            <div class="usage-item">
-                <div class="usage-icon">
-                    <i class="fas fa-database"></i>
-                </div>
-                <div class="usage-content">
-                    <h4>Database Hosting</h4>
-                    <p>MySQL, PostgreSQL, MongoDB untuk aplikasi Anda</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
+    <!-- Pricing -->
     <section class="pricing" id="pricing">
         <div class="pricing-container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-tag"></i>
-                    DAFTAR HARGA 2025
-                </div>
-                <h2 class="section-title">Pilih Paket Terbaik untuk Anda</h2>
-                <p class="section-subtitle">
-                    Harga terjangkau dengan kualitas premium. Semua paket sudah termasuk fitur anti maling dan anti delete!
-                </p>
-            </div>
-            
-            <div class="pricing-filters">
-                <button class="filter-btn active" onclick="filterPricing('all')">Semua Paket</button>
-                <button class="filter-btn" onclick="filterPricing('basic')">Basic</button>
-                <button class="filter-btn" onclick="filterPricing('professional')">Professional</button>
-                <button class="filter-btn" onclick="filterPricing('unlimited')">Unlimited</button>
-            </div>
-
+            <h2 class="section-title">Paket Harga</h2>
             <div class="pricing-grid">
-                <!-- 1GB Package -->
-                <div class="pricing-card" data-category="basic">
-                    <div class="plan-header">
-                        <div class="plan-icon">
-                            <i class="fas fa-cube"></i>
-                        </div>
-                        <h3 class="plan-name">Starter 1GB</h3>
-                        <div class="plan-price">
-                            Rp 600<span>/bulan</span>
-                        </div>
-                    </div>
+                <div class="price-card">
+                    <h3 class="plan-name">1GB</h3>
+                    <div class="plan-price">1K<span>/bln</span></div>
                     <ul class="plan-specs">
-                        <li><i class="fas fa-microchip"></i> CPU: 30%</li>
-                        <li><i class="fas fa-memory"></i> RAM: 1GB DDR4</li>
-                        <li><i class="fas fa-hdd"></i> Disk: 1GB NVMe SSD</li>
-                        <li><i class="fas fa-shield-alt"></i> Anti Maling & Delete</li>
-                        <li><i class="fas fa-headset"></i> Support 24/7</li>
+                        <li><i class="fas fa-check"></i> CPU 30%</li>
+                        <li><i class="fas fa-check"></i> RAM 1GB</li>
+                        <li><i class="fas fa-check"></i> Disk 1GB NVMe</li>
+                        <li><i class="fas fa-check"></i> Anti Maling & Rusuh</li>
                     </ul>
-                    <button class="plan-btn" onclick="orderPlan('Starter 1GB')">Pilih Paket</button>
+                    <button class="btn-select" onclick="order('1GB')">Pilih Paket</button>
                 </div>
 
-                <!-- 2GB Package -->
-                <div class="pricing-card" data-category="basic">
-                    <div class="plan-header">
-                        <div class="plan-icon">
-                            <i class="fas fa-cubes"></i>
-                        </div>
-                        <h3 class="plan-name">Basic 2GB</h3>
-                        <div class="plan-price">
-                            Rp 1.200<span>/bulan</span>
-                        </div>
-                    </div>
+                <div class="price-card">
+                    <h3 class="plan-name">2GB</h3>
+                    <div class="plan-price">2K<span>/bln</span></div>
                     <ul class="plan-specs">
-                        <li><i class="fas fa-microchip"></i> CPU: 40%</li>
-                        <li><i class="fas fa-memory"></i> RAM: 2GB DDR4</li>
-                        <li><i class="fas fa-hdd"></i> Disk: 2GB NVMe SSD</li>
-                        <li><i class="fas fa-shield-alt"></i> Anti Maling & Delete</li>
-                        <li><i class="fas fa-headset"></i> Support 24/7</li>
+                        <li><i class="fas fa-check"></i> CPU 40%</li>
+                        <li><i class="fas fa-check"></i> RAM 2GB</li>
+                        <li><i class="fas fa-check"></i> Disk 2GB NVMe</li>
+                        <li><i class="fas fa-check"></i> Anti Maling & Rusuh</li>
                     </ul>
-                    <button class="plan-btn" onclick="orderPlan('Basic 2GB')">Pilih Paket</button>
+                    <button class="btn-select" onclick="order('2GB')">Pilih Paket</button>
                 </div>
 
-                <!-- 3GB Package -->
-                <div class="pricing-card" data-category="basic">
-                    <div class="plan-header">
-                        <div class="plan-icon">
-                            <i class="fas fa-layer-group"></i>
-                        </div>
-                        <h3 class="plan-name">Standard 3GB</h3>
-                        <div class="plan-price">
-                            Rp 1.800<span>/bulan</span>
-                        </div>
-                    </div>
+                <div class="price-card">
+                    <h3 class="plan-name">3GB</h3>
+                    <div class="plan-price">3K<span>/bln</span></div>
                     <ul class="plan-specs">
-                        <li><i class="fas fa-microchip"></i> CPU: 60%</li>
-                        <li><i class="fas fa-memory"></i> RAM: 3GB DDR4</li>
-                        <li><i class="fas fa-hdd"></i> Disk: 3GB NVMe SSD</li>
-                        <li><i class="fas fa-shield-alt"></i> Anti Maling & Delete</li>
-                        <li><i class="fas fa-headset"></i> Support 24/7</li>
+                        <li><i class="fas fa-check"></i> CPU 60%</li>
+                        <li><i class="fas fa-check"></i> RAM 3GB</li>
+                        <li><i class="fas fa-check"></i> Disk 3GB NVMe</li>
+                        <li><i class="fas fa-check"></i> Anti Maling & Rusuh</li>
                     </ul>
-                    <button class="plan-btn" onclick="orderPlan('Standard 3GB')">Pilih Paket</button>
+                    <button class="btn-select" onclick="order('3GB')">Pilih Paket</button>
                 </div>
 
-                <!-- 4GB Package -->
-                <div class="pricing-card" data-category="professional">
-                    <div class="plan-header">
-                        <div class="plan-icon">
-                            <i class="fas fa-box"></i>
-                        </div>
-                        <h3 class="plan-name">Business 4GB</h3>
-                        <div class="plan-price">
-                            Rp 2.400<span>/bulan</span>
-                        </div>
-                    </div>
+                <div class="price-card">
+                    <h3 class="plan-name">4GB</h3>
+                    <div class="plan-price">4K<span>/bln</span></div>
                     <ul class="plan-specs">
-                        <li><i class="fas fa-microchip"></i> CPU: 70%</li>
-                        <li><i class="fas fa-memory"></i> RAM: 4GB DDR4</li>
-                        <li><i class="fas fa-hdd"></i> Disk: 4GB NVMe SSD</li>
-                        <li><i class="fas fa-shield-alt"></i> Anti Maling & Delete</li>
-                        <li><i class="fas fa-headset"></i> Priority Support</li>
+                        <li><i class="fas fa-check"></i> CPU 70%</li>
+                        <li><i class="fas fa-check"></i> RAM 4GB</li>
+                        <li><i class="fas fa-check"></i> Disk 4GB NVMe</li>
+                        <li><i class="fas fa-check"></i> Anti Maling & Rusuh</li>
                     </ul>
-                    <button class="plan-btn" onclick="orderPlan('Business 4GB')">Pilih Paket</button>
+                    <button class="btn-select" onclick="order('4GB')">Pilih Paket</button>
                 </div>
 
-                <!-- 5GB Package -->
-                <div class="pricing-card" data-category="professional">
-                    <div class="plan-header">
-                        <div class="plan-icon">
-                            <i class="fas fa-box-open"></i>
-                        </div>
-                        <h3 class="plan-name">Professional 5GB</h3>
-                        <div class="plan-price">
-                            Rp 3.000<span>/bulan</span>
-                        </div>
-                    </div>
+                <div class="price-card featured">
+                    <h3 class="plan-name">5GB</h3>
+                    <div class="plan-price">5K<span>/bln</span></div>
                     <ul class="plan-specs">
-                        <li><i class="fas fa-microchip"></i> CPU: 80%</li>
-                        <li><i class="fas fa-memory"></i> RAM: 5GB DDR4</li>
-                        <li><i class="fas fa-hdd"></i> Disk: 5GB NVMe SSD</li>
-                        <li><i class="fas fa-shield-alt"></i> Anti Maling & Delete</li>
-                        <li><i class="fas fa-headset"></i> Priority Support</li>
+                        <li><i class="fas fa-check"></i> CPU 80%</li>
+                        <li><i class="fas fa-check"></i> RAM 5GB</li>
+                        <li><i class="fas fa-check"></i> Disk 5GB NVMe</li>
+                        <li><i class="fas fa-check"></i> Anti Maling & Rusuh</li>
                     </ul>
-                    <button class="plan-btn" onclick="orderPlan('Professional 5GB')">Pilih Paket</button>
+                    <button class="btn-select" onclick="order('5GB')">Pilih Paket</button>
                 </div>
 
-                <!-- 6GB Package -->
-                <div class="pricing-card" data-category="professional">
-                    <div class="plan-header">
-                        <div class="plan-icon">
-                            <i class="fas fa-archive"></i>
-                        </div>
-                        <h3 class="plan-name">Advanced 6GB</h3>
-                        <div class="plan-price">
-                            Rp 3.600<span>/bulan</span>
-                        </div>
-                    </div>
+                <div class="price-card">
+                    <h3 class="plan-name">6GB</h3>
+                    <div class="plan-price">6K<span>/bln</span></div>
                     <ul class="plan-specs">
-                        <li><i class="fas fa-microchip"></i> CPU: 90%</li>
-                        <li><i class="fas fa-memory"></i> RAM: 6GB DDR4</li>
-                        <li><i class="fas fa-hdd"></i> Disk: 6GB NVMe SSD</li>
-                        <li><i class="fas fa-shield-alt"></i> Anti Maling & Delete</li>
-                        <li><i class="fas fa-headset"></i> Priority Support</li>
+                        <li><i class="fas fa-check"></i> CPU 90%</li>
+                        <li><i class="fas fa-check"></i> RAM 6GB</li>
+                        <li><i class="fas fa-check"></i> Disk 6GB NVMe</li>
+                        <li><i class="fas fa-check"></i> Anti Maling & Rusuh</li>
                     </ul>
-                    <button class="plan-btn" onclick="orderPlan('Advanced 6GB')">Pilih Paket</button>
+                    <button class="btn-select" onclick="order('6GB')">Pilih Paket</button>
                 </div>
 
-                <!-- 7GB Package -->
-                <div class="pricing-card" data-category="professional">
-                    <div class="plan-header">
-                        <div class="plan-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3 class="plan-name">Expert 7GB</h3>
-                        <div class="plan-price">
-                            Rp 4.200<span>/bulan</span>
-                        </div>
-                    </div>
+                <div class="price-card">
+                    <h3 class="plan-name">7GB</h3>
+                    <div class="plan-price">7K<span>/bln</span></div>
                     <ul class="plan-specs">
-                        <li><i class="fas fa-microchip"></i> CPU: 100%</li>
-                        <li><i class="fas fa-memory"></i> RAM: 7GB DDR4</li>
-                        <li><i class="fas fa-hdd"></i> Disk: 7GB NVMe SSD</li>
-                        <li><i class="fas fa-shield-alt"></i> Anti Maling & Delete</li>
-                        <li><i class="fas fa-headset"></i> Priority Support</li>
+                        <li><i class="fas fa-check"></i> CPU 100%</li>
+                        <li><i class="fas fa-check"></i> RAM 7GB</li>
+                        <li><i class="fas fa-check"></i> Disk 7GB NVMe</li>
+                        <li><i class="fas fa-check"></i> Anti Maling & Rusuh</li>
                     </ul>
-                    <button class="plan-btn" onclick="orderPlan('Expert 7GB')">Pilih Paket</button>
+                    <button class="btn-select" onclick="order('7GB')">Pilih Paket</button>
                 </div>
 
-                <!-- 8GB Package -->
-                <div class="pricing-card" data-category="professional">
-                    <div class="plan-header">
-                        <div class="plan-icon">
-                            <i class="fas fa-server"></i>
-                        </div>
-                        <h3 class="plan-name">Elite 8GB</h3>
-                        <div class="plan-price">
-                            Rp 4.800<span>/bulan</span>
-                        </div>
-                    </div>
+                <div class="price-card">
+                    <h3 class="plan-name">8GB</h3>
+                    <div class="plan-price">8K<span>/bln</span></div>
                     <ul class="plan-specs">
-                        <li><i class="fas fa-microchip"></i> CPU: 110%</li>
-                        <li><i class="fas fa-memory"></i> RAM: 8GB DDR4</li>
-                        <li><i class="fas fa-hdd"></i> Disk: 8GB NVMe SSD</li>
-                        <li><i class="fas fa-shield-alt"></i> Anti Maling & Delete</li>
-                        <li><i class="fas fa-headset"></i> VIP Support</li>
+                        <li><i class="fas fa-check"></i> CPU 110%</li>
+                        <li><i class="fas fa-check"></i> RAM 8GB</li>
+                        <li><i class="fas fa-check"></i> Disk 8GB NVMe</li>
+                        <li><i class="fas fa-check"></i> Anti Maling & Rusuh</li>
                     </ul>
-                    <button class="plan-btn" onclick="orderPlan('Elite 8GB')">Pilih Paket</button>
+                    <button class="btn-select" onclick="order('8GB')">Pilih Paket</button>
                 </div>
 
-                <!-- 9GB Package -->
-                <div class="pricing-card" data-category="professional">
-                    <div class="plan-header">
-                        <div class="plan-icon">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <h3 class="plan-name">Master 9GB</h3>
-                        <div class="plan-price">
-                            Rp 5.400<span>/bulan</span>
-                        </div>
-                    </div>
+                <div class="price-card">
+                    <h3 class="plan-name">9GB</h3>
+                    <div class="plan-price">9K<span>/bln</span></div>
                     <ul class="plan-specs">
-                        <li><i class="fas fa-microchip"></i> CPU: 130%</li>
-                        <li><i class="fas fa-memory"></i> RAM: 9GB DDR4</li>
-                        <li><i class="fas fa-hdd"></i> Disk: 9GB NVMe SSD</li>
-                        <li><i class="fas fa-shield-alt"></i> Anti Maling & Delete</li>
-                        <li><i class="fas fa-headset"></i> VIP Support</li>
+                        <li><i class="fas fa-check"></i> CPU 130%</li>
+                        <li><i class="fas fa-check"></i> RAM 9GB</li>
+                        <li><i class="fas fa-check"></i> Disk 9GB NVMe</li>
+                        <li><i class="fas fa-check"></i> Anti Maling & Rusuh</li>
                     </ul>
-                    <button class="plan-btn" onclick="orderPlan('Master 9GB')">Pilih Paket</button>
+                    <button class="btn-select" onclick="order('9GB')">Pilih Paket</button>
                 </div>
 
-                <!-- 10GB Package -->
-                <div class="pricing-card" data-category="professional">
-                    <div class="plan-header">
-                        <div class="plan-icon">
-                            <i class="fas fa-crown"></i>
-                        </div>
-                        <h3 class="plan-name">Ultimate 10GB</h3>
-                        <div class="plan-price">
-                            Rp 6.000<span>/bulan</span>
-                        </div>
-                    </div>
+                <div class="price-card">
+                    <h3 class="plan-name">10GB</h3>
+                    <div class="plan-price">10K<span>/bln</span></div>
                     <ul class="plan-specs">
-                        <li><i class="fas fa-microchip"></i> CPU: 150%</li>
-                        <li><i class="fas fa-memory"></i> RAM: 10GB DDR4</li>
-                        <li><i class="fas fa-hdd"></i> Disk: 10GB NVMe SSD</li>
-                        <li><i class="fas fa-shield-alt"></i> Anti Maling & Delete</li>
-                        <li><i class="fas fa-headset"></i> VIP Support</li>
+                        <li><i class="fas fa-check"></i> CPU 150%</li>
+                        <li><i class="fas fa-check"></i> RAM 10GB</li>
+                        <li><i class="fas fa-check"></i> Disk 10GB NVMe</li>
+                        <li><i class="fas fa-check"></i> Anti Maling & Rusuh</li>
                     </ul>
-                    <button class="plan-btn" onclick="orderPlan('Ultimate 10GB')">Pilih Paket</button>
+                    <button class="btn-select" onclick="order('10GB')">Pilih Paket</button>
                 </div>
 
-                <!-- Unlimited Package -->
-                <div class="pricing-card featured" data-category="unlimited">
-                    <div class="plan-header">
-                        <div class="plan-icon">
-                            <i class="fas fa-infinity"></i>
-                        </div>
-                        <h3 class="plan-name">🔥 UNLIMITED 🔥</h3>
-                        <div class="plan-price">
-                            Rp 9.000<span>/bulan</span>
-                        </div>
-                    </div>
+                <div class="price-card promo">
+                    <h3 class="plan-name">UNLIMITED</h3>
+                    <div class="plan-price">12K<span>/bln</span></div>
                     <ul class="plan-specs">
-                        <li><i class="fas fa-microchip"></i> CPU: 150%</li>
-                        <li><i class="fas fa-memory"></i> RAM: Unlimited</li>
-                        <li><i class="fas fa-hdd"></i> Disk: Unlimited</li>
-                        <li><i class="fas fa-shield-alt"></i> All Security Features</li>
-                        <li><i class="fas fa-headset"></i> Dedicated Support</li>
+                        <li><i class="fas fa-check"></i> CPU 150%</li>
+                        <li><i class="fas fa-check"></i> RAM Unlimited</li>
+                        <li><i class="fas fa-check"></i> Disk Unlimited</li>
+                        <li><i class="fas fa-check"></i> Anti Maling & Rusuh</li>
+                        <li><i class="fas fa-check"></i> Priority Support</li>
                     </ul>
-                    <button class="plan-btn" onclick="orderPlan('UNLIMITED')">Pilih Paket</button>
+                    <button class="btn-select" onclick="order('UNLIMITED')">Pilih Paket</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Reseller Section -->
+    <!-- Reseller -->
     <section class="reseller" id="reseller">
-        <div class="reseller-container">
-            <div class="reseller-content">
-                <div class="reseller-badge">
-                    <i class="fas fa-fire"></i>
-                    LIMITED OPPORTUNITY
-                </div>
-                <h2 class="reseller-title">💼 Jadi Reseller & Dapat Untung Besar!</h2>
-                <div class="reseller-price-box">
-                    <div class="reseller-price">
-                        <p>📝 Biaya Pendaftaran: <strong>Rp 10.000</strong> (sekali seumur hidup)</p>
-                        <p>💰 Maintenance: <strong>Rp 5.000/bulan</strong> (agar akun tetap aktif)</p>
-                    </div>
-                </div>
-                <ul class="reseller-features">
-                    <li><i class="fas fa-check-circle"></i> <strong>Bebas tentukan harga jual</strong> - 100% keuntungan milik Anda!</li>
-                    <li><i class="fas fa-check-circle"></i> <strong>Akses panel premium</strong> dengan semua fitur keamanan</li>
-                    <li><i class="fas fa-check-circle"></i> <strong>Prioritas support</strong> dari tim kami</li>
-                    <li><i class="fas fa-check-circle"></i> <strong>Update server otomatis</strong> tanpa biaya tambahan</li>
-                    <li><i class="fas fa-check-circle"></i> <strong>Modal minim, untung maksimal</strong> - cocok untuk pemula!</li>
-                    <li><i class="fas fa-check-circle"></i> <strong>Bimbingan bisnis</strong> dari reseller sukses</li>
-                </ul>
-                <a href="https://wa.me/6283838629756?text=BANG%20MAU%20DAFTAR%20RESELLER" class="btn-primary">
-                    <i class="fas fa-user-plus"></i>
-                    Daftar Jadi Reseller
-                </a>
+        <div class="reseller-content">
+            <div class="reseller-badge">💼 PROGRAM RESELLER</div>
+            <h2>Jadi Reseller & Raup Untung!</h2>
+            <div class="reseller-price">
+                Daftar: <strong>Rp 10K</strong> (sekali seumur hidup)<br>
+                Maintenance: <strong>Rp 5K/bulan</strong>
             </div>
-            <div class="reseller-image">
-                <div class="reseller-image-wrapper">
-                    <img src="https://z-cdn-media.chatglm.cn/files/63e73de0-7dbb-4d79-8c1a-df44cf09873b_WhatsApp%20Image%202025-10-02%20at%2013.04.24.jpeg?auth_key=1790921142-18fc4992fb764dd8b32ccade5a693de7-0-6d286a080e70f53cbfa10641bb999dc7" alt="Reseller Program" loading="lazy">
-                </div>
-            </div>
+            <ul class="reseller-features">
+                <li><i class="fas fa-check-circle"></i> Bebas tentukan harga jual sendiri</li>
+                <li><i class="fas fa-check-circle"></i> 100% keuntungan untuk Anda</li>
+                <li><i class="fas fa-check-circle"></i> Akses panel premium lengkap</li>
+                <li><i class="fas fa-check-circle"></i> Priority support dari tim</li>
+                <li><i class="fas fa-check-circle"></i> Update otomatis gratis</li>
+                <li><i class="fas fa-check-circle"></i> Bimbingan bisnis reseller</li>
+            </ul>
+            <a href="https://wa.me/6283838629756?text=BANG%20MAU%20DAFTAR%20RESELLER" class="btn-primary">
+                <i class="fas fa-user-plus"></i> Daftar Reseller
+            </a>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <div class="section-header">
-            <div class="section-badge">
-                <i class="fas fa-comments"></i>
-                TESTIMONI
-            </div>
-            <h2 class="section-title">Apa Kata Mereka?</h2>
-            <p class="section-subtitle">
-                Ribuan customer puas dengan layanan panel kami
-            </p>
-        </div>
-        <div class="testimonials-container">
-            <div class="testimonials-grid">
-                <div class="testimonial-card featured">
-                    <div class="testimonial-image">
-                        <img src="https://z-cdn-media.chatglm.cn/files/63e73de0-7dbb-4d79-8c1a-df44cf09873b_WhatsApp%20Image%202025-10-02%20at%2013.04.24.jpeg?auth_key=1790921142-18fc4992fb764dd8b32ccade5a693de7-0-6d286a080e70f53cbfa10641bb999dc7" alt="Customer Testimonial" loading="lazy">
-                    </div>
-                    <div class="testimonial-content">
-                        <div class="testimonial-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">
-                            "Panelnya mantap! Anti maling beneran, bot WhatsApp aku aman dari para hacker. 
-                            Support juga responsif, recommended banget!"
-                        </p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">AR</div>
-                            <div class="author-info">
-                                <h4>Ahmad Rizki</h4>
-                                <p>Bot Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "Sudah 6 bulan pakai panel Xobe Store, tidak pernah down. 
-                        Harga terjangkau tapi kualitas premium. Sukses terus!"
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SP</div>
-                        <div class="author-info">
-                            <h4>Siti Putri</h4>
-                            <p>Game Server Owner</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">
-                        "Jadi reseller di sini untungnya lumayan besar. 
-                        Modal kecil tapi bisa balik modal cepat. Terima kasih Xobe Store!"
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">BP</div>
-                        <div class="author-info">
-                            <h4>Budi Pratama</h4>
-                            <p>Reseller</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
+    <!-- CTA -->
     <section class="cta">
-        <div class="cta-container">
-            <h2 class="cta-title">⚠️ Jangan Sampai Kehabisan Slot!</h2>
-            <p class="cta-subtitle">
-                Slot terbatas setiap bulannya! Dapatkan panel premium dengan harga terbaik sekarang juga 
-                sebelum kompetitor Anda mengambilnya terlebih dahulu!
-            </p>
-            <div class="cta-buttons">
-                <a href="https://wa.me/6283838629756?text=BANG%20MAU%20ORDER%20PANEL" class="btn-cta-primary">
-                    <i class="fab fa-whatsapp"></i>
-                    Order Sekarang
-                </a>
-                <a href="#pricing" class="btn-cta-secondary">
-                    <i class="fas fa-info-circle"></i>
-                    Lihat Paket Lengkap
-                </a>
-            </div>
-        </div>
+        <h2>Siap Memulai?</h2>
+        <p>Order sekarang dan dapatkan panel premium terbaik!</p>
+        <a href="https://wa.me/6283838629756?text=BANG%20MAU%20ORDER%20PANEL" class="btn-primary">
+            <i class="fab fa-whatsapp"></i> Hubungi Kami
+        </a>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Xobe Store</h3>
-                    <p>
-                        Provider panel Pterodactyl premium #1 di Indonesia dengan fitur anti maling dan anti rusuh. 
-                        Dijamin aman, stabil, dan terpercaya untuk semua kebutuhan hosting Anda.
-                    </p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#features"><i class="fas fa-chevron-right"></i> Fitur Unggulan</a></li>
-                        <li><a href="#usage"><i class="fas fa-chevron-right"></i> Kegunaan Panel</a></li>
-                        <li><a href="#pricing"><i class="fas fa-chevron-right"></i> Daftar Harga</a></li>
-                        <li><a href="#reseller"><i class="fas fa-chevron-right"></i> Program Reseller</a></li>
-                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimoni</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Support</h3>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Tutorial Panel</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Cara Order</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Payment Method</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <div class="contact-buttons">
-                        <a href="https://wa.me/6283838629756" class="contact-btn whatsapp">
-                            <i class="fab fa-whatsapp"></i>
-                            <div>
-                                <div style="font-weight: 700;">WhatsApp</div>
-                                <div style="font-size: 14px; color: var(--text-muted);">+62 838-3862-9756</div>
-                            </div>
-                        </a>
-                        <a href="https://t.me/xobedevelopment" class="contact-btn telegram">
-                            <i class="fab fa-telegram"></i>
-                            <div>
-                                <div style="font-weight: 700;">Telegram</div>
-                                <div style="font-size: 14px; color: var(--text-muted);">@xobedevelopment</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Xobe Store Official. All rights reserved. Made with ❤️ in Indonesia</p>
-            </div>
+        <div class="footer-links">
+            <a href="#features">Fitur</a>
+            <a href="#pricing">Harga</a>
+            <a href="#reseller">Reseller</a>
+            <a href="https://wa.me/6283838629756">WhatsApp</a>
+            <a href="https://t.me/xobedevelopment">Telegram</a>
         </div>
+        <p style="color: #94a3b8;">&copy; 2025 Xobe Store. All rights reserved.</p>
     </footer>
 
-    <!-- Toast Notification -->
-    <div class="toast" id="toast">
-        <div class="toast-icon">
-            <i class="fas fa-check-circle"></i>
-        </div>
-        <div class="toast-content">
-            <h4>Success!</h4>
-            <p id="toastMessage">Action completed successfully</p>
-        </div>
-    </div>
-
     <script>
-        // Loading Screen with Percentage
-        let loadingPercentage = 0;
-        const loadingScreen = document.getElementById('loadingScreen');
-        const loadingPercentageEl = document.getElementById('loadingPercentage');
-        
-        const loadingInterval = setInterval(() => {
-            loadingPercentage += Math.random() * 15;
-            if (loadingPercentage >= 100) {
-                loadingPercentage = 100;
-                loadingPercentageEl.textContent = `Loading... 100%`;
-                setTimeout(() => {
-                    loadingScreen.classList.add('hidden');
-                    clearInterval(loadingInterval);
-                }, 500);
-            } else {
-                loadingPercentageEl.textContent = `Loading... ${Math.floor(loadingPercentage)}%`;
-            }
-        }, 200);
-
-        // Mobile Menu Toggle - Improved
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-            
-            // Prevent body scroll when menu is open
-            if (mobileMenu.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
-            }
-        });
-
-        // Close mobile menu when clicking on a link
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
-                document.body.style.overflow = '';
-            });
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-                mobileMenu.classList.remove('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
-                document.body.style.overflow = '';
-            }
-        });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Smooth scrolling for anchor links - Improved
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const offsetTop = target.offsetTop - 80;
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Pricing Filter - Improved
-        function filterPricing(category) {
-            const cards = document.querySelectorAll('.pricing-card');
-            const buttons = document.querySelectorAll('.filter-btn');
-            
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            
-            cards.forEach(card => {
-                if (category === 'all' || card.dataset.category === category) {
-                    card.style.display = 'block';
-                    setTimeout(() => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'scale(1)';
-                    }, 10);
-                } else {
-                    card.style.opacity = '0';
-                    card.style.transform = 'scale(0.9)';
-                    setTimeout(() => {
-                        card.style.display = 'none';
-                    }, 300);
-                }
-            });
+        function order(plan) {
+            const msg = `BANG MAU ORDER PANEL ${plan}`;
+            window.open(`https://wa.me/6283838629756?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
-        // Order plan function - Improved
-        function orderPlan(planName) {
-            const message = `BANG MAU ORDER PANEL ${planName}`;
-            const whatsappUrl = `https://wa.me/6283838629756?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
-            
-            // Show toast
-            showToast(`Mengarahkan ke WhatsApp untuk order ${planName}...`);
-        }
-
-        // Show toast notification - Improved
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            const toastMessage = document.getElementById('toastMessage');
-            toastMessage.textContent = message;
-            toast.classList.add('show');
-            
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
-        }
-
-        // Intersection Observer for animations - Improved
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Apply animation to elements
-        document.querySelectorAll('.feature-card, .pricing-card, .usage-item, .testimonial-card, .trust-item').forEach(el => {
-            el.style.opacity = 0;
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-
-        // Add parallax effect to hero section - Improved
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-        });
-
-        // Add typing effect to hero title - Improved
-        const heroTitle = document.querySelector('.hero-title');
-        const text = heroTitle.innerText;
-        heroTitle.innerText = '';
-        let index = 0;
-
-        function typeWriter() {
-            if (index < text.length) {
-                heroTitle.innerText += text.charAt(index);
-                index++;
-                setTimeout(typeWriter, 50);
-            }
-        }
-
-        setTimeout(typeWriter, 1500);
-
-        // Performance optimization - Lazy loading images
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-
-            document.querySelectorAll('img.lazy').forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
-
-        // Add keyboard navigation support
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-                mobileMenu.classList.remove('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
-                document.body.style.overflow = '';
-            }
-        });
-
-        // Add focus management for accessibility
-        mobileMenuBtn.addEventListener('focus', () => {
-            mobileMenuBtn.setAttribute('aria-expanded', mobileMenu.classList.contains('active'));
-        });
-
-        // Add ARIA live region for screen readers
-        const liveRegion = document.createElement('div');
-        liveRegion.setAttribute('aria-live', 'polite');
-        liveRegion.setAttribute('aria-atomic', 'true');
-        liveRegion.className = 'sr-only';
-        document.body.appendChild(liveRegion);
-
-        function announceToScreenReader(message) {
-            liveRegion.textContent = message;
-            setTimeout(() => {
-                liveRegion.textContent = '';
-            }, 1000);
-        }
-
-        // Update mobile menu button to announce state changes
-        mobileMenuBtn.addEventListener('click', () => {
-            const isOpen = mobileMenu.classList.contains('active');
-            announceToScreenReader(isOpen ? 'Menu opened' : 'Menu closed');
+        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+            alert('Menu mobile - hubungi: https://wa.me/6283838629756');
         });
     </script>
 </body>
