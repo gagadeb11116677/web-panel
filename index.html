@@ -459,6 +459,287 @@
             font-size: 15px;
         }
 
+        /* Testimonials Section */
+        .testimonials {
+            padding: 60px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .testimonials-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .testimonials-title-section {
+            flex: 1;
+        }
+
+        .testimonials-stats {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: rgba(99, 102, 241, 0.05);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            border-radius: 15px;
+            padding: 15px 20px;
+        }
+
+        .rating-summary {
+            text-align: center;
+        }
+
+        .rating-number {
+            font-size: 32px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .rating-stars {
+            color: #fbbf24;
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .rating-count {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        .rating-bars {
+            flex: 1;
+            max-width: 200px;
+        }
+
+        .rating-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+
+        .rating-bar-label {
+            width: 40px;
+            color: #94a3b8;
+        }
+
+        .rating-bar-track {
+            flex: 1;
+            height: 8px;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 0 10px;
+        }
+
+        .rating-bar-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            border-radius: 4px;
+        }
+
+        .rating-bar-percent {
+            width: 30px;
+            color: #94a3b8;
+            text-align: right;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-card {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 20px;
+            padding: 25px;
+            transition: 0.4s;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: #6366f1;
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+        }
+
+        .testimonial-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-user {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .user-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .user-info h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .user-plan {
+            font-size: 14px;
+            color: #6366f1;
+            font-weight: 600;
+        }
+
+        .testimonial-rating {
+            color: #fbbf24;
+            font-size: 18px;
+        }
+
+        .testimonial-content {
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .testimonial-date {
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .testimonial-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .testimonial-action {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            color: #94a3b8;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .testimonial-action:hover {
+            color: #6366f1;
+        }
+
+        .testimonial-action.liked {
+            color: #ec4899;
+        }
+
+        /* Review Form */
+        .review-form-container {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        .review-form-title {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #fff, #6366f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            color: #cbd5e1;
+        }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .rating-input {
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .rating-star {
+            font-size: 24px;
+            color: #4b5563;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .rating-star:hover,
+        .rating-star.active {
+            color: #fbbf24;
+        }
+
+        .form-submit {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 14px 30px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.5);
+        }
+
         /* Pricing */
         .pricing {
             padding: 60px 20px;
@@ -1084,6 +1365,10 @@
                 gap: 25px;
             }
 
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .pricing-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 25px;
@@ -1105,6 +1390,10 @@
 
         @media (min-width: 1024px) {
             .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .testimonials-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
 
@@ -1137,6 +1426,7 @@
             </div>
             <div class="nav-links">
                 <a href="#features">Features</a>
+                <a href="#testimonials">Testimonials</a>
                 <a href="#pricing">Pricing</a>
                 <a href="#reseller">Reseller</a>
                 <div class="nav-cta-group">
@@ -1168,6 +1458,7 @@
         </div>
         <div class="mobile-menu-links">
             <a href="#features" onclick="toggleMobileMenu()">Features</a>
+            <a href="#testimonials" onclick="toggleMobileMenu()">Testimonials</a>
             <a href="#pricing" onclick="toggleMobileMenu()">Pricing</a>
             <a href="#reseller" onclick="toggleMobileMenu()">Reseller</a>
         </div>
@@ -1274,6 +1565,309 @@
                 <h3>Global Infrastructure</h3>
                 <p>Worldwide server locations with low latency connectivity</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-header">
+            <div class="section-label">CUSTOMER FEEDBACK</div>
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">
+                Real reviews from our valued customers
+            </p>
+        </div>
+        
+        <div class="testimonials-header">
+            <div class="testimonials-title-section">
+                <h3>Overall Rating</h3>
+            </div>
+            <div class="testimonials-stats">
+                <div class="rating-summary">
+                    <div class="rating-number">4.8</div>
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="rating-count">Based on 324 reviews</div>
+                </div>
+                <div class="rating-bars">
+                    <div class="rating-bar">
+                        <div class="rating-bar-label">5</div>
+                        <div class="rating-bar-track">
+                            <div class="rating-bar-fill" style="width: 75%"></div>
+                        </div>
+                        <div class="rating-bar-percent">75%</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="rating-bar-label">4</div>
+                        <div class="rating-bar-track">
+                            <div class="rating-bar-fill" style="width: 15%"></div>
+                        </div>
+                        <div class="rating-bar-percent">15%</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="rating-bar-label">3</div>
+                        <div class="rating-bar-track">
+                            <div class="rating-bar-fill" style="width: 7%"></div>
+                        </div>
+                        <div class="rating-bar-percent">7%</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="rating-bar-label">2</div>
+                        <div class="rating-bar-track">
+                            <div class="rating-bar-fill" style="width: 2%"></div>
+                        </div>
+                        <div class="rating-bar-percent">2%</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="rating-bar-label">1</div>
+                        <div class="rating-bar-track">
+                            <div class="rating-bar-fill" style="width: 1%"></div>
+                        </div>
+                        <div class="rating-bar-percent">1%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-user">
+                        <div class="user-avatar">JD</div>
+                        <div class="user-info">
+                            <h4>John Doe</h4>
+                            <div class="user-plan">Professional Plan</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    Xobe Store has been a game-changer for my hosting business. The panel is incredibly stable and the support team is always there when I need them. Highly recommended!
+                </div>
+                <div class="testimonial-date">2 weeks ago</div>
+                <div class="testimonial-actions">
+                    <div class="testimonial-action liked">
+                        <i class="fas fa-thumbs-up"></i> 24
+                    </div>
+                    <div class="testimonial-action">
+                        <i class="fas fa-reply"></i> Reply
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-user">
+                        <div class="user-avatar">SA</div>
+                        <div class="user-info">
+                            <h4>Sarah Anderson</h4>
+                            <div class="user-plan">Premium Plan</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    I've tried many panel providers before, but Xobe Store stands out with their exceptional performance and security features. The anti-theft protection gives me peace of mind.
+                </div>
+                <div class="testimonial-date">1 month ago</div>
+                <div class="testimonial-actions">
+                    <div class="testimonial-action">
+                        <i class="fas fa-thumbs-up"></i> 18
+                    </div>
+                    <div class="testimonial-action">
+                        <i class="fas fa-reply"></i> Reply
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-user">
+                        <div class="user-avatar">MK</div>
+                        <div class="user-info">
+                            <h4>Michael Kim</h4>
+                            <div class="user-plan">Reseller Partner</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    As a reseller, I appreciate the flexibility and white-label solutions offered by Xobe Store. Their reseller program has helped me grow my business significantly.
+                </div>
+                <div class="testimonial-date">1 month ago</div>
+                <div class="testimonial-actions">
+                    <div class="testimonial-action">
+                        <i class="fas fa-thumbs-up"></i> 15
+                    </div>
+                    <div class="testimonial-action">
+                        <i class="fas fa-reply"></i> Reply
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-user">
+                        <div class="user-avatar">EJ</div>
+                        <div class="user-info">
+                            <h4>Emily Johnson</h4>
+                            <div class="user-plan">Standard Plan</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    The performance is outstanding! My servers run smoothly without any issues. The dashboard is intuitive and easy to navigate even for beginners.
+                </div>
+                <div class="testimonial-date">2 months ago</div>
+                <div class="testimonial-actions">
+                    <div class="testimonial-action">
+                        <i class="fas fa-thumbs-up"></i> 12
+                    </div>
+                    <div class="testimonial-action">
+                        <i class="fas fa-reply"></i> Reply
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-user">
+                        <div class="user-avatar">RC</div>
+                        <div class="user-info">
+                            <h4>Robert Chen</h4>
+                            <div class="user-plan">Business Plan</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    Great service with excellent uptime. The only minor issue is that sometimes support response can be a bit slow during peak hours, but they always resolve my issues.
+                </div>
+                <div class="testimonial-date">3 months ago</div>
+                <div class="testimonial-actions">
+                    <div class="testimonial-action">
+                        <i class="fas fa-thumbs-up"></i> 9
+                    </div>
+                    <div class="testimonial-action">
+                        <i class="fas fa-reply"></i> Reply
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-user">
+                        <div class="user-avatar">LM</div>
+                        <div class="user-info">
+                            <h4>Lisa Martinez</h4>
+                            <div class="user-plan">Advanced Plan</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    I've been with Xobe Store for over a year now and couldn't be happier. The panel is reliable, secure, and the pricing is competitive. Highly recommend!
+                </div>
+                <div class="testimonial-date">3 months ago</div>
+                <div class="testimonial-actions">
+                    <div class="testimonial-action">
+                        <i class="fas fa-thumbs-up"></i> 21
+                    </div>
+                    <div class="testimonial-action">
+                        <i class="fas fa-reply"></i> Reply
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Review Form -->
+        <div class="review-form-container">
+            <h3 class="review-form-title">Share Your Experience</h3>
+            <form id="reviewForm">
+                <div class="form-group">
+                    <label class="form-label" for="reviewName">Your Name</label>
+                    <input type="text" id="reviewName" class="form-input" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="reviewPlan">Your Plan</label>
+                    <select id="reviewPlan" class="form-select" required>
+                        <option value="">Select your plan</option>
+                        <option value="Starter">Starter</option>
+                        <option value="Basic">Basic</option>
+                        <option value="Standard">Standard</option>
+                        <option value="Advanced">Advanced</option>
+                        <option value="Professional">Professional</option>
+                        <option value="Business">Business</option>
+                        <option value="Premium">Premium</option>
+                        <option value="Elite">Elite</option>
+                        <option value="Master">Master</option>
+                        <option value="Ultimate">Ultimate</option>
+                        <option value="UNLIMITED">UNLIMITED</option>
+                        <option value="Reseller Partner">Reseller Partner</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Rating</label>
+                    <div class="rating-input">
+                        <i class="fas fa-star rating-star" data-rating="1"></i>
+                        <i class="fas fa-star rating-star" data-rating="2"></i>
+                        <i class="fas fa-star rating-star" data-rating="3"></i>
+                        <i class="fas fa-star rating-star" data-rating="4"></i>
+                        <i class="fas fa-star rating-star" data-rating="5"></i>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="reviewText">Your Review</label>
+                    <textarea id="reviewText" class="form-textarea" placeholder="Share your experience with Xobe Store..." required></textarea>
+                </div>
+                
+                <button type="submit" class="form-submit">Submit Review</button>
+            </form>
         </div>
     </section>
 
@@ -1492,6 +2086,7 @@
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
                     <li><a href="#features">Features</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#reseller">Reseller</a></li>
                     <li><a href="#">Documentation</a></li>
@@ -1565,9 +2160,29 @@
         </div>
     </div>
 
+    <!-- Success Modal -->
+    <div id="successModal" class="order-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeSuccessModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <div class="modal-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h2 class="modal-title">Thank You!</h2>
+                <p class="modal-subtitle">Your review has been submitted successfully</p>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="form-submit" onclick="closeSuccessModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
     <script>
         let selectedPlan = '';
         let selectedPrice = '';
+        let selectedRating = 0;
 
         function toggleMobileMenu() {
             const menu = document.querySelector('.mobile-menu');
@@ -1592,6 +2207,11 @@
             document.body.style.overflow = 'auto';
         }
 
+        function closeSuccessModal() {
+            document.getElementById('successModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
         function orderViaWhatsApp() {
             const whatsappMsg = `Hi Xobe, I'm interested in ordering the ${selectedPlan} plan (${selectedPrice}/mo)`;
             window.open(`https://wa.me/6283838629756?text=${encodeURIComponent(whatsappMsg)}`, '_blank');
@@ -1604,11 +2224,138 @@
             closeOrderModal();
         }
 
+        // Rating stars functionality
+        document.querySelectorAll('.rating-star').forEach(star => {
+            star.addEventListener('click', function() {
+                selectedRating = parseInt(this.getAttribute('data-rating'));
+                updateRatingStars();
+            });
+            
+            star.addEventListener('mouseenter', function() {
+                const hoverRating = parseInt(this.getAttribute('data-rating'));
+                highlightStars(hoverRating);
+            });
+        });
+
+        document.querySelector('.rating-input').addEventListener('mouseleave', function() {
+            updateRatingStars();
+        });
+
+        function updateRatingStars() {
+            highlightStars(selectedRating);
+        }
+
+        function highlightStars(rating) {
+            document.querySelectorAll('.rating-star').forEach((star, index) => {
+                if (index < rating) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+        }
+
+        // Review form submission
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (selectedRating === 0) {
+                alert('Please select a rating');
+                return;
+            }
+            
+            // Get form values
+            const name = document.getElementById('reviewName').value;
+            const plan = document.getElementById('reviewPlan').value;
+            const reviewText = document.getElementById('reviewText').value;
+            
+            // Create new testimonial card
+            const testimonialsGrid = document.querySelector('.testimonials-grid');
+            const newCard = document.createElement('div');
+            newCard.className = 'testimonial-card';
+            
+            // Generate initials from name
+            const initials = name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
+            
+            // Generate star HTML based on rating
+            let starsHTML = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= selectedRating) {
+                    starsHTML += '<i class="fas fa-star"></i>';
+                } else {
+                    starsHTML += '<i class="far fa-star"></i>';
+                }
+            }
+            
+            // Set card content
+            newCard.innerHTML = `
+                <div class="testimonial-header">
+                    <div class="testimonial-user">
+                        <div class="user-avatar">${initials}</div>
+                        <div class="user-info">
+                            <h4>${name}</h4>
+                            <div class="user-plan">${plan}</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        ${starsHTML}
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    ${reviewText}
+                </div>
+                <div class="testimonial-date">Just now</div>
+                <div class="testimonial-actions">
+                    <div class="testimonial-action">
+                        <i class="fas fa-thumbs-up"></i> 0
+                    </div>
+                    <div class="testimonial-action">
+                        <i class="fas fa-reply"></i> Reply
+                    </div>
+                </div>
+            `;
+            
+            // Add new card to the beginning of the grid
+            testimonialsGrid.insertBefore(newCard, testimonialsGrid.firstChild);
+            
+            // Reset form
+            document.getElementById('reviewForm').reset();
+            selectedRating = 0;
+            updateRatingStars();
+            
+            // Show success modal
+            document.getElementById('successModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Testimonial like functionality
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.testimonial-action') && e.target.closest('.testimonial-action').querySelector('.fa-thumbs-up')) {
+                const action = e.target.closest('.testimonial-action');
+                const likeCount = action.querySelector('i').nextSibling;
+                const currentCount = parseInt(likeCount.textContent.trim());
+                
+                if (action.classList.contains('liked')) {
+                    action.classList.remove('liked');
+                    likeCount.textContent = ' ' + (currentCount - 1);
+                } else {
+                    action.classList.add('liked');
+                    likeCount.textContent = ' ' + (currentCount + 1);
+                }
+            }
+        });
+
         // Close modal when clicking outside
         window.onclick = function(event) {
-            const modal = document.getElementById('orderModal');
-            if (event.target === modal) {
+            const orderModal = document.getElementById('orderModal');
+            const successModal = document.getElementById('successModal');
+            
+            if (event.target === orderModal) {
                 closeOrderModal();
+            }
+            
+            if (event.target === successModal) {
+                closeSuccessModal();
             }
         }
 
