@@ -3,9 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xobe Store - Enterprise Panel Pterodactyl Solutions</title>
+    <title>Xobe Store - Solusi Panel Pterodactyl Enterprise | Hosting Terpercaya Indonesia</title>
+    <meta name="description" content="Xobe Store menyediakan solusi hosting Pterodactyl enterprise dengan keamanan tinggi, performa optimal, dan dukungan 24/7. Dapatkan panel hosting terbaik untuk bisnis Anda.">
+    <meta name="keywords" content="panel pterodactyl, hosting indonesia, enterprise hosting, game server, vps hosting, dedicated server, cloud hosting, anti theft, panel hosting murah">
+    <meta name="author" content="Xobe Store">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://xobestore.com" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Xobe Store - Solusi Panel Pterodactyl Enterprise">
+    <meta property="og:description" content="Solusi hosting Pterodactyl enterprise dengan keamanan tinggi dan performa optimal. Dapatkan panel hosting terbaik untuk bisnis Anda.">
+    <meta property="og:image" content="https://xobestore.com/images/og-image.jpg">
+    <meta property="og:url" content="https://xobestore.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Xobe Store">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Xobe Store - Solusi Panel Pterodactyl Enterprise">
+    <meta name="twitter:description" content="Solusi hosting Pterodactyl enterprise dengan keamanan tinggi dan performa optimal.">
+    <meta name="twitter:image" content="https://xobestore.com/images/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://xobestore.com/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://xobestore.com/apple-touch-icon.png">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Xobe Store",
+        "url": "https://xobestore.com",
+        "logo": "https://xobestore.com/logo.png",
+        "description": "Solusi Panel Pterodactyl Enterprise",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "ID"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+6283838629756",
+            "contactType": "customer service",
+            "availableLanguage": ["Indonesian", "English"]
+        },
+        "sameAs": [
+            "https://wa.me/6283838629756",
+            "https://t.me/xobedevelopment"
+        ]
+    }
+    </script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
+        /* CSS Variables untuk Dark/Light Mode */
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+            --accent-color: #ec4899;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            
+            /* Dark Mode Colors */
+            --dark-bg: #0a0a1e;
+            --dark-card: #141432;
+            --dark-border: rgba(99, 102, 241, 0.2);
+            --dark-text: #ffffff;
+            --dark-text-secondary: #94a3b8;
+            --dark-text-muted: #64748b;
+            
+            /* Light Mode Colors */
+            --light-bg: #f8fafc;
+            --light-card: #ffffff;
+            --light-border: rgba(99, 102, 241, 0.2);
+            --light-text: #1e293b;
+            --light-text-secondary: #475569;
+            --light-text-muted: #64748b;
+            
+            /* Transition */
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Light Mode Default */
+        [data-theme="light"] {
+            --bg-primary: var(--light-bg);
+            --bg-card: var(--light-card);
+            --bg-secondary: #f1f5f9;
+            --border-color: var(--light-border);
+            --text-primary: var(--light-text);
+            --text-secondary: var(--light-text-secondary);
+            --text-muted: var(--light-text-muted);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Dark Mode */
+        [data-theme="dark"] {
+            --bg-primary: var(--dark-bg);
+            --bg-card: var(--dark-card);
+            --bg-secondary: rgba(99, 102, 241, 0.05);
+            --border-color: var(--dark-border);
+            --text-primary: var(--dark-text);
+            --text-secondary: var(--dark-text-secondary);
+            --text-muted: var(--dark-text-muted);
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -14,9 +121,54 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            background: #000000;
-            color: #fff;
+            background: var(--bg-primary);
+            color: var(--text-primary);
             overflow-x: hidden;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        /* Loading Screen */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-primary);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(99, 102, 241, 0.2);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-color);
+            letter-spacing: 1px;
         }
 
         /* Animated Background */
@@ -24,10 +176,11 @@
             position: fixed;
             width: 100%;
             height: 100%;
-            z-index: -1;
-            background: linear-gradient(135deg, #000000, #1a0033, #000000, #001a33);
+            z-index: -2;
+            background: linear-gradient(135deg, var(--bg-primary), var(--bg-card), var(--bg-primary));
             background-size: 400% 400%;
             animation: gradient 20s ease infinite;
+            transition: var(--transition);
         }
 
         @keyframes gradient {
@@ -44,6 +197,117 @@
                 linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
             background-size: 50px 50px;
+            opacity: 0.5;
+        }
+
+        /* Particles Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            filter: blur(1px);
+            opacity: 0.3;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.3;
+            }
+            90% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px);
+                opacity: 0;
+            }
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            z-index: 10000;
+            transition: width 0.2s ease;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--bg-card);
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            font-size: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            border-color: var(--primary-color);
         }
 
         /* Navigation */
@@ -52,10 +316,16 @@
             top: 0;
             width: 100%;
             padding: 15px 0;
-            background: rgba(0, 0, 0, 0.95);
+            background: var(--bg-card);
             backdrop-filter: blur(20px);
             z-index: 1000;
-            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        nav.scrolled {
+            padding: 10px 0;
+            box-shadow: var(--shadow);
         }
 
         .nav-container {
@@ -70,19 +340,30 @@
         .logo {
             font-size: 24px;
             font-weight: 900;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: flex;
             align-items: center;
             gap: 10px;
             letter-spacing: -0.5px;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
         }
 
         .logo i {
-            color: #6366f1;
+            color: var(--primary-color);
             font-size: 28px;
             filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.5));
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
         }
 
         .nav-links {
@@ -97,15 +378,16 @@
             display: block;
             font-size: 24px;
             cursor: pointer;
-            color: #6366f1;
+            color: var(--primary-color);
             padding: 8px;
             background: rgba(99, 102, 241, 0.1);
             border-radius: 10px;
-            transition: 0.3s;
+            transition: var(--transition);
         }
 
         .mobile-btn:hover {
             background: rgba(99, 102, 241, 0.2);
+            transform: scale(1.1);
         }
 
         /* Mobile Menu */
@@ -116,12 +398,12 @@
             width: 80%;
             max-width: 350px;
             height: 100vh;
-            background: linear-gradient(135deg, rgba(10, 10, 30, 0.98), rgba(20, 20, 50, 0.98));
+            background: var(--bg-card);
             backdrop-filter: blur(20px);
             z-index: 2000;
             transition: 0.3s ease;
             overflow-y: auto;
-            border-left: 1px solid rgba(99, 102, 241, 0.2);
+            border-left: 1px solid var(--border-color);
         }
 
         .mobile-menu.active {
@@ -130,7 +412,7 @@
 
         .mobile-menu-header {
             padding: 20px;
-            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+            border-bottom: 1px solid var(--border-color);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -139,16 +421,17 @@
         .mobile-menu-close {
             font-size: 24px;
             cursor: pointer;
-            color: #64748b;
+            color: var(--text-muted);
             padding: 8px;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(99, 102, 241, 0.1);
             border-radius: 8px;
-            transition: 0.3s;
+            transition: var(--transition);
         }
 
         .mobile-menu-close:hover {
-            color: #fff;
-            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            background: rgba(99, 102, 241, 0.2);
+            transform: rotate(90deg);
         }
 
         .mobile-menu-links {
@@ -158,23 +441,42 @@
         .mobile-menu-links a {
             display: block;
             padding: 15px 20px;
-            color: #94a3b8;
+            color: var(--text-secondary);
             text-decoration: none;
             font-weight: 600;
             font-size: 16px;
             margin-bottom: 10px;
             border-radius: 12px;
-            transition: 0.3s;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mobile-menu-links a::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
         }
 
         .mobile-menu-links a:hover {
             background: rgba(99, 102, 241, 0.1);
-            color: #fff;
+            color: var(--text-primary);
+            padding-left: 25px;
+        }
+
+        .mobile-menu-links a:hover::before {
+            transform: scaleY(1);
         }
 
         .mobile-menu-cta {
             padding: 20px;
-            border-top: 1px solid rgba(99, 102, 241, 0.2);
+            border-top: 1px solid var(--border-color);
         }
 
         .mobile-menu-cta a {
@@ -185,7 +487,27 @@
             font-weight: 700;
             text-align: center;
             margin-bottom: 10px;
-            transition: 0.3s;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mobile-menu-cta a::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .mobile-menu-cta a:hover::after {
+            width: 300px;
+            height: 300px;
         }
 
         .mobile-menu-cta .btn-whatsapp {
@@ -213,11 +535,38 @@
             display: block;
         }
 
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 100px 20px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--accent-color);
+        }
+
+        .breadcrumb .separator {
+            color: var(--text-muted);
+        }
+
         /* Hero */
         .hero {
             padding: 120px 20px 60px;
             text-align: center;
             position: relative;
+            overflow: hidden;
         }
 
         .hero-spotlight {
@@ -227,9 +576,15 @@
             transform: translateX(-50%);
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.2), transparent 70%);
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.15), transparent 70%);
             filter: blur(80px);
             z-index: -1;
+            animation: pulse 4s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: translateX(-50%) scale(1); }
+            100% { transform: translateX(-50%) scale(1.1); }
         }
 
         .hero-badge {
@@ -243,31 +598,60 @@
             margin-bottom: 20px;
             letter-spacing: 0.5px;
             text-transform: uppercase;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero h1 {
             font-size: clamp(32px, 8vw, 56px);
             font-weight: 900;
             margin-bottom: 20px;
-            background: linear-gradient(135deg, #fff 0%, #6366f1 50%, #ec4899 100%);
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary-color) 50%, var(--accent-color) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             line-height: 1.2;
             letter-spacing: -1px;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero-subtitle {
             font-size: clamp(18px, 4vw, 22px);
-            color: #94a3b8;
+            color: var(--text-secondary);
             margin-bottom: 15px;
             line-height: 1.5;
+            animation: fadeInUp 0.8s ease 0.4s both;
         }
 
         .hero-description {
             font-size: 16px;
-            color: #64748b;
+            color: var(--text-muted);
             margin-bottom: 30px;
             line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.8s ease 0.6s both;
         }
 
         .hero-cta {
@@ -275,6 +659,7 @@
             gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.8s both;
         }
 
         .btn-hero {
@@ -285,13 +670,30 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            transition: 0.3s;
+            transition: var(--transition);
             font-size: 15px;
             letter-spacing: 0.3px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.5s ease;
+        }
+
+        .btn-hero:hover::before {
+            left: 100%;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: #fff;
             box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
         }
@@ -303,8 +705,8 @@
 
         .btn-outline {
             background: transparent;
-            border: 2px solid #6366f1;
-            color: #fff;
+            border: 2px solid var(--primary-color);
+            color: var(--text-primary);
         }
 
         .btn-outline:hover {
@@ -328,30 +730,54 @@
         .trust-item {
             text-align: center;
             padding: 30px 20px;
-            background: rgba(99, 102, 241, 0.03);
-            border: 1px solid rgba(99, 102, 241, 0.1);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
             border-radius: 15px;
-            transition: 0.3s;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .trust-item::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .trust-item:hover::before {
+            opacity: 1;
         }
 
         .trust-item:hover {
             transform: translateY(-5px);
-            border-color: #6366f1;
-            box-shadow: 0 15px 35px rgba(99, 102, 241, 0.2);
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow);
         }
 
         .trust-number {
             font-size: 36px;
             font-weight: 900;
-            background: linear-gradient(135deg, #6366f1, #ec4899);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 8px;
+            transition: var(--transition);
+        }
+
+        .trust-item:hover .trust-number {
+            transform: scale(1.1);
         }
 
         .trust-label {
             font-size: 14px;
-            color: #94a3b8;
+            color: var(--text-secondary);
             font-weight: 600;
         }
 
@@ -378,14 +804,14 @@
             margin-bottom: 15px;
             letter-spacing: 0.5px;
             text-transform: uppercase;
-            color: #6366f1;
+            color: var(--primary-color);
         }
 
         .section-title {
             font-size: clamp(28px, 6vw, 40px);
             font-weight: 900;
             margin-bottom: 15px;
-            background: linear-gradient(135deg, #fff, #6366f1);
+            background: linear-gradient(135deg, var(--text-primary), var(--primary-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -0.5px;
@@ -393,7 +819,7 @@
 
         .section-subtitle {
             font-size: 16px;
-            color: #64748b;
+            color: var(--text-muted);
             line-height: 1.6;
         }
 
@@ -404,11 +830,11 @@
         }
 
         .feature-card {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
-            border: 1px solid rgba(99, 102, 241, 0.2);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
             border-radius: 20px;
             padding: 30px 25px;
-            transition: 0.4s;
+            transition: var(--transition);
             position: relative;
             overflow: hidden;
         }
@@ -422,6 +848,7 @@
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
             transition: 0.6s;
+            pointer-events: none;
         }
 
         .feature-card:hover::before {
@@ -430,14 +857,14 @@
 
         .feature-card:hover {
             transform: translateY(-5px);
-            border-color: #6366f1;
-            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow);
         }
 
         .feature-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             border-radius: 15px;
             display: flex;
             align-items: center;
@@ -445,16 +872,22 @@
             margin-bottom: 20px;
             font-size: 28px;
             box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: rotate(5deg) scale(1.1);
         }
 
         .feature-card h3 {
             font-size: 20px;
             margin-bottom: 12px;
             font-weight: 800;
+            color: var(--text-primary);
         }
 
         .feature-card p {
-            color: #94a3b8;
+            color: var(--text-secondary);
             line-height: 1.7;
             font-size: 15px;
         }
@@ -483,8 +916,8 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            background: rgba(99, 102, 241, 0.05);
-            border: 1px solid rgba(99, 102, 241, 0.1);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
             border-radius: 15px;
             padding: 15px 20px;
         }
@@ -496,7 +929,7 @@
         .rating-number {
             font-size: 32px;
             font-weight: 900;
-            background: linear-gradient(135deg, #6366f1, #ec4899);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -509,7 +942,7 @@
 
         .rating-count {
             font-size: 14px;
-            color: #94a3b8;
+            color: var(--text-secondary);
         }
 
         .rating-bars {
@@ -526,7 +959,7 @@
 
         .rating-bar-label {
             width: 40px;
-            color: #94a3b8;
+            color: var(--text-secondary);
         }
 
         .rating-bar-track {
@@ -540,14 +973,41 @@
 
         .rating-bar-fill {
             height: 100%;
-            background: linear-gradient(135deg, #6366f1, #ec4899);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             border-radius: 4px;
+            transition: width 1s ease;
         }
 
         .rating-bar-percent {
             width: 30px;
-            color: #94a3b8;
+            color: var(--text-secondary);
             text-align: right;
+        }
+
+        .testimonials-filter {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--text-primary);
+            border-color: var(--primary-color);
         }
 
         .testimonials-grid {
@@ -558,18 +1018,25 @@
         }
 
         .testimonial-card {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
-            border: 1px solid rgba(99, 102, 241, 0.2);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
             border-radius: 20px;
             padding: 25px;
-            transition: 0.4s;
+            transition: var(--transition);
             position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .testimonial-card.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .testimonial-card:hover {
             transform: translateY(-5px);
-            border-color: #6366f1;
-            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow);
         }
 
         .testimonial-header {
@@ -588,7 +1055,7 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             display: flex;
             align-items: center;
             justify-content: center;
@@ -601,11 +1068,12 @@
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 4px;
+            color: var(--text-primary);
         }
 
         .user-plan {
             font-size: 14px;
-            color: #6366f1;
+            color: var(--primary-color);
             font-weight: 600;
         }
 
@@ -615,7 +1083,7 @@
         }
 
         .testimonial-content {
-            color: #cbd5e1;
+            color: var(--text-secondary);
             line-height: 1.6;
             margin-bottom: 15px;
             font-size: 15px;
@@ -623,7 +1091,7 @@
 
         .testimonial-date {
             font-size: 13px;
-            color: #64748b;
+            color: var(--text-muted);
         }
 
         .testimonial-actions {
@@ -637,23 +1105,23 @@
             align-items: center;
             gap: 5px;
             font-size: 14px;
-            color: #94a3b8;
+            color: var(--text-secondary);
             cursor: pointer;
-            transition: 0.3s;
+            transition: var(--transition);
         }
 
         .testimonial-action:hover {
-            color: #6366f1;
+            color: var(--primary-color);
         }
 
         .testimonial-action.liked {
-            color: #ec4899;
+            color: var(--accent-color);
         }
 
         /* Review Form */
         .review-form-container {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
-            border: 1px solid rgba(99, 102, 241, 0.2);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
             border-radius: 20px;
             padding: 30px;
             margin-top: 20px;
@@ -664,7 +1132,7 @@
             font-weight: 800;
             margin-bottom: 20px;
             text-align: center;
-            background: linear-gradient(135deg, #fff, #6366f1);
+            background: linear-gradient(135deg, var(--text-primary), var(--primary-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -678,23 +1146,23 @@
             margin-bottom: 8px;
             font-weight: 600;
             font-size: 15px;
-            color: #cbd5e1;
+            color: var(--text-primary);
         }
 
         .form-input, .form-select, .form-textarea {
             width: 100%;
             padding: 12px 15px;
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(99, 102, 241, 0.2);
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
             border-radius: 10px;
-            color: #fff;
+            color: var(--text-primary);
             font-size: 15px;
-            transition: 0.3s;
+            transition: var(--transition);
         }
 
         .form-input:focus, .form-select:focus, .form-textarea:focus {
             outline: none;
-            border-color: #6366f1;
+            border-color: var(--primary-color);
             box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
         }
 
@@ -713,16 +1181,17 @@
             font-size: 24px;
             color: #4b5563;
             cursor: pointer;
-            transition: 0.3s;
+            transition: var(--transition);
         }
 
         .rating-star:hover,
         .rating-star.active {
             color: #fbbf24;
+            transform: scale(1.2);
         }
 
         .form-submit {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: #fff;
             border: none;
             border-radius: 12px;
@@ -730,9 +1199,29 @@
             font-weight: 700;
             font-size: 16px;
             cursor: pointer;
-            transition: 0.3s;
+            transition: var(--transition);
             display: block;
             margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-submit::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .form-submit:hover::before {
+            width: 300px;
+            height: 300px;
         }
 
         .form-submit:hover {
@@ -743,7 +1232,7 @@
         /* Pricing */
         .pricing {
             padding: 60px 20px;
-            background: rgba(99, 102, 241, 0.02);
+            background: var(--bg-secondary);
         }
 
         .pricing-container {
@@ -759,59 +1248,85 @@
         }
 
         .price-card {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(10, 10, 30, 0.9));
-            border: 1px solid rgba(99, 102, 241, 0.2);
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
             border-radius: 20px;
             padding: 30px 25px;
             text-align: center;
-            transition: 0.4s;
+            transition: var(--transition);
             position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .price-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.05), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .price-card:hover::before {
+            opacity: 1;
         }
 
         .price-card:hover {
             transform: translateY(-8px);
-            border-color: #6366f1;
-            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.4);
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow);
         }
 
         .price-card.featured {
-            border: 2px solid #6366f1;
+            border: 2px solid var(--primary-color);
             transform: scale(1.02);
             box-shadow: 0 15px 35px rgba(99, 102, 241, 0.3);
         }
 
-        .price-card.featured::before {
-            content: '⭐ POPULAR';
+        .price-card.featured::after {
+            content: '⭐ POPULER';
             position: absolute;
             top: -12px;
             left: 50%;
             transform: translateX(-50%);
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             padding: 4px 16px;
             border-radius: 16px;
             font-size: 10px;
             font-weight: 800;
             letter-spacing: 0.5px;
+            z-index: 2;
         }
 
         .price-card.promo {
-            border: 2px solid #ec4899;
+            border: 2px solid var(--accent-color);
             transform: scale(1.02);
             box-shadow: 0 15px 35px rgba(236, 72, 153, 0.4);
         }
 
-        .price-card.promo::before {
+        .price-card.promo::after {
             content: '🔥 PROMO';
             position: absolute;
             top: -12px;
             left: 50%;
             transform: translateX(-50%);
-            background: linear-gradient(135deg, #ec4899, #f59e0b);
+            background: linear-gradient(135deg, var(--accent-color), var(--warning-color));
             padding: 4px 16px;
             border-radius: 16px;
             font-size: 10px;
             font-weight: 800;
             letter-spacing: 0.5px;
+            z-index: 2;
+        }
+
+        .price-card.featured:hover, .price-card.promo:hover {
+            transform: scale(1.02) translateY(-8px);
         }
 
         .plan-name {
@@ -819,26 +1334,33 @@
             font-weight: 800;
             margin-bottom: 15px;
             letter-spacing: -0.3px;
+            color: var(--text-primary);
+            position: relative;
+            z-index: 2;
         }
 
         .plan-price {
             font-size: 40px;
             font-weight: 900;
-            background: linear-gradient(135deg, #6366f1, #ec4899);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 8px;
+            position: relative;
+            z-index: 2;
         }
 
         .plan-price span {
             font-size: 14px;
-            color: #64748b;
+            color: var(--text-muted);
         }
 
         .plan-specs {
             list-style: none;
             margin: 20px 0;
             text-align: left;
+            position: relative;
+            z-index: 2;
         }
 
         .plan-specs li {
@@ -847,8 +1369,8 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            color: #cbd5e1;
-            border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-color);
         }
 
         .plan-specs li:last-child {
@@ -856,22 +1378,43 @@
         }
 
         .plan-specs i {
-            color: #10b981;
+            color: var(--success-color);
             font-size: 14px;
         }
 
         .btn-select {
             width: 100%;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: #fff;
             padding: 14px;
             border: none;
             border-radius: 12px;
             font-weight: 700;
             cursor: pointer;
-            transition: 0.3s;
+            transition: var(--transition);
             font-size: 15px;
             letter-spacing: 0.3px;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .btn-select::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn-select:hover::before {
+            width: 300px;
+            height: 300px;
         }
 
         .btn-select:hover {
@@ -887,7 +1430,7 @@
         }
 
         .reseller-card {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(236, 72, 153, 0.05));
+            background: var(--bg-secondary);
             border: 2px solid rgba(251, 191, 36, 0.3);
             border-radius: 25px;
             padding: 40px 25px;
@@ -905,6 +1448,7 @@
             height: 200%;
             background: radial-gradient(circle, rgba(251, 191, 36, 0.1), transparent 70%);
             animation: rotate 20s linear infinite;
+            pointer-events: none;
         }
 
         @keyframes rotate {
@@ -933,11 +1477,12 @@
             font-weight: 900;
             margin-bottom: 25px;
             letter-spacing: -0.5px;
+            color: var(--text-primary);
         }
 
         .reseller-price {
             font-size: 16px;
-            color: #94a3b8;
+            color: var(--text-secondary);
             margin-bottom: 30px;
             line-height: 1.8;
         }
@@ -963,10 +1508,11 @@
             gap: 12px;
             font-size: 15px;
             font-weight: 600;
+            color: var(--text-primary);
         }
 
         .reseller-features i {
-            color: #10b981;
+            color: var(--success-color);
             font-size: 18px;
         }
 
@@ -974,7 +1520,7 @@
         .cta-final {
             padding: 80px 20px;
             text-align: center;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
+            background: var(--bg-secondary);
         }
 
         .cta-final h2 {
@@ -982,11 +1528,12 @@
             font-weight: 900;
             margin-bottom: 20px;
             letter-spacing: -0.5px;
+            color: var(--text-primary);
         }
 
         .cta-final p {
             font-size: 16px;
-            color: #94a3b8;
+            color: var(--text-secondary);
             margin-bottom: 30px;
             line-height: 1.6;
         }
@@ -998,10 +1545,179 @@
             flex-wrap: wrap;
         }
 
+        /* FAQ Section */
+        .faq {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+            color: var(--text-primary);
+        }
+
+        .faq-question:hover {
+            color: var(--primary-color);
+        }
+
+        .faq-icon {
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer-content {
+            padding: 0 20px 20px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            padding: 60px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .newsletter-title {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, var(--text-primary), var(--primary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .newsletter-description {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 14px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 15px;
+            transition: var(--transition);
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        .newsletter-button {
+            padding: 14px 30px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.5);
+        }
+
+        .newsletter-privacy {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Social Sharing */
+        .social-sharing {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .social-share-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 18px;
+            transition: var(--transition);
+        }
+
+        .social-share-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .social-share-btn.facebook {
+            background: #1877f2;
+        }
+
+        .social-share-btn.twitter {
+            background: #1da1f2;
+        }
+
+        .social-share-btn.linkedin {
+            background: #0077b5;
+        }
+
+        .social-share-btn.whatsapp {
+            background: #25d366;
+        }
+
         /* Footer */
         footer {
             padding: 50px 20px 30px;
-            border-top: 1px solid rgba(99, 102, 241, 0.2);
+            border-top: 1px solid var(--border-color);
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -1017,13 +1733,13 @@
             font-size: 18px;
             font-weight: 800;
             margin-bottom: 20px;
-            background: linear-gradient(135deg, #6366f1, #ec4899);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .footer-section p {
-            color: #64748b;
+            color: var(--text-muted);
             line-height: 1.7;
             margin-bottom: 15px;
             font-size: 15px;
@@ -1041,23 +1757,38 @@
         }
 
         .footer-links a {
-            color: #94a3b8;
+            color: var(--text-secondary);
             text-decoration: none;
-            transition: 0.3s;
+            transition: var(--transition);
             font-weight: 500;
             font-size: 14px;
+            position: relative;
+        }
+
+        .footer-links a::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
         }
 
         .footer-links a:hover {
-            color: #6366f1;
-            padding-left: 3px;
+            color: var(--primary-color);
+        }
+
+        .footer-links a:hover::before {
+            width: 100%;
         }
 
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
-            border-top: 1px solid rgba(99, 102, 241, 0.1);
-            color: #64748b;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
             font-size: 14px;
         }
 
@@ -1073,12 +1804,12 @@
             align-items: center;
             gap: 12px;
             padding: 12px 16px;
-            background: rgba(99, 102, 241, 0.05);
-            border: 1px solid rgba(99, 102, 241, 0.2);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
-            color: #fff;
+            color: var(--text-primary);
             text-decoration: none;
-            transition: 0.3s;
+            transition: var(--transition);
         }
 
         .contact-btn:hover {
@@ -1121,14 +1852,14 @@
         }
 
         .modal-content {
-            background: linear-gradient(135deg, rgba(10, 10, 30, 0.95), rgba(20, 20, 50, 0.95));
-            border: 1px solid rgba(99, 102, 241, 0.3);
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
             border-radius: 20px;
             padding: 30px 25px;
             max-width: 400px;
             width: 100%;
             position: relative;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            box-shadow: var(--shadow);
             animation: slideUp 0.4s ease;
         }
 
@@ -1143,20 +1874,20 @@
             right: 15px;
             width: 32px;
             height: 32px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(99, 102, 241, 0.1);
             border: none;
             border-radius: 50%;
-            color: #fff;
+            color: var(--text-primary);
             font-size: 16px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: 0.3s;
+            transition: var(--transition);
         }
 
         .modal-close:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(99, 102, 241, 0.2);
             transform: rotate(90deg);
         }
 
@@ -1168,7 +1899,7 @@
         .modal-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1181,19 +1912,19 @@
             font-size: 24px;
             font-weight: 800;
             margin-bottom: 8px;
-            background: linear-gradient(135deg, #fff, #6366f1);
+            background: linear-gradient(135deg, var(--text-primary), var(--primary-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .modal-subtitle {
-            color: #94a3b8;
+            color: var(--text-secondary);
             font-size: 14px;
         }
 
         .modal-plan {
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid rgba(99, 102, 241, 0.2);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 16px;
             margin: 20px 0;
@@ -1204,12 +1935,13 @@
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 4px;
+            color: var(--text-primary);
         }
 
         .modal-plan-price {
             font-size: 24px;
             font-weight: 900;
-            background: linear-gradient(135deg, #6366f1, #ec4899);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -1223,18 +1955,18 @@
         .modal-option {
             flex: 1;
             padding: 16px 12px;
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(99, 102, 241, 0.2);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
             text-align: center;
             cursor: pointer;
-            transition: 0.3s;
+            transition: var(--transition);
         }
 
         .modal-option:hover {
             background: rgba(99, 102, 241, 0.1);
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.2);
+            box-shadow: var(--shadow);
         }
 
         .modal-option i {
@@ -1253,10 +1985,11 @@
         .modal-option-name {
             font-weight: 700;
             font-size: 15px;
+            color: var(--text-primary);
         }
 
         .modal-option-desc {
-            color: #64748b;
+            color: var(--text-muted);
             font-size: 12px;
             margin-top: 4px;
         }
@@ -1270,11 +2003,11 @@
             }
 
             .nav-links a {
-                color: #94a3b8;
+                color: var(--text-secondary);
                 text-decoration: none;
                 font-weight: 600;
                 font-size: 14px;
-                transition: 0.3s;
+                transition: var(--transition);
                 position: relative;
                 letter-spacing: 0.3px;
             }
@@ -1286,12 +2019,12 @@
                 left: 0;
                 width: 0;
                 height: 2px;
-                background: linear-gradient(135deg, #6366f1, #ec4899);
-                transition: 0.3s;
+                background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+                transition: var(--transition);
             }
 
             .nav-links a:hover {
-                color: #fff;
+                color: var(--text-primary);
             }
 
             .nav-links a:hover::after {
@@ -1308,7 +2041,7 @@
                 border-radius: 25px;
                 font-weight: 600;
                 text-decoration: none;
-                transition: 0.3s;
+                transition: var(--transition);
                 font-size: 13px;
                 display: flex;
                 align-items: center;
@@ -1413,24 +2146,45 @@
         }
     </style>
 </head>
-<body>
+<body data-theme="dark">
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+        <div class="loading-text">Memuat Xobe Store...</div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
     <div class="animated-bg"></div>
     <div class="grid-overlay"></div>
+    <div class="particles" id="particles"></div>
 
     <!-- Navigation -->
-    <nav>
+    <nav id="navbar">
         <div class="nav-container">
             <div class="logo">
                 <i class="fas fa-server"></i>
                 XOBE
             </div>
             <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#pricing">Pricing</a>
+                <a href="#features">Fitur</a>
+                <a href="#testimonials">Testimoni</a>
+                <a href="#pricing">Harga</a>
                 <a href="#reseller">Reseller</a>
+                <a href="#faq">FAQ</a>
                 <div class="nav-cta-group">
-                    <a href="https://wa.me/6283838629756?text=Hi%20Xobe,%20I%27m%20interested%20in%20your%20panel%20services" class="btn-nav btn-whatsapp">
+                    <a href="https://wa.me/6283838629756?text=Halo%20Xobe,%20saya%20tertarik%20dengan%20layanan%20panel%20anda" class="btn-nav btn-whatsapp">
                         <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
                     <a href="https://t.me/xobedevelopment" class="btn-nav btn-telegram">
@@ -1457,13 +2211,14 @@
             </div>
         </div>
         <div class="mobile-menu-links">
-            <a href="#features" onclick="toggleMobileMenu()">Features</a>
-            <a href="#testimonials" onclick="toggleMobileMenu()">Testimonials</a>
-            <a href="#pricing" onclick="toggleMobileMenu()">Pricing</a>
+            <a href="#features" onclick="toggleMobileMenu()">Fitur</a>
+            <a href="#testimonials" onclick="toggleMobileMenu()">Testimoni</a>
+            <a href="#pricing" onclick="toggleMobileMenu()">Harga</a>
             <a href="#reseller" onclick="toggleMobileMenu()">Reseller</a>
+            <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
         </div>
         <div class="mobile-menu-cta">
-            <a href="https://wa.me/6283838629756?text=Hi%20Xobe,%20I%27m%20interested%20in%20your%20panel%20services" class="btn-whatsapp">
+            <a href="https://wa.me/6283838629756?text=Halo%20Xobe,%20saya%20tertarik%20dengan%20layanan%20panel%20anda" class="btn-whatsapp">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
             <a href="https://t.me/xobedevelopment" class="btn-telegram">
@@ -1472,21 +2227,42 @@
         </div>
     </div>
 
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="#">Beranda</a>
+        <span class="separator">/</span>
+        <span>Solusi Panel Enterprise</span>
+    </div>
+
     <!-- Hero -->
     <section class="hero">
         <div class="hero-spotlight"></div>
-        <div class="hero-badge">🚀 TRUSTED BY 5000+ CUSTOMERS</div>
-        <h1>Enterprise Panel Solutions</h1>
-        <p class="hero-subtitle">Premium Pterodactyl Hosting</p>
+        <div class="hero-badge">🚀 DIPERCAYA OLEH 5000+ PELANGGAN</div>
+        <h1>Solusi Panel Enterprise</h1>
+        <p class="hero-subtitle">Hosting Pterodactyl Premium</p>
         <p class="hero-description">
-            Experience unmatched performance, security, and reliability with our enterprise-grade panel infrastructure
+            Rasakan performa yang tak tertandingi, keamanan, dan keandalan dengan infrastruktur panel enterprise-grade kami
         </p>
         <div class="hero-cta">
-            <a href="https://wa.me/6283838629756?text=Hi%20Xobe,%20I%27m%20interested%20in%20your%20panel%20services" class="btn-hero btn-primary">
-                <i class="fab fa-whatsapp"></i> Get Started
+            <a href="https://wa.me/6283838629756?text=Halo%20Xobe,%20saya%20tertarik%20dengan%20layanan%20panel%20anda" class="btn-hero btn-primary">
+                <i class="fab fa-whatsapp"></i> Mulai Sekarang
             </a>
             <a href="https://t.me/xobedevelopment" class="btn-hero btn-outline">
-                <i class="fab fa-telegram"></i> Contact
+                <i class="fab fa-telegram"></i> Hubungi Kami
+            </a>
+        </div>
+        <div class="social-sharing">
+            <a href="#" class="social-share-btn facebook" onclick="shareOnFacebook(); return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-share-btn twitter" onclick="shareOnTwitter(); return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-share-btn linkedin" onclick="shareOnLinkedIn(); return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-share-btn whatsapp" onclick="shareOnWhatsApp(); return false;">
+                <i class="fab fa-whatsapp"></i>
             </a>
         </div>
     </section>
@@ -1496,7 +2272,7 @@
         <div class="trust-grid">
             <div class="trust-item">
                 <div class="trust-number">5000+</div>
-                <div class="trust-label">Active Clients</div>
+                <div class="trust-label">Pelanggan Aktif</div>
             </div>
             <div class="trust-item">
                 <div class="trust-number">99.9%</div>
@@ -1504,11 +2280,11 @@
             </div>
             <div class="trust-item">
                 <div class="trust-number">24/7</div>
-                <div class="trust-label">Support</div>
+                <div class="trust-label">Dukungan</div>
             </div>
             <div class="trust-item">
                 <div class="trust-number">100+</div>
-                <div class="trust-label">Servers</div>
+                <div class="trust-label">Server</div>
             </div>
         </div>
     </section>
@@ -1516,10 +2292,10 @@
     <!-- Features -->
     <section class="features" id="features">
         <div class="section-header">
-            <div class="section-label">WHY CHOOSE US</div>
-            <h2 class="section-title">Enterprise Features</h2>
+            <div class="section-label">MENGAPA MEMILIH KAMI</div>
+            <h2 class="section-title">Fitur Enterprise</h2>
             <p class="section-subtitle">
-                Built for performance, secured for peace of mind
+                Dibangun untuk performa, diamankan untuk ketenangan pikiran
             </p>
         </div>
         <div class="features-grid">
@@ -1527,43 +2303,43 @@
                 <div class="feature-icon">
                     <i class="fas fa-shield-alt"></i>
                 </div>
-                <h3>Military-Grade Security</h3>
-                <p>Advanced anti-theft protection with multi-layer security protocols</p>
+                <h3>Keamanan Militer</h3>
+                <p>Perlindungan anti-pencurian canggih dengan protokol keamanan multi-lapis</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-lock"></i>
                 </div>
-                <h3>Anti-Damage Protection</h3>
-                <p>Comprehensive protection against unauthorized deletions</p>
+                <h3>Perlindungan Anti-Kerusakan</h3>
+                <p>Perlindungan komprehensif terhadap penghapusan yang tidak sah</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-rocket"></i>
                 </div>
-                <h3>Lightning Performance</h3>
-                <p>Enterprise NVMe SSD storage with dedicated CPU cores</p>
+                <h3>Performa Kilat</h3>
+                <p>Storage NVMe SSD enterprise dengan CPU core dedicated</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-headset"></i>
                 </div>
-                <h3>Premium Support</h3>
-                <p>24/7 dedicated support team with fast response time</p>
+                <h3>Dukungan Premium</h3>
+                <p>Tim dukungan 24/7 dengan waktu respons cepat</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-chart-line"></i>
                 </div>
-                <h3>99.9% Uptime</h3>
-                <p>Industry-leading uptime guarantee with redundant infrastructure</p>
+                <h3>Uptime 99.9%</h3>
+                <p>Jaminan uptime terkemuka dengan infrastruktur redundan</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-globe"></i>
                 </div>
-                <h3>Global Infrastructure</h3>
-                <p>Worldwide server locations with low latency connectivity</p>
+                <h3>Infrastruktur Global</h3>
+                <p>Lokasi server worldwide dengan konektivitas latensi rendah</p>
             </div>
         </div>
     </section>
@@ -1571,20 +2347,20 @@
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
         <div class="section-header">
-            <div class="section-label">CUSTOMER FEEDBACK</div>
-            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="section-label">FEEDBACK PELANGGAN</div>
+            <h2 class="section-title">Apa Kata Pelanggan Kami</h2>
             <p class="section-subtitle">
-                Real reviews from our valued customers
+                Review nyata dari pelanggan berharga kami
             </p>
         </div>
         
         <div class="testimonials-header">
             <div class="testimonials-title-section">
-                <h3>Overall Rating</h3>
+                <h3>Rating Keseluruhan</h3>
             </div>
             <div class="testimonials-stats">
                 <div class="rating-summary">
-                    <div class="rating-number">4.8</div>
+                    <div class="rating-number" id="overallRating">4.8</div>
                     <div class="rating-stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -1592,249 +2368,74 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <div class="rating-count">Based on 324 reviews</div>
+                    <div class="rating-count" id="totalReviews">Berdasarkan 324 review</div>
                 </div>
                 <div class="rating-bars">
                     <div class="rating-bar">
                         <div class="rating-bar-label">5</div>
                         <div class="rating-bar-track">
-                            <div class="rating-bar-fill" style="width: 75%"></div>
+                            <div class="rating-bar-fill" id="rating5" style="width: 75%"></div>
                         </div>
-                        <div class="rating-bar-percent">75%</div>
+                        <div class="rating-bar-percent" id="rating5Percent">75%</div>
                     </div>
                     <div class="rating-bar">
                         <div class="rating-bar-label">4</div>
                         <div class="rating-bar-track">
-                            <div class="rating-bar-fill" style="width: 15%"></div>
+                            <div class="rating-bar-fill" id="rating4" style="width: 15%"></div>
                         </div>
-                        <div class="rating-bar-percent">15%</div>
+                        <div class="rating-bar-percent" id="rating4Percent">15%</div>
                     </div>
                     <div class="rating-bar">
                         <div class="rating-bar-label">3</div>
                         <div class="rating-bar-track">
-                            <div class="rating-bar-fill" style="width: 7%"></div>
+                            <div class="rating-bar-fill" id="rating3" style="width: 7%"></div>
                         </div>
-                        <div class="rating-bar-percent">7%</div>
+                        <div class="rating-bar-percent" id="rating3Percent">7%</div>
                     </div>
                     <div class="rating-bar">
                         <div class="rating-bar-label">2</div>
                         <div class="rating-bar-track">
-                            <div class="rating-bar-fill" style="width: 2%"></div>
+                            <div class="rating-bar-fill" id="rating2" style="width: 2%"></div>
                         </div>
-                        <div class="rating-bar-percent">2%</div>
+                        <div class="rating-bar-percent" id="rating2Percent">2%</div>
                     </div>
                     <div class="rating-bar">
                         <div class="rating-bar-label">1</div>
                         <div class="rating-bar-track">
-                            <div class="rating-bar-fill" style="width: 1%"></div>
+                            <div class="rating-bar-fill" id="rating1" style="width: 1%"></div>
                         </div>
-                        <div class="rating-bar-percent">1%</div>
+                        <div class="rating-bar-percent" id="rating1Percent">1%</div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="testimonial-header">
-                    <div class="testimonial-user">
-                        <div class="user-avatar">JD</div>
-                        <div class="user-info">
-                            <h4>John Doe</h4>
-                            <div class="user-plan">Professional Plan</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                <div class="testimonial-content">
-                    Xobe Store has been a game-changer for my hosting business. The panel is incredibly stable and the support team is always there when I need them. Highly recommended!
-                </div>
-                <div class="testimonial-date">2 weeks ago</div>
-                <div class="testimonial-actions">
-                    <div class="testimonial-action liked">
-                        <i class="fas fa-thumbs-up"></i> 24
-                    </div>
-                    <div class="testimonial-action">
-                        <i class="fas fa-reply"></i> Reply
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-header">
-                    <div class="testimonial-user">
-                        <div class="user-avatar">SA</div>
-                        <div class="user-info">
-                            <h4>Sarah Anderson</h4>
-                            <div class="user-plan">Premium Plan</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                <div class="testimonial-content">
-                    I've tried many panel providers before, but Xobe Store stands out with their exceptional performance and security features. The anti-theft protection gives me peace of mind.
-                </div>
-                <div class="testimonial-date">1 month ago</div>
-                <div class="testimonial-actions">
-                    <div class="testimonial-action">
-                        <i class="fas fa-thumbs-up"></i> 18
-                    </div>
-                    <div class="testimonial-action">
-                        <i class="fas fa-reply"></i> Reply
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-header">
-                    <div class="testimonial-user">
-                        <div class="user-avatar">MK</div>
-                        <div class="user-info">
-                            <h4>Michael Kim</h4>
-                            <div class="user-plan">Reseller Partner</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                </div>
-                <div class="testimonial-content">
-                    As a reseller, I appreciate the flexibility and white-label solutions offered by Xobe Store. Their reseller program has helped me grow my business significantly.
-                </div>
-                <div class="testimonial-date">1 month ago</div>
-                <div class="testimonial-actions">
-                    <div class="testimonial-action">
-                        <i class="fas fa-thumbs-up"></i> 15
-                    </div>
-                    <div class="testimonial-action">
-                        <i class="fas fa-reply"></i> Reply
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-header">
-                    <div class="testimonial-user">
-                        <div class="user-avatar">EJ</div>
-                        <div class="user-info">
-                            <h4>Emily Johnson</h4>
-                            <div class="user-plan">Standard Plan</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                <div class="testimonial-content">
-                    The performance is outstanding! My servers run smoothly without any issues. The dashboard is intuitive and easy to navigate even for beginners.
-                </div>
-                <div class="testimonial-date">2 months ago</div>
-                <div class="testimonial-actions">
-                    <div class="testimonial-action">
-                        <i class="fas fa-thumbs-up"></i> 12
-                    </div>
-                    <div class="testimonial-action">
-                        <i class="fas fa-reply"></i> Reply
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-header">
-                    <div class="testimonial-user">
-                        <div class="user-avatar">RC</div>
-                        <div class="user-info">
-                            <h4>Robert Chen</h4>
-                            <div class="user-plan">Business Plan</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-                <div class="testimonial-content">
-                    Great service with excellent uptime. The only minor issue is that sometimes support response can be a bit slow during peak hours, but they always resolve my issues.
-                </div>
-                <div class="testimonial-date">3 months ago</div>
-                <div class="testimonial-actions">
-                    <div class="testimonial-action">
-                        <i class="fas fa-thumbs-up"></i> 9
-                    </div>
-                    <div class="testimonial-action">
-                        <i class="fas fa-reply"></i> Reply
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-header">
-                    <div class="testimonial-user">
-                        <div class="user-avatar">LM</div>
-                        <div class="user-info">
-                            <h4>Lisa Martinez</h4>
-                            <div class="user-plan">Advanced Plan</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                <div class="testimonial-content">
-                    I've been with Xobe Store for over a year now and couldn't be happier. The panel is reliable, secure, and the pricing is competitive. Highly recommend!
-                </div>
-                <div class="testimonial-date">3 months ago</div>
-                <div class="testimonial-actions">
-                    <div class="testimonial-action">
-                        <i class="fas fa-thumbs-up"></i> 21
-                    </div>
-                    <div class="testimonial-action">
-                        <i class="fas fa-reply"></i> Reply
-                    </div>
-                </div>
-            </div>
+        <div class="testimonials-filter">
+            <button class="filter-btn active" onclick="filterTestimonials('all')">Semua</button>
+            <button class="filter-btn" onclick="filterTestimonials('5')">5 Bintang</button>
+            <button class="filter-btn" onclick="filterTestimonials('4')">4 Bintang</button>
+            <button class="filter-btn" onclick="filterTestimonials('3')">3 Bintang</button>
+            <button class="filter-btn" onclick="filterTestimonials('2')">2 Bintang</button>
+            <button class="filter-btn" onclick="filterTestimonials('1')">1 Bintang</button>
+        </div>
+        
+        <div class="testimonials-grid" id="testimonialsGrid">
+            <!-- Testimonials will be loaded here -->
         </div>
         
         <!-- Review Form -->
         <div class="review-form-container">
-            <h3 class="review-form-title">Share Your Experience</h3>
+            <h3 class="review-form-title">Bagikan Pengalaman Anda</h3>
             <form id="reviewForm">
                 <div class="form-group">
-                    <label class="form-label" for="reviewName">Your Name</label>
-                    <input type="text" id="reviewName" class="form-input" placeholder="Enter your name" required>
+                    <label class="form-label" for="reviewName">Nama Anda</label>
+                    <input type="text" id="reviewName" class="form-input" placeholder="Masukkan nama Anda" required>
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label" for="reviewPlan">Your Plan</label>
+                    <label class="form-label" for="reviewPlan">Paket Anda</label>
                     <select id="reviewPlan" class="form-select" required>
-                        <option value="">Select your plan</option>
+                        <option value="">Pilih paket Anda</option>
                         <option value="Starter">Starter</option>
                         <option value="Basic">Basic</option>
                         <option value="Standard">Standard</option>
@@ -1862,11 +2463,11 @@
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label" for="reviewText">Your Review</label>
-                    <textarea id="reviewText" class="form-textarea" placeholder="Share your experience with Xobe Store..." required></textarea>
+                    <label class="form-label" for="reviewText">Review Anda</label>
+                    <textarea id="reviewText" class="form-textarea" placeholder="Bagikan pengalaman Anda dengan Xobe Store..." required></textarea>
                 </div>
                 
-                <button type="submit" class="form-submit">Submit Review</button>
+                <button type="submit" class="form-submit">Kirim Review</button>
             </form>
         </div>
     </section>
@@ -1875,55 +2476,55 @@
     <section class="pricing" id="pricing">
         <div class="pricing-container">
             <div class="section-header">
-                <div class="section-label">PRICING PLANS</div>
-                <h2 class="section-title">Choose Your Plan</h2>
+                <div class="section-label">PAKET HARGA</div>
+                <h2 class="section-title">Pilih Paket Anda</h2>
                 <p class="section-subtitle">
-                    Transparent pricing with no hidden fees
+                    Harga transparan tanpa biaya tersembunyi
                 </p>
             </div>
             <div class="pricing-grid">
                 <div class="price-card">
                     <h3 class="plan-name">Starter</h3>
-                    <div class="plan-price">1K<span>/mo</span></div>
+                    <div class="plan-price">1K<span>/bln</span></div>
                     <ul class="plan-specs">
                         <li><i class="fas fa-check"></i> 30% CPU</li>
                         <li><i class="fas fa-check"></i> 1GB RAM</li>
                         <li><i class="fas fa-check"></i> 1GB Storage</li>
                         <li><i class="fas fa-check"></i> Anti-Theft</li>
-                        <li><i class="fas fa-check"></i> 24/7 Support</li>
+                        <li><i class="fas fa-check"></i> Support 24/7</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Starter 1GB', '1K')">Get Started</button>
+                    <button class="btn-select" onclick="openOrderModal('Starter 1GB', '1K')">Mulai Sekarang</button>
                 </div>
 
                 <div class="price-card">
                     <h3 class="plan-name">Basic</h3>
-                    <div class="plan-price">2K<span>/mo</span></div>
+                    <div class="plan-price">2K<span>/bln</span></div>
                     <ul class="plan-specs">
                         <li><i class="fas fa-check"></i> 40% CPU</li>
                         <li><i class="fas fa-check"></i> 2GB RAM</li>
                         <li><i class="fas fa-check"></i> 2GB Storage</li>
                         <li><i class="fas fa-check"></i> Anti-Theft</li>
-                        <li><i class="fas fa-check"></i> 24/7 Support</li>
+                        <li><i class="fas fa-check"></i> Support 24/7</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Basic 2GB', '2K')">Get Started</button>
+                    <button class="btn-select" onclick="openOrderModal('Basic 2GB', '2K')">Mulai Sekarang</button>
                 </div>
 
                 <div class="price-card">
                     <h3 class="plan-name">Standard</h3>
-                    <div class="plan-price">3K<span>/mo</span></div>
+                    <div class="plan-price">3K<span>/bln</span></div>
                     <ul class="plan-specs">
                         <li><i class="fas fa-check"></i> 60% CPU</li>
                         <li><i class="fas fa-check"></i> 3GB RAM</li>
                         <li><i class="fas fa-check"></i> 3GB Storage</li>
                         <li><i class="fas fa-check"></i> Full Protection</li>
-                        <li><i class="fas fa-check"></i> 24/7 Support</li>
+                        <li><i class="fas fa-check"></i> Support 24/7</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Standard 3GB', '3K')">Get Started</button>
+                    <button class="btn-select" onclick="openOrderModal('Standard 3GB', '3K')">Mulai Sekarang</button>
                 </div>
 
                 <div class="price-card">
                     <h3 class="plan-name">Advanced</h3>
-                    <div class="plan-price">4K<span>/mo</span></div>
+                    <div class="plan-price">4K<span>/bln</span></div>
                     <ul class="plan-specs">
                         <li><i class="fas fa-check"></i> 70% CPU</li>
                         <li><i class="fas fa-check"></i> 4GB RAM</li>
@@ -1931,12 +2532,12 @@
                         <li><i class="fas fa-check"></i> Full Protection</li>
                         <li><i class="fas fa-check"></i> Priority Support</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Advanced 4GB', '4K')">Get Started</button>
+                    <button class="btn-select" onclick="openOrderModal('Advanced 4GB', '4K')">Mulai Sekarang</button>
                 </div>
 
                 <div class="price-card featured">
                     <h3 class="plan-name">Professional</h3>
-                    <div class="plan-price">5K<span>/mo</span></div>
+                    <div class="plan-price">5K<span>/bln</span></div>
                     <ul class="plan-specs">
                         <li><i class="fas fa-check"></i> 80% CPU</li>
                         <li><i class="fas fa-check"></i> 5GB RAM</li>
@@ -1944,12 +2545,12 @@
                         <li><i class="fas fa-check"></i> Full Protection</li>
                         <li><i class="fas fa-check"></i> Priority Support</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Professional 5GB', '5K')">Get Started</button>
+                    <button class="btn-select" onclick="openOrderModal('Professional 5GB', '5K')">Mulai Sekarang</button>
                 </div>
 
                 <div class="price-card">
                     <h3 class="plan-name">Business</h3>
-                    <div class="plan-price">6K<span>/mo</span></div>
+                    <div class="plan-price">6K<span>/bln</span></div>
                     <ul class="plan-specs">
                         <li><i class="fas fa-check"></i> 90% CPU</li>
                         <li><i class="fas fa-check"></i> 6GB RAM</li>
@@ -1957,12 +2558,12 @@
                         <li><i class="fas fa-check"></i> Full Protection</li>
                         <li><i class="fas fa-check"></i> Priority Support</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Business 6GB', '6K')">Get Started</button>
+                    <button class="btn-select" onclick="openOrderModal('Business 6GB', '6K')">Mulai Sekarang</button>
                 </div>
 
                 <div class="price-card">
                     <h3 class="plan-name">Premium</h3>
-                    <div class="plan-price">7K<span>/mo</span></div>
+                    <div class="plan-price">7K<span>/bln</span></div>
                     <ul class="plan-specs">
                         <li><i class="fas fa-check"></i> 100% CPU</li>
                         <li><i class="fas fa-check"></i> 7GB RAM</li>
@@ -1970,12 +2571,12 @@
                         <li><i class="fas fa-check"></i> Full Protection</li>
                         <li><i class="fas fa-check"></i> VIP Support</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Premium 7GB', '7K')">Get Started</button>
+                    <button class="btn-select" onclick="openOrderModal('Premium 7GB', '7K')">Mulai Sekarang</button>
                 </div>
 
                 <div class="price-card">
                     <h3 class="plan-name">Elite</h3>
-                    <div class="plan-price">8K<span>/mo</span></div>
+                    <div class="plan-price">8K<span>/bln</span></div>
                     <ul class="plan-specs">
                         <li><i class="fas fa-check"></i> 110% CPU</li>
                         <li><i class="fas fa-check"></i> 8GB RAM</li>
@@ -1983,12 +2584,12 @@
                         <li><i class="fas fa-check"></i> Full Protection</li>
                         <li><i class="fas fa-check"></i> VIP Support</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Elite 8GB', '8K')">Get Started</button>
+                    <button class="btn-select" onclick="openOrderModal('Elite 8GB', '8K')">Mulai Sekarang</button>
                 </div>
 
                 <div class="price-card">
                     <h3 class="plan-name">Master</h3>
-                    <div class="plan-price">9K<span>/mo</span></div>
+                    <div class="plan-price">9K<span>/bln</span></div>
                     <ul class="plan-specs">
                         <li><i class="fas fa-check"></i> 130% CPU</li>
                         <li><i class="fas fa-check"></i> 9GB RAM</li>
@@ -1996,12 +2597,12 @@
                         <li><i class="fas fa-check"></i> Full Protection</li>
                         <li><i class="fas fa-check"></i> VIP Support</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Master 9GB', '9K')">Get Started</button>
+                    <button class="btn-select" onclick="openOrderModal('Master 9GB', '9K')">Mulai Sekarang</button>
                 </div>
 
                 <div class="price-card">
                     <h3 class="plan-name">Ultimate</h3>
-                    <div class="plan-price">10K<span>/mo</span></div>
+                    <div class="plan-price">10K<span>/bln</span></div>
                     <ul class="plan-specs">
                         <li><i class="fas fa-check"></i> 150% CPU</li>
                         <li><i class="fas fa-check"></i> 10GB RAM</li>
@@ -2009,12 +2610,12 @@
                         <li><i class="fas fa-check"></i> Full Protection</li>
                         <li><i class="fas fa-check"></i> VIP Support</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Ultimate 10GB', '10K')">Get Started</button>
+                    <button class="btn-select" onclick="openOrderModal('Ultimate 10GB', '10K')">Mulai Sekarang</button>
                 </div>
 
                 <div class="price-card promo">
                     <h3 class="plan-name">UNLIMITED</h3>
-                    <div class="plan-price">12K<span>/mo</span></div>
+                    <div class="plan-price">12K<span>/bln</span></div>
                     <ul class="plan-specs">
                         <li><i class="fas fa-check"></i> 150% CPU</li>
                         <li><i class="fas fa-check"></i> Unlimited RAM</li>
@@ -2023,7 +2624,7 @@
                         <li><i class="fas fa-check"></i> Dedicated Support</li>
                         <li><i class="fas fa-check"></i> Custom Solutions</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('UNLIMITED Plan', '12K')">Get Started</button>
+                    <button class="btn-select" onclick="openOrderModal('UNLIMITED Plan', '12K')">Mulai Sekarang</button>
                 </div>
             </div>
         </div>
@@ -2033,44 +2634,132 @@
     <section class="reseller" id="reseller">
         <div class="reseller-card">
             <div class="reseller-content">
-                <div class="reseller-badge">💼 PARTNER PROGRAM</div>
-                <h2>Become a Reseller Partner</h2>
+                <div class="reseller-badge">💼 PROGRAM PARTNER</div>
+                <h2>Jadi Partner Reseller</h2>
                 <div class="reseller-price">
-                    Registration: <strong>10K</strong> (One-time)<br>
-                    Maintenance: <strong>5K/month</strong>
+                    Pendaftaran: <strong>10K</strong> (Sekali bayar)<br>
+                    Maintenance: <strong>5K/bulan</strong>
                 </div>
                 <ul class="reseller-features">
-                    <li><i class="fas fa-check-circle"></i> Set Your Own Prices</li>
-                    <li><i class="fas fa-check-circle"></i> 100% Profit Margin</li>
-                    <li><i class="fas fa-check-circle"></i> Full Panel Access</li>
+                    <li><i class="fas fa-check-circle"></i> Tetapkan Harga Sendiri</li>
+                    <li><i class="fas fa-check-circle"></i> Margin Profit 100%</li>
+                    <li><i class="fas fa-check-circle"></i> Akses Panel Penuh</li>
                     <li><i class="fas fa-check-circle"></i> Priority Support</li>
-                    <li><i class="fas fa-check-circle"></i> Free Updates</li>
-                    <li><i class="fas fa-check-circle"></i> Training Materials</li>
-                    <li><i class="fas fa-check-circle"></i> Marketing Support</li>
-                    <li><i class="fas fa-check-circle"></i> White-Label Solutions</li>
+                    <li><i class="fas fa-check-circle"></i> Update Gratis</li>
+                    <li><i class="fas fa-check-circle"></i> Materi Training</li>
+                    <li><i class="fas fa-check-circle"></i> Dukungan Marketing</li>
+                    <li><i class="fas fa-check-circle"></i> Solusi White-Label</li>
                 </ul>
                 <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                    <a href="https://wa.me/6283838629756?text=Hi%20Xobe,%20I%27m%20interested%20in%20becoming%20a%20reseller%20partner" class="btn-hero btn-primary">
-                        <i class="fab fa-whatsapp"></i> Join via WhatsApp
+                    <a href="https://wa.me/6283838629756?text=Halo%20Xobe,%20saya%20tertarik%20menjadi%20reseller" class="btn-hero btn-primary">
+                        <i class="fab fa-whatsapp"></i> Gabung via WhatsApp
                     </a>
                     <a href="https://t.me/xobedevelopment" class="btn-hero btn-outline">
-                        <i class="fab fa-telegram"></i> Join via Telegram
+                        <i class="fab fa-telegram"></i> Gabung via Telegram
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="section-header">
+            <div class="section-label">PERTANYAAN YANG SERING DITANYAKAN</div>
+            <h2 class="section-title">Punya Pertanyaan? Kami Punya Jawaban</h2>
+            <p class="section-subtitle">
+                Temukan jawaban untuk pertanyaan umum tentang layanan kami
+            </p>
+        </div>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Apa itu Panel Pterodactyl?</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Pterodactyl adalah panel manajemen server game gratis dan open-source yang dibangun dengan PHP, React, dan Go. Dirancang dengan mempertimbangkan keamanan, Pterodactyl menjalankan semua server game dalam container Docker terisolasi sambil mengekspos UI yang indah dan intuitif kepada pengguna akhir.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Berapa lama waktu yang dibutuhkan untuk setup panel saya?</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Setup panel biasanya selesai dalam 24 jam setelah konfirmasi pembayaran. Anda akan menerima semua kredensial login dan dokumentasi untuk memulai segera.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Apakah saya bisa upgrade paket saya nanti?</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Ya, Anda dapat upgrade paket Anda kapan saja. Cukup hubungi tim support kami, dan kami akan membantu Anda bermigrasi ke paket tier yang lebih tinggi tanpa downtime.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Metode pembayaran apa yang Anda terima?</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Kami menerima berbagai metode pembayaran termasuk transfer bank, e-wallet (DANA, OVO, GoPay), dan cryptocurrency. Semua pembayaran diproses secara aman melalui mitra pembayaran kami.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Apakah Anda menyediakan dukungan teknis?</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Ya, kami menyediakan dukungan teknis 24/7 melalui WhatsApp dan Telegram. Tim kami selalu siap membantu Anda dengan masalah atau pertanyaan apa pun yang mungkin Anda miliki.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <h3 class="newsletter-title">Tetap Terupdate</h3>
+        <p class="newsletter-description">
+            Berlangganan newsletter kami untuk update terbaru, penawaran khusus, dan tips.
+        </p>
+        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+            <input type="email" class="newsletter-input" placeholder="Masukkan email Anda" required>
+            <button type="submit" class="newsletter-button">Berlangganan</button>
+        </form>
+        <p class="newsletter-privacy">
+            Kami menghargai privasi Anda. Berhenti berlangganan kapan saja.
+        </p>
+    </section>
+
     <!-- CTA Final -->
     <section class="cta-final">
-        <h2>Ready to Scale Your Business?</h2>
-        <p>Join thousands of satisfied customers who trust Xobe Store</p>
+        <h2>Siap untuk Mengembangkan Bisnis Anda?</h2>
+        <p>Bergabunglah dengan ribuan pelanggan puas yang percaya pada Xobe Store</p>
         <div class="cta-buttons">
-            <a href="https://wa.me/6283838629756?text=Hi%20Xobe,%20I%27m%20ready%20to%20get%20started" class="btn-hero btn-primary">
-                <i class="fab fa-whatsapp"></i> Start on WhatsApp
+            <a href="https://wa.me/6283838629756?text=Halo%20Xobe,%20saya%20siap%20memulai" class="btn-hero btn-primary">
+                <i class="fab fa-whatsapp"></i> Mulai di WhatsApp
             </a>
             <a href="https://t.me/xobedevelopment" class="btn-hero btn-outline">
-                <i class="fab fa-telegram"></i> Start on Telegram
+                <i class="fab fa-telegram"></i> Mulai di Telegram
             </a>
         </div>
     </section>
@@ -2080,51 +2769,69 @@
         <div class="footer-grid">
             <div class="footer-section">
                 <h3>XOBE STORE</h3>
-                <p>Enterprise-grade Pterodactyl panel hosting solutions trusted by businesses worldwide.</p>
+                <p>Solusi hosting panel Pterodactyl enterprise-grade yang dipercaya oleh bisnis worldwide.</p>
+                <div class="social-sharing">
+                    <a href="#" class="social-share-btn facebook" onclick="shareOnFacebook(); return false;">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-share-btn twitter" onclick="shareOnTwitter(); return false;">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-share-btn linkedin" onclick="shareOnLinkedIn(); return false;">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-share-btn whatsapp" onclick="shareOnWhatsApp(); return false;">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
             </div>
             <div class="footer-section">
-                <h3>Quick Links</h3>
+                <h3>Link Cepat</h3>
                 <ul class="footer-links">
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#features">Fitur</a></li>
+                    <li><a href="#testimonials">Testimoni</a></li>
+                    <li><a href="#pricing">Harga</a></li>
                     <li><a href="#reseller">Reseller</a></li>
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">Terms</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#">Dokumentasi</a></li>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Support</h3>
+                <h3>Dukungan</h3>
                 <ul class="footer-links">
-                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Pusat Bantuan</a></li>
                     <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Tutorial</a></li>
                     <li><a href="#">Status</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Kontak</a></li>
+                    <li><a href="#">Laporkan Masalah</a></li>
+                    <li><a href="#">Permintaan Fitur</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Contact Us</h3>
+                <h3>Hubungi Kami</h3>
                 <div class="contact-btns">
                     <a href="https://wa.me/6283838629756" class="contact-btn whatsapp">
                         <i class="fab fa-whatsapp"></i>
                         <div>
                             <div style="font-weight: 700;">WhatsApp</div>
-                            <div style="font-size: 12px; color: #64748b;">+62 838-3862-9756</div>
+                            <div style="font-size: 12px; color: var(--text-muted);">+62 838-3862-9756</div>
                         </div>
                     </a>
                     <a href="https://t.me/xobedevelopment" class="contact-btn telegram">
                         <i class="fab fa-telegram"></i>
                         <div>
                             <div style="font-weight: 700;">Telegram</div>
-                            <div style="font-size: 12px; color: #64748b;">@xobedevelopment</div>
+                            <div style="font-size: 12px; color: var(--text-muted);">@xobedevelopment</div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Xobe Store. All rights reserved.</p>
+            <p>&copy; 2025 Xobe Store. Semua hak dilindungi. | <a href="#" style="color: var(--primary-color);">Sitemap</a></p>
         </div>
     </footer>
 
@@ -2138,23 +2845,23 @@
                 <div class="modal-icon">
                     <i class="fas fa-shopping-cart"></i>
                 </div>
-                <h2 class="modal-title">Complete Your Order</h2>
-                <p class="modal-subtitle">Choose your preferred contact method</p>
+                <h2 class="modal-title">Selesaikan Pesanan Anda</h2>
+                <p class="modal-subtitle">Pilih metode kontak yang Anda inginkan</p>
             </div>
             <div class="modal-plan">
-                <div class="modal-plan-name" id="modalPlanName">Plan Name</div>
-                <div class="modal-plan-price" id="modalPlanPrice">Price</div>
+                <div class="modal-plan-name" id="modalPlanName">Nama Paket</div>
+                <div class="modal-plan-price" id="modalPlanPrice">Harga</div>
             </div>
             <div class="modal-options">
                 <div class="modal-option whatsapp" onclick="orderViaWhatsApp()">
                     <i class="fab fa-whatsapp"></i>
                     <div class="modal-option-name">WhatsApp</div>
-                    <div class="modal-option-desc">Fast response</div>
+                    <div class="modal-option-desc">Respons cepat</div>
                 </div>
                 <div class="modal-option telegram" onclick="orderViaTelegram()">
                     <i class="fab fa-telegram"></i>
                     <div class="modal-option-name">Telegram</div>
-                    <div class="modal-option-desc">Quick support</div>
+                    <div class="modal-option-desc">Support cepat</div>
                 </div>
             </div>
         </div>
@@ -2170,20 +2877,249 @@
                 <div class="modal-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
                     <i class="fas fa-check"></i>
                 </div>
-                <h2 class="modal-title">Thank You!</h2>
-                <p class="modal-subtitle">Your review has been submitted successfully</p>
+                <h2 class="modal-title">Terima Kasih!</h2>
+                <p class="modal-subtitle" id="successMessage">Review Anda telah berhasil dikirim</p>
             </div>
             <div style="text-align: center; margin-top: 20px;">
-                <button class="form-submit" onclick="closeSuccessModal()">Close</button>
+                <button class="form-submit" onclick="closeSuccessModal()">Tutup</button>
             </div>
         </div>
     </div>
 
     <script>
+        // Initialize variables
         let selectedPlan = '';
         let selectedPrice = '';
         let selectedRating = 0;
+        let testimonials = [];
+        let currentFilter = 'all';
+        let isDarkMode = true;
 
+        // Initialize localStorage for testimonials
+        function initializeTestimonials() {
+            // Check if testimonials exist in localStorage
+            if (!localStorage.getItem('xobeTestimonials')) {
+                // Default testimonials
+                const defaultTestimonials = [
+                    {
+                        id: 1,
+                        name: "Budi Santoso",
+                        plan: "Paket Professional",
+                        rating: 5,
+                        content: "Xobe Store telah mengubah bisnis hosting saya. Panelnya sangat stabil dan tim support selalu ada saat saya butuhkan. Sangat direkomendasikan!",
+                        date: "2 minggu lalu",
+                        likes: 24,
+                        liked: false
+                    },
+                    {
+                        id: 2,
+                        name: "Siti Nurhaliza",
+                        plan: "Paket Premium",
+                        rating: 5,
+                        content: "Saya sudah mencoba banyak provider panel sebelumnya, tapi Xobe Store menonjol dengan performa dan fitur keamanannya. Perlindungan anti-theft memberikan ketenangan pikiran.",
+                        date: "1 bulan lalu",
+                        likes: 18,
+                        liked: false
+                    },
+                    {
+                        id: 3,
+                        name: "Ahmad Fauzi",
+                        plan: "Partner Reseller",
+                        rating: 4,
+                        content: "Sebagai reseller, saya menghargai fleksibilitas dan solusi white-label yang ditawarkan Xobe Store. Program reseller mereka telah membantu saya mengembangkan bisnis secara signifikan.",
+                        date: "1 bulan lalu",
+                        likes: 15,
+                        liked: false
+                    },
+                    {
+                        id: 4,
+                        name: "Dewi Lestari",
+                        plan: "Paket Standard",
+                        rating: 5,
+                        content: "Performanya luar biasa! Server saya berjalan lancar tanpa masalah. Dashboardnya intuitif dan mudah dinavigasi bahkan untuk pemula.",
+                        date: "2 bulan lalu",
+                        likes: 12,
+                        liked: false
+                    },
+                    {
+                        id: 5,
+                        name: "Rudi Hermawan",
+                        plan: "Paket Business",
+                        rating: 4,
+                        content: "Layanan hebat dengan uptime excellent. Satu-satunya masalah kecil adalah terkadang respons support bisa sedikit lambat saat jam sibuk, tapi mereka selalu menyelesaikan masalah saya.",
+                        date: "3 bulan lalu",
+                        likes: 9,
+                        liked: false
+                    },
+                    {
+                        id: 6,
+                        name: "Maya Putri",
+                        plan: "Paket Advanced",
+                        rating: 5,
+                        content: "Saya sudah bersama Xobe Store selama lebih dari setahun dan tidak bisa lebih bahagia. Panelnya andal, aman, dan harganya kompetitif. Sangat direkomendasikan!",
+                        date: "3 bulan lalu",
+                        likes: 21,
+                        liked: false
+                    }
+                ];
+                
+                localStorage.setItem('xobeTestimonials', JSON.stringify(defaultTestimonials));
+            }
+            
+            // Load testimonials from localStorage
+            testimonials = JSON.parse(localStorage.getItem('xobeTestimonials'));
+            renderTestimonials();
+            updateRatingStats();
+        }
+
+        // Render testimonials
+        function renderTestimonials() {
+            const testimonialsGrid = document.getElementById('testimonialsGrid');
+            testimonialsGrid.innerHTML = '';
+            
+            // Filter testimonials based on current filter
+            let filteredTestimonials = testimonials;
+            if (currentFilter !== 'all') {
+                filteredTestimonials = testimonials.filter(t => t.rating == currentFilter);
+            }
+            
+            // Create testimonial cards
+            filteredTestimonials.forEach((testimonial, index) => {
+                const card = document.createElement('div');
+                card.className = 'testimonial-card';
+                
+                // Generate initials from name
+                const initials = testimonial.name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
+                
+                // Generate star HTML based on rating
+                let starsHTML = '';
+                for (let i = 1; i <= 5; i++) {
+                    if (i <= testimonial.rating) {
+                        starsHTML += '<i class="fas fa-star"></i>';
+                    } else {
+                        starsHTML += '<i class="far fa-star"></i>';
+                    }
+                }
+                
+                // Set card content
+                card.innerHTML = `
+                    <div class="testimonial-header">
+                        <div class="testimonial-user">
+                            <div class="user-avatar">${initials}</div>
+                            <div class="user-info">
+                                <h4>${testimonial.name}</h4>
+                                <div class="user-plan">${testimonial.plan}</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            ${starsHTML}
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        ${testimonial.content}
+                    </div>
+                    <div class="testimonial-date">${testimonial.date}</div>
+                    <div class="testimonial-actions">
+                        <div class="testimonial-action ${testimonial.liked ? 'liked' : ''}" onclick="toggleLike(${testimonial.id})">
+                            <i class="fas fa-thumbs-up"></i> ${testimonial.likes}
+                        </div>
+                        <div class="testimonial-action">
+                            <i class="fas fa-reply"></i> Balas
+                        </div>
+                    </div>
+                `;
+                
+                testimonialsGrid.appendChild(card);
+                
+                // Add animation with delay
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, index * 100);
+            });
+        }
+
+        // Update rating statistics
+        function updateRatingStats() {
+            const totalReviews = testimonials.length;
+            const ratingCounts = [0, 0, 0, 0, 0, 0]; // Index 0 unused, 1-5 for ratings
+            
+            let totalRating = 0;
+            
+            testimonials.forEach(testimonial => {
+                ratingCounts[testimonial.rating]++;
+                totalRating += testimonial.rating;
+            });
+            
+            // Calculate average rating
+            const averageRating = (totalRating / totalReviews).toFixed(1);
+            document.getElementById('overallRating').textContent = averageRating;
+            document.getElementById('totalReviews').textContent = `Berdasarkan ${totalReviews} review`;
+            
+            // Update rating bars
+            for (let i = 1; i <= 5; i++) {
+                const percentage = Math.round((ratingCounts[i] / totalReviews) * 100);
+                document.getElementById(`rating${i}`).style.width = `${percentage}%`;
+                document.getElementById(`rating${i}Percent`).textContent = `${percentage}%`;
+            }
+        }
+
+        // Toggle like on testimonial
+        function toggleLike(testimonialId) {
+            const testimonial = testimonials.find(t => t.id === testimonialId);
+            if (testimonial) {
+                testimonial.liked = !testimonial.liked;
+                testimonial.likes += testimonial.liked ? 1 : -1;
+                
+                // Save to localStorage
+                localStorage.setItem('xobeTestimonials', JSON.stringify(testimonials));
+                
+                // Re-render testimonials
+                renderTestimonials();
+            }
+        }
+
+        // Filter testimonials
+        function filterTestimonials(rating) {
+            currentFilter = rating;
+            
+            // Update active filter button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Re-render testimonials
+            renderTestimonials();
+        }
+
+        // Create particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Random position
+                particle.style.left = `${Math.random() * 100}%`;
+                
+                // Random size
+                const size = Math.random() * 3 + 1;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random animation delay
+                particle.style.animationDelay = `${Math.random() * 15}s`;
+                
+                // Random animation duration
+                particle.style.animationDuration = `${Math.random() * 20 + 10}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Toggle mobile menu
         function toggleMobileMenu() {
             const menu = document.querySelector('.mobile-menu');
             const overlay = document.querySelector('.mobile-menu-overlay');
@@ -2192,36 +3128,86 @@
             document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : 'auto';
         }
 
+        // Open order modal
         function openOrderModal(plan, price) {
             selectedPlan = plan;
             selectedPrice = price;
             
             document.getElementById('modalPlanName').textContent = plan;
-            document.getElementById('modalPlanPrice').textContent = price + '/mo';
+            document.getElementById('modalPlanPrice').textContent = price + '/bln';
             document.getElementById('orderModal').style.display = 'flex';
             document.body.style.overflow = 'hidden';
         }
 
+        // Close order modal
         function closeOrderModal() {
             document.getElementById('orderModal').style.display = 'none';
             document.body.style.overflow = 'auto';
         }
 
+        // Close success modal
         function closeSuccessModal() {
             document.getElementById('successModal').style.display = 'none';
             document.body.style.overflow = 'auto';
         }
 
+        // Order via WhatsApp
         function orderViaWhatsApp() {
-            const whatsappMsg = `Hi Xobe, I'm interested in ordering the ${selectedPlan} plan (${selectedPrice}/mo)`;
+            const whatsappMsg = `Halo Xobe, saya tertarik untuk memesan paket ${selectedPlan} (${selectedPrice}/bln)`;
             window.open(`https://wa.me/6283838629756?text=${encodeURIComponent(whatsappMsg)}`, '_blank');
             closeOrderModal();
         }
 
+        // Order via Telegram
         function orderViaTelegram() {
-            const telegramMsg = `Hi Xobe, I'm interested in ordering the ${selectedPlan} plan (${selectedPrice}/mo)`;
+            const telegramMsg = `Halo Xobe, saya tertarik untuk memesan paket ${selectedPlan} (${selectedPrice}/bln)`;
             window.open(`https://t.me/xobedevelopment?text=${encodeURIComponent(telegramMsg)}`, '_blank');
             closeOrderModal();
+        }
+
+        // Toggle FAQ
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+        }
+
+        // Subscribe to newsletter
+        function subscribeNewsletter(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            
+            // Show success message
+            document.getElementById('successMessage').textContent = `Terima kasih telah berlangganan dengan ${email}!`;
+            document.getElementById('successModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            
+            // Reset form
+            event.target.reset();
+        }
+
+        // Social sharing functions
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('Lihat Xobe Store - Solusi Panel Pterodactyl Enterprise');
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`, '_blank');
+        }
+
+        function shareOnTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('Lihat Xobe Store - Solusi Panel Pterodactyl Enterprise');
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        }
+
+        function shareOnLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('Lihat Xobe Store - Solusi Panel Pterodactyl Enterprise');
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}&summary=${text}`, '_blank');
+        }
+
+        function shareOnWhatsApp() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('Lihat Xobe Store - Solusi Panel Pterodactyl Enterprise');
+            window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
         }
 
         // Rating stars functionality
@@ -2260,7 +3246,7 @@
             e.preventDefault();
             
             if (selectedRating === 0) {
-                alert('Please select a rating');
+                alert('Silakan pilih rating');
                 return;
             }
             
@@ -2269,81 +3255,108 @@
             const plan = document.getElementById('reviewPlan').value;
             const reviewText = document.getElementById('reviewText').value;
             
-            // Create new testimonial card
-            const testimonialsGrid = document.querySelector('.testimonials-grid');
-            const newCard = document.createElement('div');
-            newCard.className = 'testimonial-card';
+            // Create new testimonial
+            const newTestimonial = {
+                id: testimonials.length > 0 ? Math.max(...testimonials.map(t => t.id)) + 1 : 1,
+                name: name,
+                plan: plan,
+                rating: selectedRating,
+                content: reviewText,
+                date: "Baru saja",
+                likes: 0,
+                liked: false
+            };
             
-            // Generate initials from name
-            const initials = name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
+            // Add to testimonials array
+            testimonials.unshift(newTestimonial);
             
-            // Generate star HTML based on rating
-            let starsHTML = '';
-            for (let i = 1; i <= 5; i++) {
-                if (i <= selectedRating) {
-                    starsHTML += '<i class="fas fa-star"></i>';
-                } else {
-                    starsHTML += '<i class="far fa-star"></i>';
-                }
-            }
-            
-            // Set card content
-            newCard.innerHTML = `
-                <div class="testimonial-header">
-                    <div class="testimonial-user">
-                        <div class="user-avatar">${initials}</div>
-                        <div class="user-info">
-                            <h4>${name}</h4>
-                            <div class="user-plan">${plan}</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">
-                        ${starsHTML}
-                    </div>
-                </div>
-                <div class="testimonial-content">
-                    ${reviewText}
-                </div>
-                <div class="testimonial-date">Just now</div>
-                <div class="testimonial-actions">
-                    <div class="testimonial-action">
-                        <i class="fas fa-thumbs-up"></i> 0
-                    </div>
-                    <div class="testimonial-action">
-                        <i class="fas fa-reply"></i> Reply
-                    </div>
-                </div>
-            `;
-            
-            // Add new card to the beginning of the grid
-            testimonialsGrid.insertBefore(newCard, testimonialsGrid.firstChild);
+            // Save to localStorage
+            localStorage.setItem('xobeTestimonials', JSON.stringify(testimonials));
             
             // Reset form
             document.getElementById('reviewForm').reset();
             selectedRating = 0;
             updateRatingStars();
             
+            // Update display
+            renderTestimonials();
+            updateRatingStats();
+            
             // Show success modal
+            document.getElementById('successMessage').textContent = 'Review Anda telah berhasil dikirim';
             document.getElementById('successModal').style.display = 'flex';
             document.body.style.overflow = 'hidden';
         });
 
-        // Testimonial like functionality
-        document.addEventListener('click', function(e) {
-            if (e.target.closest('.testimonial-action') && e.target.closest('.testimonial-action').querySelector('.fa-thumbs-up')) {
-                const action = e.target.closest('.testimonial-action');
-                const likeCount = action.querySelector('i').nextSibling;
-                const currentCount = parseInt(likeCount.textContent.trim());
-                
-                if (action.classList.contains('liked')) {
-                    action.classList.remove('liked');
-                    likeCount.textContent = ' ' + (currentCount - 1);
-                } else {
-                    action.classList.add('liked');
-                    likeCount.textContent = ' ' + (currentCount + 1);
-                }
+        // Scroll to top functionality
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.getElementById('scrollTop');
+            const scrollProgress = document.getElementById('scrollProgress');
+            const navbar = document.getElementById('navbar');
+            
+            // Update scroll progress bar
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPosition = window.scrollY;
+            const progressPercentage = (scrollPosition / scrollHeight) * 100;
+            scrollProgress.style.width = `${progressPercentage}%`;
+            
+            // Show/hide scroll to top button
+            if (window.scrollY > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+            
+            // Add scrolled class to navbar
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
             }
         });
+
+        document.getElementById('scrollTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Theme toggle
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            isDarkMode = !isDarkMode;
+            const body = document.body;
+            const themeIcon = this.querySelector('i');
+            
+            if (isDarkMode) {
+                body.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fas fa-moon';
+            } else {
+                body.setAttribute('data-theme', 'light');
+                themeIcon.className = 'fas fa-sun';
+            }
+            
+            // Save theme preference
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        });
+
+        // Load saved theme
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                isDarkMode = savedTheme === 'dark';
+                const body = document.body;
+                const themeIcon = document.getElementById('themeToggle').querySelector('i');
+                
+                if (isDarkMode) {
+                    body.setAttribute('data-theme', 'dark');
+                    themeIcon.className = 'fas fa-moon';
+                } else {
+                    body.setAttribute('data-theme', 'light');
+                    themeIcon.className = 'fas fa-sun';
+                }
+            }
+        }
 
         // Close modal when clicking outside
         window.onclick = function(event) {
@@ -2370,14 +3383,52 @@
             });
         });
 
-        // Prevent body scroll when mobile menu is open
-        document.addEventListener('DOMContentLoaded', function() {
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            // Load saved theme
+            loadTheme();
+            
+            // Hide loading screen
+            setTimeout(() => {
+                document.getElementById('loadingScreen').classList.add('hidden');
+            }, 1500);
+            
+            // Initialize particles
+            createParticles();
+            
+            // Initialize testimonials
+            initializeTestimonials();
+            
+            // Initialize mobile menu
             const mobileBtn = document.querySelector('.mobile-btn');
             if (mobileBtn) {
                 mobileBtn.addEventListener('click', function(e) {
                     e.stopPropagation();
                 });
             }
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToObserve = document.querySelectorAll('.feature-card, .price-card, .trust-item');
+            elementsToObserve.forEach(el => {
+                observer.observe(el);
+            });
         });
     </script>
 </body>
