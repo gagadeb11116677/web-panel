@@ -2144,6 +2144,496 @@
                 grid-template-columns: repeat(4, 1fr);
             }
         }
+        
+        /* New additions for improved experience */
+        
+        /* Live Chat Widget */
+        .live-chat {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: var(--shadow);
+            animation: pulse-green 2s infinite;
+        }
+        
+        @keyframes pulse-green {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .live-chat:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+        
+        .live-chat-tooltip {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            white-space: nowrap;
+            box-shadow: var(--shadow);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        
+        .live-chat:hover .live-chat-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Countdown Timer */
+        .countdown-container {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(245, 158, 11, 0.1));
+            border: 1px solid rgba(236, 72, 153, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+        
+        .countdown-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .countdown-value {
+            font-size: 32px;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--accent-color), var(--warning-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+        
+        .countdown-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 5px;
+        }
+        
+        /* Comparison Table */
+        .comparison-container {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .comparison-table th {
+            background: var(--bg-secondary);
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: rgba(99, 102, 241, 0.05);
+        }
+        
+        .comparison-table .feature-name {
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .comparison-table .check {
+            color: var(--success-color);
+            font-size: 18px;
+        }
+        
+        .comparison-table .cross {
+            color: var(--danger-color);
+            font-size: 18px;
+        }
+        
+        /* Notification */
+        .notification {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 15px 20px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transform: translateX(120%);
+            transition: transform 0.3s ease;
+            z-index: 1001;
+            max-width: 350px;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        .notification-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .notification.success .notification-icon {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success-color);
+        }
+        
+        .notification.error .notification-icon {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--danger-color);
+        }
+        
+        .notification.info .notification-icon {
+            background: rgba(99, 102, 241, 0.2);
+            color: var(--primary-color);
+        }
+        
+        .notification-content {
+            flex: 1;
+        }
+        
+        .notification-title {
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: var(--text-primary);
+        }
+        
+        .notification-message {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        .notification-close {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 16px;
+            padding: 5px;
+        }
+        
+        /* Custom Price Calculator */
+        .calculator-container {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 600px;
+        }
+        
+        .calculator-title {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--text-primary), var(--primary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .calculator-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .calculator-slider {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .slider-label {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .slider-value {
+            color: var(--primary-color);
+        }
+        
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background: var(--bg-card);
+            outline: none;
+            transition: var(--transition);
+        }
+        
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .slider::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+        }
+        
+        .slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .slider::-moz-range-thumb:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+        }
+        
+        .calculator-result {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .result-label {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+        
+        .result-price {
+            font-size: 32px;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .result-price span {
+            font-size: 16px;
+            color: var(--text-muted);
+        }
+        
+        /* Enhanced FAQ */
+        .faq-search {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .faq-search-input {
+            width: 100%;
+            padding: 15px 20px 15px 50px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 16px;
+            transition: var(--transition);
+        }
+        
+        .faq-search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+        
+        .faq-search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 18px;
+        }
+        
+        .faq-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .faq-category {
+            padding: 8px 16px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .faq-category:hover, .faq-category.active {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--text-primary);
+            border-color: var(--primary-color);
+        }
+        
+        /* Enhanced Testimonials */
+        .testimonial-card {
+            position: relative;
+        }
+        
+        .testimonial-quote {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 60px;
+            color: rgba(99, 102, 241, 0.1);
+            line-height: 1;
+        }
+        
+        .testimonial-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .testimonial-verified {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success-color);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 12px;
+            margin-top: 5px;
+        }
+        
+        /* Enhanced Pricing */
+        .price-tag {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .price-original {
+            font-size: 18px;
+            color: var(--text-muted);
+            text-decoration: line-through;
+            margin-right: 10px;
+        }
+        
+        .price-discount {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: var(--danger-color);
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 12px;
+        }
+        
+        /* Improved Mobile Experience */
+        @media (max-width: 767px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .hero-description {
+                font-size: 14px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .comparison-table {
+                font-size: 14px;
+            }
+            
+            .comparison-table th, .comparison-table td {
+                padding: 10px 5px;
+            }
+            
+            .countdown-timer {
+                gap: 10px;
+            }
+            
+            .countdown-value {
+                font-size: 24px;
+            }
+            
+            .notification {
+                right: 10px;
+                left: 10px;
+                max-width: none;
+            }
+        }
     </style>
 </head>
 <body data-theme="dark">
@@ -2238,17 +2728,17 @@
     <section class="hero">
         <div class="hero-spotlight"></div>
         <div class="hero-badge">🚀 DIPERCAYA OLEH 5000+ PELANGGAN</div>
-        <h1>Solusi Panel Enterprise</h1>
-        <p class="hero-subtitle">Hosting Pterodactyl Premium</p>
+        <h1>Wujudkan Server Impianmu</h1>
+        <p class="hero-subtitle">Hosting Pterodactyl Premium Tanpa Batas</p>
         <p class="hero-description">
-            Rasakan performa yang tak tertandingi, keamanan, dan keandalan dengan infrastruktur panel enterprise-grade kami
+            Nikmati pengalaman hosting game server yang luar biasa dengan performa tinggi, keamanan maksimal, dan dukungan 24/7 dari tim ahli kami
         </p>
         <div class="hero-cta">
             <a href="https://wa.me/6283838629756?text=Halo%20Xobe,%20saya%20tertarik%20dengan%20layanan%20panel%20anda" class="btn-hero btn-primary">
                 <i class="fab fa-whatsapp"></i> Mulai Sekarang
             </a>
             <a href="https://t.me/xobedevelopment" class="btn-hero btn-outline">
-                <i class="fab fa-telegram"></i> Hubungi Kami
+                <i class="fab fa-telegram"></i> Konsultasi Gratis
             </a>
         </div>
         <div class="social-sharing">
@@ -2267,24 +2757,47 @@
         </div>
     </section>
 
+    <!-- Countdown Timer -->
+    <div class="countdown-container">
+        <div class="countdown-title">🔥 PROMO SPESIAL - Berakhir Dalam:</div>
+        <div class="countdown-timer" id="countdown">
+            <div class="countdown-item">
+                <div class="countdown-value" id="days">00</div>
+                <div class="countdown-label">Hari</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-value" id="hours">00</div>
+                <div class="countdown-label">Jam</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-value" id="minutes">00</div>
+                <div class="countdown-label">Menit</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-value" id="seconds">00</div>
+                <div class="countdown-label">Detik</div>
+            </div>
+        </div>
+    </div>
+
     <!-- Trust Section -->
     <section class="trust-section">
         <div class="trust-grid">
             <div class="trust-item">
                 <div class="trust-number">5000+</div>
-                <div class="trust-label">Pelanggan Aktif</div>
+                <div class="trust-label">Pelanggan Setia</div>
             </div>
             <div class="trust-item">
                 <div class="trust-number">99.9%</div>
-                <div class="trust-label">Uptime SLA</div>
+                <div class="trust-label">Uptime Terjamin</div>
             </div>
             <div class="trust-item">
                 <div class="trust-number">24/7</div>
-                <div class="trust-label">Dukungan</div>
+                <div class="trust-label">Support Siaga</div>
             </div>
             <div class="trust-item">
                 <div class="trust-number">100+</div>
-                <div class="trust-label">Server</div>
+                <div class="trust-label">Server Global</div>
             </div>
         </div>
     </section>
@@ -2293,9 +2806,9 @@
     <section class="features" id="features">
         <div class="section-header">
             <div class="section-label">MENGAPA MEMILIH KAMI</div>
-            <h2 class="section-title">Fitur Enterprise</h2>
+            <h2 class="section-title">Fitur Unggulan Kami</h2>
             <p class="section-subtitle">
-                Dibangun untuk performa, diamankan untuk ketenangan pikiran
+                Rasakan perbedaan dengan teknologi terdepan dan layanan terbaik
             </p>
         </div>
         <div class="features-grid">
@@ -2303,43 +2816,43 @@
                 <div class="feature-icon">
                     <i class="fas fa-shield-alt"></i>
                 </div>
-                <h3>Keamanan Militer</h3>
-                <p>Perlindungan anti-pencurian canggih dengan protokol keamanan multi-lapis</p>
+                <h3>Keamanan Berlapis</h3>
+                <p>Sistem keamanan canggih dengan proteksi anti-DDoS dan firewall berlapis untuk melindungi data server Anda</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-lock"></i>
                 </div>
-                <h3>Perlindungan Anti-Kerusakan</h3>
-                <p>Perlindungan komprehensif terhadap penghapusan yang tidak sah</p>
+                <h3>Anti-Theft Protection</h3>
+                <p>Perlindungan khusus terhadap pencurian dan penghapusan data yang tidak sah dengan sistem backup otomatis</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-rocket"></i>
                 </div>
-                <h3>Performa Kilat</h3>
-                <p>Storage NVMe SSD enterprise dengan CPU core dedicated</p>
+                <h3>Performa Maksimal</h3>
+                <p>Storage NVMe SSD tercepat dengan CPU dedicated untuk pengalaman gaming yang mulus tanpa lag</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-headset"></i>
                 </div>
-                <h3>Dukungan Premium</h3>
-                <p>Tim dukungan 24/7 dengan waktu respons cepat</p>
+                <h3>Support Responsif</h3>
+                <p>Tim support ahli siap membantu 24/7 dengan respons cepat untuk semua pertanyaan dan masalah teknis</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-chart-line"></i>
                 </div>
                 <h3>Uptime 99.9%</h3>
-                <p>Jaminan uptime terkemuka dengan infrastruktur redundan</p>
+                <p>Jaminan uptime tertinggi dengan infrastruktur redundan dan monitoring real-time 24 jam</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-globe"></i>
                 </div>
-                <h3>Infrastruktur Global</h3>
-                <p>Lokasi server worldwide dengan konektivitas latensi rendah</p>
+                <h3>Jaringan Global</h3>
+                <p>Server tersebar di berbagai lokasi strategis dengan konektivitas latensi rendah untuk pengalaman terbaik</p>
             </div>
         </div>
     </section>
@@ -2349,9 +2862,9 @@
         <div class="pricing-container">
             <div class="section-header">
                 <div class="section-label">PAKET HARGA</div>
-                <h2 class="section-title">Pilih Paket Anda</h2>
+                <h2 class="section-title">Pilih Paket yang Cocok Untukmu</h2>
                 <p class="section-subtitle">
-                    Harga transparan tanpa biaya tersembunyi
+                    Harga transparan tanpa biaya tersembunyi, upgrade kapan saja
                 </p>
             </div>
             <div class="pricing-grid">
@@ -2365,7 +2878,7 @@
                         <li><i class="fas fa-check"></i> Anti-Theft</li>
                         <li><i class="fas fa-check"></i> Support 24/7</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Starter 1GB', '1K')">Mulai Sekarang</button>
+                    <button class="btn-select" onclick="openOrderModal('Starter 1GB', '1K')">Pilih Paket</button>
                 </div>
 
                 <div class="price-card">
@@ -2378,7 +2891,7 @@
                         <li><i class="fas fa-check"></i> Anti-Theft</li>
                         <li><i class="fas fa-check"></i> Support 24/7</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Basic 2GB', '2K')">Mulai Sekarang</button>
+                    <button class="btn-select" onclick="openOrderModal('Basic 2GB', '2K')">Pilih Paket</button>
                 </div>
 
                 <div class="price-card">
@@ -2391,7 +2904,7 @@
                         <li><i class="fas fa-check"></i> Full Protection</li>
                         <li><i class="fas fa-check"></i> Support 24/7</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Standard 3GB', '3K')">Mulai Sekarang</button>
+                    <button class="btn-select" onclick="openOrderModal('Standard 3GB', '3K')">Pilih Paket</button>
                 </div>
 
                 <div class="price-card">
@@ -2404,7 +2917,7 @@
                         <li><i class="fas fa-check"></i> Full Protection</li>
                         <li><i class="fas fa-check"></i> Priority Support</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Advanced 4GB', '4K')">Mulai Sekarang</button>
+                    <button class="btn-select" onclick="openOrderModal('Advanced 4GB', '4K')">Pilih Paket</button>
                 </div>
 
                 <div class="price-card featured">
@@ -2417,7 +2930,7 @@
                         <li><i class="fas fa-check"></i> Full Protection</li>
                         <li><i class="fas fa-check"></i> Priority Support</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Professional 5GB', '5K')">Mulai Sekarang</button>
+                    <button class="btn-select" onclick="openOrderModal('Professional 5GB', '5K')">Pilih Paket</button>
                 </div>
 
                 <div class="price-card">
@@ -2430,7 +2943,7 @@
                         <li><i class="fas fa-check"></i> Full Protection</li>
                         <li><i class="fas fa-check"></i> Priority Support</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Business 6GB', '6K')">Mulai Sekarang</button>
+                    <button class="btn-select" onclick="openOrderModal('Business 6GB', '6K')">Pilih Paket</button>
                 </div>
 
                 <div class="price-card">
@@ -2443,7 +2956,7 @@
                         <li><i class="fas fa-check"></i> Full Protection</li>
                         <li><i class="fas fa-check"></i> VIP Support</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Premium 7GB', '7K')">Mulai Sekarang</button>
+                    <button class="btn-select" onclick="openOrderModal('Premium 7GB', '7K')">Pilih Paket</button>
                 </div>
 
                 <div class="price-card">
@@ -2456,7 +2969,7 @@
                         <li><i class="fas fa-check"></i> Full Protection</li>
                         <li><i class="fas fa-check"></i> VIP Support</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Elite 8GB', '8K')">Mulai Sekarang</button>
+                    <button class="btn-select" onclick="openOrderModal('Elite 8GB', '8K')">Pilih Paket</button>
                 </div>
 
                 <div class="price-card">
@@ -2469,7 +2982,7 @@
                         <li><i class="fas fa-check"></i> Full Protection</li>
                         <li><i class="fas fa-check"></i> VIP Support</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Master 9GB', '9K')">Mulai Sekarang</button>
+                    <button class="btn-select" onclick="openOrderModal('Master 9GB', '9K')">Pilih Paket</button>
                 </div>
 
                 <div class="price-card">
@@ -2482,7 +2995,7 @@
                         <li><i class="fas fa-check"></i> Full Protection</li>
                         <li><i class="fas fa-check"></i> VIP Support</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('Ultimate 10GB', '10K')">Mulai Sekarang</button>
+                    <button class="btn-select" onclick="openOrderModal('Ultimate 10GB', '10K')">Pilih Paket</button>
                 </div>
 
                 <div class="price-card promo">
@@ -2496,19 +3009,132 @@
                         <li><i class="fas fa-check"></i> Dedicated Support</li>
                         <li><i class="fas fa-check"></i> Custom Solutions</li>
                     </ul>
-                    <button class="btn-select" onclick="openOrderModal('UNLIMITED Plan', '12K')">Mulai Sekarang</button>
+                    <button class="btn-select" onclick="openOrderModal('UNLIMITED Plan', '12K')">Pilih Paket</button>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Custom Price Calculator -->
+    <div class="calculator-container">
+        <h3 class="calculator-title">Kalkulator Harga Kustom</h3>
+        <div class="calculator-form">
+            <div class="calculator-slider">
+                <div class="slider-label">
+                    <span>CPU</span>
+                    <span class="slider-value" id="cpuValue">50%</span>
+                </div>
+                <input type="range" min="10" max="150" value="50" class="slider" id="cpuSlider">
+            </div>
+            <div class="calculator-slider">
+                <div class="slider-label">
+                    <span>RAM</span>
+                    <span class="slider-value" id="ramValue">2GB</span>
+                </div>
+                <input type="range" min="1" max="16" value="2" class="slider" id="ramSlider">
+            </div>
+            <div class="calculator-slider">
+                <div class="slider-label">
+                    <span>Storage</span>
+                    <span class="slider-value" id="storageValue">2GB</span>
+                </div>
+                <input type="range" min="1" max="20" value="2" class="slider" id="storageSlider">
+            </div>
+            <div class="calculator-result">
+                <div class="result-label">Estimasi Harga Bulanan</div>
+                <div class="result-price" id="estimatedPrice">Rp 2.000<span>/bln</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="comparison-container">
+        <div class="section-header">
+            <div class="section-label">BANDINGKAN PAKET</div>
+            <h2 class="section-title">Temukan Paket yang Tepat</h2>
+            <p class="section-subtitle">
+                Bandingkan fitur dari setiap paket untuk membuat keputusan terbaik
+            </p>
+        </div>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Fitur</th>
+                    <th>Starter</th>
+                    <th>Basic</th>
+                    <th>Standard</th>
+                    <th>Professional</th>
+                    <th>Unlimited</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="feature-name">CPU</td>
+                    <td>30%</td>
+                    <td>40%</td>
+                    <td>60%</td>
+                    <td>80%</td>
+                    <td>150%</td>
+                </tr>
+                <tr>
+                    <td class="feature-name">RAM</td>
+                    <td>1GB</td>
+                    <td>2GB</td>
+                    <td>3GB</td>
+                    <td>5GB</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td class="feature-name">Storage</td>
+                    <td>1GB</td>
+                    <td>2GB</td>
+                    <td>3GB</td>
+                    <td>5GB</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td class="feature-name">Anti-Theft</td>
+                    <td><i class="fas fa-check check"></i></td>
+                    <td><i class="fas fa-check check"></i></td>
+                    <td><i class="fas fa-check check"></i></td>
+                    <td><i class="fas fa-check check"></i></td>
+                    <td><i class="fas fa-check check"></i></td>
+                </tr>
+                <tr>
+                    <td class="feature-name">Full Protection</td>
+                    <td><i class="fas fa-times cross"></i></td>
+                    <td><i class="fas fa-times cross"></i></td>
+                    <td><i class="fas fa-check check"></i></td>
+                    <td><i class="fas fa-check check"></i></td>
+                    <td><i class="fas fa-check check"></i></td>
+                </tr>
+                <tr>
+                    <td class="feature-name">Priority Support</td>
+                    <td><i class="fas fa-times cross"></i></td>
+                    <td><i class="fas fa-times cross"></i></td>
+                    <td><i class="fas fa-times cross"></i></td>
+                    <td><i class="fas fa-check check"></i></td>
+                    <td><i class="fas fa-check check"></i></td>
+                </tr>
+                <tr>
+                    <td class="feature-name">VIP Support</td>
+                    <td><i class="fas fa-times cross"></i></td>
+                    <td><i class="fas fa-times cross"></i></td>
+                    <td><i class="fas fa-times cross"></i></td>
+                    <td><i class="fas fa-times cross"></i></td>
+                    <td><i class="fas fa-check check"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
         <div class="section-header">
-            <div class="section-label">FEEDBACK PELANGGAN</div>
-            <h2 class="section-title">Apa Kata Pelanggan Kami</h2>
+            <div class="section-label">TESTIMONI PELANGGAN</div>
+            <h2 class="section-title">Apa Kata Mereka Tentang Kami</h2>
             <p class="section-subtitle">
-                Review nyata dari pelanggan berharga kami
+                Dengarkan langsung dari pelanggan setia kami
             </p>
         </div>
         
@@ -2583,17 +3209,17 @@
         
         <!-- Review Form -->
         <div class="review-form-container">
-            <h3 class="review-form-title">Bagikan Pengalaman Anda</h3>
+            <h3 class="review-form-title">Bagikan Pengalamanmu</h3>
             <form id="reviewForm">
                 <div class="form-group">
-                    <label class="form-label" for="reviewName">Nama Anda</label>
-                    <input type="text" id="reviewName" class="form-input" placeholder="Masukkan nama Anda" required>
+                    <label class="form-label" for="reviewName">Nama Kamu</label>
+                    <input type="text" id="reviewName" class="form-input" placeholder="Masukkan nama kamu" required>
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label" for="reviewPlan">Paket Anda</label>
+                    <label class="form-label" for="reviewPlan">Paket Kamu</label>
                     <select id="reviewPlan" class="form-select" required>
-                        <option value="">Pilih paket Anda</option>
+                        <option value="">Pilih paket kamu</option>
                         <option value="Starter">Starter</option>
                         <option value="Basic">Basic</option>
                         <option value="Standard">Standard</option>
@@ -2621,8 +3247,8 @@
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label" for="reviewText">Review Anda</label>
-                    <textarea id="reviewText" class="form-textarea" placeholder="Bagikan pengalaman Anda dengan Xobe Store..." required></textarea>
+                    <label class="form-label" for="reviewText">Review Kamu</label>
+                    <textarea id="reviewText" class="form-textarea" placeholder="Bagikan pengalaman kamu dengan Xobe Store..." required></textarea>
                 </div>
                 
                 <button type="submit" class="form-submit">Kirim Review</button>
@@ -2635,16 +3261,16 @@
         <div class="reseller-card">
             <div class="reseller-content">
                 <div class="reseller-badge">💼 PROGRAM PARTNER</div>
-                <h2>Jadi Partner Reseller</h2>
+                <h2>Jadi Partner Reseller Kami</h2>
                 <div class="reseller-price">
                     Pendaftaran: <strong>10K</strong> (Sekali bayar)<br>
                     Maintenance: <strong>5K/bulan</strong>
                 </div>
                 <ul class="reseller-features">
-                    <li><i class="fas fa-check-circle"></i> Tetapkan Harga Sendiri</li>
-                    <li><i class="fas fa-check-circle"></i> Margin Profit 100%</li>
+                    <li><i class="fas fa-check-circle"></i> Tentukan Harga Sendiri</li>
+                    <li><i class="fas fa-check-circle"></i> Profit 100% Untukmu</li>
                     <li><i class="fas fa-check-circle"></i> Akses Panel Penuh</li>
-                    <li><i class="fas fa-check-circle"></i> Priority Support</li>
+                    <li><i class="fas fa-check-circle"></i> Support Prioritas</li>
                     <li><i class="fas fa-check-circle"></i> Update Gratis</li>
                     <li><i class="fas fa-check-circle"></i> Materi Training</li>
                     <li><i class="fas fa-check-circle"></i> Dukungan Marketing</li>
@@ -2665,15 +3291,28 @@
     <!-- FAQ Section -->
     <section class="faq" id="faq">
         <div class="section-header">
-            <div class="section-label">PERTANYAAN YANG SERING DITANYAKAN</div>
-            <h2 class="section-title">Punya Pertanyaan? Kami Punya Jawaban</h2>
+            <div class="section-label">PERTANYAAN UMUM</div>
+            <h2 class="section-title">Punya Pertanyaan? Kami Jawab</h2>
             <p class="section-subtitle">
-                Temukan jawaban untuk pertanyaan umum tentang layanan kami
+                Temukan jawaban untuk pertanyaan yang sering diajukan
             </p>
         </div>
         
+        <div class="faq-search">
+            <i class="fas fa-search faq-search-icon"></i>
+            <input type="text" class="faq-search-input" placeholder="Cari pertanyaan..." id="faqSearch">
+        </div>
+        
+        <div class="faq-categories">
+            <div class="faq-category active" onclick="filterFAQCategory('all')">Semua</div>
+            <div class="faq-category" onclick="filterFAQCategory('general')">Umum</div>
+            <div class="faq-category" onclick="filterFAQCategory('pricing')">Harga</div>
+            <div class="faq-category" onclick="filterFAQCategory('technical')">Teknis</div>
+            <div class="faq-category" onclick="filterFAQCategory('billing')">Pembayaran</div>
+        </div>
+        
         <div class="faq-container">
-            <div class="faq-item">
+            <div class="faq-item" data-category="general">
                 <div class="faq-question" onclick="toggleFAQ(this)">
                     <span>Apa itu Panel Pterodactyl?</span>
                     <i class="fas fa-chevron-down faq-icon"></i>
@@ -2685,9 +3324,9 @@
                 </div>
             </div>
             
-            <div class="faq-item">
+            <div class="faq-item" data-category="general">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>Berapa lama waktu yang dibutuhkan untuk setup panel saya?</span>
+                    <span>Berapa lama waktu setup panel saya?</span>
                     <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer">
@@ -2697,7 +3336,7 @@
                 </div>
             </div>
             
-            <div class="faq-item">
+            <div class="faq-item" data-category="pricing">
                 <div class="faq-question" onclick="toggleFAQ(this)">
                     <span>Apakah saya bisa upgrade paket saya nanti?</span>
                     <i class="fas fa-chevron-down faq-icon"></i>
@@ -2709,9 +3348,9 @@
                 </div>
             </div>
             
-            <div class="faq-item">
+            <div class="faq-item" data-category="billing">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>Metode pembayaran apa yang Anda terima?</span>
+                    <span>Metode pembayaran apa yang diterima?</span>
                     <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer">
@@ -2721,9 +3360,9 @@
                 </div>
             </div>
             
-            <div class="faq-item">
+            <div class="faq-item" data-category="technical">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>Apakah Anda menyediakan dukungan teknis?</span>
+                    <span>Apakah tersedia dukungan teknis?</span>
                     <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer">
@@ -2737,23 +3376,23 @@
 
     <!-- Newsletter -->
     <section class="newsletter">
-        <h3 class="newsletter-title">Tetap Terupdate</h3>
+        <h3 class="newsletter-title">Dapatkan Update Terbaru</h3>
         <p class="newsletter-description">
-            Berlangganan newsletter kami untuk update terbaru, penawaran khusus, dan tips.
+            Berlangganan newsletter kami untuk info terbaru, penawaran spesial, dan tips menarik
         </p>
         <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
-            <input type="email" class="newsletter-input" placeholder="Masukkan email Anda" required>
+            <input type="email" class="newsletter-input" placeholder="Masukkan email kamu" required>
             <button type="submit" class="newsletter-button">Berlangganan</button>
         </form>
         <p class="newsletter-privacy">
-            Kami menghargai privasi Anda. Berhenti berlangganan kapan saja.
+            Kami menghargai privasi kamu. Berhenti berlangganan kapan saja.
         </p>
     </section>
 
     <!-- CTA Final -->
     <section class="cta-final">
-        <h2>Siap untuk Mengembangkan Bisnis Anda?</h2>
-        <p>Bergabunglah dengan ribuan pelanggan puas yang percaya pada Xobe Store</p>
+        <h2>Siap Memulai Perjalanan Servermu?</h2>
+        <p>Bergabunglah dengan ribuan pelanggan puas yang telah mempercayai Xobe Store</p>
         <div class="cta-buttons">
             <a href="https://wa.me/6283838629756?text=Halo%20Xobe,%20saya%20siap%20memulai" class="btn-hero btn-primary">
                 <i class="fab fa-whatsapp"></i> Mulai di WhatsApp
@@ -2769,7 +3408,7 @@
         <div class="footer-grid">
             <div class="footer-section">
                 <h3>XOBE STORE</h3>
-                <p>Solusi hosting panel Pterodactyl enterprise-grade yang dipercaya oleh bisnis worldwide.</p>
+                <p>Solusi hosting panel Pterodactyl enterprise-grade yang dipercaya oleh bisnis di seluruh Indonesia.</p>
                 <div class="social-sharing">
                     <a href="#" class="social-share-btn facebook" onclick="shareOnFacebook(); return false;">
                         <i class="fab fa-facebook-f"></i>
@@ -2799,13 +3438,13 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Dukungan</h3>
+                <h3>Bantuan</h3>
                 <ul class="footer-links">
                     <li><a href="#">Pusat Bantuan</a></li>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Tutorial</a></li>
-                    <li><a href="#">Status</a></li>
-                    <li><a href="#">Kontak</a></li>
+                    <li><a href="#">Status Server</a></li>
+                    <li><a href="#">Kontak Kami</a></li>
                     <li><a href="#">Laporkan Masalah</a></li>
                     <li><a href="#">Permintaan Fitur</a></li>
                 </ul>
@@ -2835,6 +3474,12 @@
         </div>
     </footer>
 
+    <!-- Live Chat Widget -->
+    <div class="live-chat" onclick="openLiveChat()">
+        <i class="fab fa-whatsapp"></i>
+        <div class="live-chat-tooltip">Butuh bantuan? Chat kami!</div>
+    </div>
+
     <!-- Order Modal -->
     <div id="orderModal" class="order-modal">
         <div class="modal-content">
@@ -2845,8 +3490,8 @@
                 <div class="modal-icon">
                     <i class="fas fa-shopping-cart"></i>
                 </div>
-                <h2 class="modal-title">Selesaikan Pesanan Anda</h2>
-                <p class="modal-subtitle">Pilih metode kontak yang Anda inginkan</p>
+                <h2 class="modal-title">Selesaikan Pesananmu</h2>
+                <p class="modal-subtitle">Pilih metode kontak yang kamu inginkan</p>
             </div>
             <div class="modal-plan">
                 <div class="modal-plan-name" id="modalPlanName">Nama Paket</div>
@@ -2878,12 +3523,26 @@
                     <i class="fas fa-check"></i>
                 </div>
                 <h2 class="modal-title">Terima Kasih!</h2>
-                <p class="modal-subtitle" id="successMessage">Review Anda telah berhasil dikirim</p>
+                <p class="modal-subtitle" id="successMessage">Review kamu telah berhasil dikirim</p>
             </div>
             <div style="text-align: center; margin-top: 20px;">
                 <button class="form-submit" onclick="closeSuccessModal()">Tutup</button>
             </div>
         </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification">
+        <div class="notification-icon">
+            <i class="fas fa-check"></i>
+        </div>
+        <div class="notification-content">
+            <div class="notification-title">Berhasil!</div>
+            <div class="notification-message" id="notificationMessage">Aksi berhasil dilakukan</div>
+        </div>
+        <button class="notification-close" onclick="hideNotification()">
+            <i class="fas fa-times"></i>
+        </button>
     </div>
 
     <script>
@@ -2909,7 +3568,8 @@
                         content: "Xobe Store telah mengubah bisnis hosting saya. Panelnya sangat stabil dan tim support selalu ada saat saya butuhkan. Sangat direkomendasikan!",
                         date: "2 minggu lalu",
                         likes: 24,
-                        liked: false
+                        liked: false,
+                        image: "https://picsum.photos/seed/user1/100/100.jpg"
                     },
                     {
                         id: 2,
@@ -2919,7 +3579,8 @@
                         content: "Saya sudah mencoba banyak provider panel sebelumnya, tapi Xobe Store menonjol dengan performa dan fitur keamanannya. Perlindungan anti-theft memberikan ketenangan pikiran.",
                         date: "1 bulan lalu",
                         likes: 18,
-                        liked: false
+                        liked: false,
+                        image: "https://picsum.photos/seed/user2/100/100.jpg"
                     },
                     {
                         id: 3,
@@ -2929,7 +3590,8 @@
                         content: "Sebagai reseller, saya menghargai fleksibilitas dan solusi white-label yang ditawarkan Xobe Store. Program reseller mereka telah membantu saya mengembangkan bisnis secara signifikan.",
                         date: "1 bulan lalu",
                         likes: 15,
-                        liked: false
+                        liked: false,
+                        image: "https://picsum.photos/seed/user3/100/100.jpg"
                     },
                     {
                         id: 4,
@@ -2939,7 +3601,8 @@
                         content: "Performanya luar biasa! Server saya berjalan lancar tanpa masalah. Dashboardnya intuitif dan mudah dinavigasi bahkan untuk pemula.",
                         date: "2 bulan lalu",
                         likes: 12,
-                        liked: false
+                        liked: false,
+                        image: "https://picsum.photos/seed/user4/100/100.jpg"
                     },
                     {
                         id: 5,
@@ -2949,7 +3612,8 @@
                         content: "Layanan hebat dengan uptime excellent. Satu-satunya masalah kecil adalah terkadang respons support bisa sedikit lambat saat jam sibuk, tapi mereka selalu menyelesaikan masalah saya.",
                         date: "3 bulan lalu",
                         likes: 9,
-                        liked: false
+                        liked: false,
+                        image: "https://picsum.photos/seed/user5/100/100.jpg"
                     },
                     {
                         id: 6,
@@ -2959,7 +3623,8 @@
                         content: "Saya sudah bersama Xobe Store selama lebih dari setahun dan tidak bisa lebih bahagia. Panelnya andal, aman, dan harganya kompetitif. Sangat direkomendasikan!",
                         date: "3 bulan lalu",
                         likes: 21,
-                        liked: false
+                        liked: false,
+                        image: "https://picsum.photos/seed/user6/100/100.jpg"
                     }
                 ];
                 
@@ -2988,9 +3653,6 @@
                 const card = document.createElement('div');
                 card.className = 'testimonial-card';
                 
-                // Generate initials from name
-                const initials = testimonial.name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
-                
                 // Generate star HTML based on rating
                 let starsHTML = '';
                 for (let i = 1; i <= 5; i++) {
@@ -3003,12 +3665,16 @@
                 
                 // Set card content
                 card.innerHTML = `
+                    <div class="testimonial-quote">"</div>
                     <div class="testimonial-header">
                         <div class="testimonial-user">
-                            <div class="user-avatar">${initials}</div>
+                            <img src="${testimonial.image}" alt="${testimonial.name}" class="user-avatar">
                             <div class="user-info">
                                 <h4>${testimonial.name}</h4>
                                 <div class="user-plan">${testimonial.plan}</div>
+                                <div class="testimonial-verified">
+                                    <i class="fas fa-check-circle"></i> Terverifikasi
+                                </div>
                             </div>
                         </div>
                         <div class="testimonial-rating">
@@ -3171,6 +3837,40 @@
             faqItem.classList.toggle('active');
         }
 
+        // Filter FAQ by category
+        function filterFAQCategory(category) {
+            // Update active category button
+            document.querySelectorAll('.faq-category').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Show/hide FAQ items based on category
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Search FAQ
+        document.getElementById('faqSearch').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            document.querySelectorAll('.faq-item').forEach(item => {
+                const question = item.querySelector('.faq-question span').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer-content').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
         // Subscribe to newsletter
         function subscribeNewsletter(event) {
             event.preventDefault();
@@ -3246,7 +3946,7 @@
             e.preventDefault();
             
             if (selectedRating === 0) {
-                alert('Silakan pilih rating');
+                showNotification('error', 'Error', 'Silakan pilih rating');
                 return;
             }
             
@@ -3264,7 +3964,8 @@
                 content: reviewText,
                 date: "Baru saja",
                 likes: 0,
-                liked: false
+                liked: false,
+                image: `https://picsum.photos/seed/user${Date.now()}/100/100.jpg`
             };
             
             // Add to testimonials array
@@ -3282,11 +3983,126 @@
             renderTestimonials();
             updateRatingStats();
             
-            // Show success modal
-            document.getElementById('successMessage').textContent = 'Review Anda telah berhasil dikirim';
-            document.getElementById('successModal').style.display = 'flex';
-            document.body.style.overflow = 'hidden';
+            // Show success notification
+            showNotification('success', 'Berhasil!', 'Review kamu telah berhasil dikirim');
         });
+
+        // Countdown Timer
+        function startCountdown() {
+            // Set the date we're counting down to (7 days from now)
+            const countDownDate = new Date();
+            countDownDate.setDate(countDownDate.getDate() + 7);
+            
+            // Update the countdown every 1 second
+            const countdownInterval = setInterval(function() {
+                // Get today's date and time
+                const now = new Date().getTime();
+                
+                // Find the distance between now and the countdown date
+                const distance = countDownDate - now;
+                
+                // Time calculations for days, hours, minutes, and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                // Display the result in the elements
+                document.getElementById("days").textContent = days.toString().padStart(2, '0');
+                document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+                document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+                document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
+                
+                // If the countdown is finished, display a message
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    document.getElementById("days").textContent = "00";
+                    document.getElementById("hours").textContent = "00";
+                    document.getElementById("minutes").textContent = "00";
+                    document.getElementById("seconds").textContent = "00";
+                }
+            }, 1000);
+        }
+
+        // Custom Price Calculator
+        function initCalculator() {
+            const cpuSlider = document.getElementById('cpuSlider');
+            const ramSlider = document.getElementById('ramSlider');
+            const storageSlider = document.getElementById('storageSlider');
+            
+            cpuSlider.addEventListener('input', function() {
+                document.getElementById('cpuValue').textContent = this.value + '%';
+                updateEstimatedPrice();
+            });
+            
+            ramSlider.addEventListener('input', function() {
+                document.getElementById('ramValue').textContent = this.value + 'GB';
+                updateEstimatedPrice();
+            });
+            
+            storageSlider.addEventListener('input', function() {
+                document.getElementById('storageValue').textContent = this.value + 'GB';
+                updateEstimatedPrice();
+            });
+        }
+
+        function updateEstimatedPrice() {
+            const cpu = parseInt(document.getElementById('cpuSlider').value);
+            const ram = parseInt(document.getElementById('ramSlider').value);
+            const storage = parseInt(document.getElementById('storageSlider').value);
+            
+            // Calculate estimated price (simplified formula)
+            const basePrice = 1000;
+            const cpuPrice = cpu * 50;
+            const ramPrice = ram * 500;
+            const storagePrice = storage * 200;
+            
+            const totalPrice = basePrice + cpuPrice + ramPrice + storagePrice;
+            
+            document.getElementById('estimatedPrice').innerHTML = `Rp ${totalPrice.toLocaleString('id-ID')}<span>/bln</span>`;
+        }
+
+        // Notification System
+        function showNotification(type, title, message) {
+            const notification = document.getElementById('notification');
+            const notificationIcon = notification.querySelector('.notification-icon i');
+            const notificationTitle = notification.querySelector('.notification-title');
+            const notificationMessage = document.getElementById('notificationMessage');
+            
+            // Set notification type
+            notification.className = 'notification ' + type;
+            
+            // Set icon based on type
+            if (type === 'success') {
+                notificationIcon.className = 'fas fa-check';
+            } else if (type === 'error') {
+                notificationIcon.className = 'fas fa-times';
+            } else if (type === 'info') {
+                notificationIcon.className = 'fas fa-info';
+            }
+            
+            // Set content
+            notificationTitle.textContent = title;
+            notificationMessage.textContent = message;
+            
+            // Show notification
+            notification.classList.add('show');
+            
+            // Auto hide after 5 seconds
+            setTimeout(() => {
+                hideNotification();
+            }, 5000);
+        }
+
+        function hideNotification() {
+            const notification = document.getElementById('notification');
+            notification.classList.remove('show');
+        }
+
+        // Open Live Chat
+        function openLiveChat() {
+            window.open('https://wa.me/6283838629756?text=Halo%20Xobe,%20saya%20butuh%20bantuan', '_blank');
+        }
 
         // Scroll to top functionality
         window.addEventListener('scroll', function() {
@@ -3398,6 +4214,12 @@
             
             // Initialize testimonials
             initializeTestimonials();
+            
+            // Initialize countdown timer
+            startCountdown();
+            
+            // Initialize calculator
+            initCalculator();
             
             // Initialize mobile menu
             const mobileBtn = document.querySelector('.mobile-btn');
